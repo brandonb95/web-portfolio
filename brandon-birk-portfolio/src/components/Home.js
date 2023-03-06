@@ -47,11 +47,28 @@ const Home = () => {
         <>
         { isLoaded ?
         <header id="masthead" className="site-header">
-          <div className="site-branding">
-            {/* <p className="site-title">WordPress REST API</p> */}
-          </div>
          
-         <Navbar />
+         <div className={navOpen ? 'show' : undefined}>
+          <div className="logo-wrapper">
+          </div>
+        <button
+            className="btn-main-nav"
+            onMouseDown={e => {
+            e.preventDefault();
+            }}
+            onClick={showHideNav}
+        >
+            <span className="hamburger-icon">
+            <span className="line"></span>
+            <span className="line"></span>
+            <span className="line"></span>
+            </span>
+            <span className="sr-only">Menu</span>
+        </button>
+
+         <Navbar handleShowHideNav={showHideNav}/>
+        
+        </div>
         
         <article>
                 <h1>{restData.title.rendered}</h1>

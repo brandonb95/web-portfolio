@@ -1,0 +1,66 @@
+@use "variables" as *;
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    justify-content: sri;
+    bottom: 0;
+    height: 0;
+    transition: height 0.5s ease, visibility 0s;
+
+    ul{
+        display: block;
+        list-style: none;
+    }
+
+    .show & {
+        transition: height 0.5s ease, visibility 0s;
+        visibility: visible;
+        ;
+        height: 140px;
+      }
+}
+
+// Mobile Menu
+.btn-main-nav {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    display: block;
+    color: transparent;
+    background-color: $primary-theme-color;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: none;
+  }
+  
+  .hamburger-icon {
+    margin: 0 3rem;
+    cursor: pointer;
+  }
+  
+  .line {
+    background: $background-color-dark;
+    display: block;
+    position: relative;
+    width: 36px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 7px;
+    transition: all 0.55s cubic-bezier(0.075, 0.82, 0.165, 1);
+  
+  
+    .show &:nth-child(1) {
+      transform: translateY(11px) rotate(45deg);
+    }
+  
+    .show &:nth-child(2) {
+    opacity: 0;
+    }
+  
+    .show &:nth-child(3) {
+      transform: translateY(-11px) rotate(-45deg);
+    }
+  }

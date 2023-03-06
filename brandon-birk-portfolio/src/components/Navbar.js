@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-// import '../scss/styles.scss';
 
 const Navbar = ({ handleShowHideNav }) => {
   function closeNav(e) {
