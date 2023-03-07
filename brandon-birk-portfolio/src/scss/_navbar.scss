@@ -17,7 +17,6 @@
     .show & {
         transition: height 0.5s ease, visibility 0s;
         visibility: visible;
-        ;
         height: 140px;
       }
 }
@@ -63,4 +62,57 @@
     .show &:nth-child(3) {
       transform: translateY(-11px) rotate(-45deg);
     }
+  }
+
+  // 768px - Tablet
+  @media screen and (min-width: 48rem) {
+    .btn-main-nav {
+      visibility: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      line-height: 1;
+      border: none;
+      background: none;
+      margin-right: 0.75em;
+    }
+
+    .main-nav {
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: end;
+      transition: none;
+      overflow: visible;
+      margin: 0 2rem;
+      
+      .show & {
+        display: flex;
+        transition: none;
+      }
+  
+      li {
+        text-decoration: none;
+        list-style: none;
+        padding: 1rem;
+      }
+  
+      a {
+        padding: 0;
+        text-align: center;
+        border-top: none;
+        @at-root .main-nav li:not(:first-child) a {
+          border-top: none;
+        }
+  
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: transparent;
+          color: $primary-theme-color;
+          transition: 0.5s;
+        }
+      }
+    }
+  
   }
