@@ -1,1 +1,16 @@
 @use "variables" as *;
+
+.landing-banner{
+text-align: center;
+height: 400px;
+background-color: $background-color-dark;
+color: $text-color-light;
+
+.landing-title{
+    font-size: 2.3rem;
+    text-align: center;
+    position: relative;
+    top: 10rem;
+}
+
+}

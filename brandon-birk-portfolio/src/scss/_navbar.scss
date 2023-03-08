@@ -79,9 +79,10 @@
 
     .main-nav {
       height: auto;
+      width: 100vw;
       display: flex;
       flex-wrap: wrap;
-      justify-content: end;
+      justify-content: center;
       transition: none;
       overflow: visible;
       margin: 0 2rem;
@@ -91,6 +92,10 @@
         transition: none;
       }
   
+      ul{
+        display: flex;
+        text-align: center;
+
       li {
         text-decoration: none;
         list-style: none;
@@ -113,6 +118,8 @@
           transition: 0.5s;
         }
       }
+
+    }
     }
   
   }
