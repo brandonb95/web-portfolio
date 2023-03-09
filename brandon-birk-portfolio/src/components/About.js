@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 const About = () => {
-    const restPath = 'https://localhost:3000/brandonbirk/wp-json/wp/v2/posts/13'
+    const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/posts/13'
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 
@@ -21,12 +21,15 @@ const About = () => {
     
     return (
         <>
+        { isLoaded ?
             <article id={`post-${restData.id}`}>
                 <h1>{restData.title.rendered}</h1>
                 <div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
                 </div>
             </article>
-   
+        :
+        <h2>About Not Loaded</h2>       
+        }
         </>
     )
 }

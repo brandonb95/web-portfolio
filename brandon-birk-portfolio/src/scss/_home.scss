@@ -1,7 +1,10 @@
 @use "variables" as *;
 
 .landing-banner{
+position: relative;
+z-index: -1;
 text-align: center;
+width: 100vw;
 height: 400px;
 background-color: $background-color-dark;
 color: $text-color-light;

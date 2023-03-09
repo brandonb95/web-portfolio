@@ -76,6 +76,8 @@ const Home = () => {
                  
                 </div>
             </article>
+
+            
                 </header>
                 :
             <h2>Nothing</h2>       
