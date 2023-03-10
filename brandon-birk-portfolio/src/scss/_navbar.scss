@@ -4,27 +4,37 @@
     display: flex;
     flex-wrap: wrap;
     position: fixed;
-    justify-content: sri;
+    z-index: -1;
+    width: 100vw;
+    justify-content: center;
     bottom: 0;
     height: 0;
+    color: $text-color-light;
+    background-color: $background-color-dark;
+    margin: 0 auto;
     transition: height 0.5s ease, visibility 0s;
 
     ul{
         display: block;
         list-style: none;
+        padding: $default-spacing 0;
+        li{
+          padding: 1rem 0;
+        }
     }
 
     .show & {
         transition: height 0.5s ease, visibility 0s;
         visibility: visible;
-        height: 140px;
+        height: 240px;
       }
 }
 
 // Mobile Menu
 .btn-main-nav {
     position: fixed;
-    bottom: 10vh;
+    z-index: 99;
+    bottom: 1vh;
     left: 1rem;
     display: block;
     color: transparent;
@@ -38,12 +48,15 @@
   .hamburger-icon {
     margin: 0 3rem;
     cursor: pointer;
+    
   }
   
   .line {
     background: $background-color-dark;
     display: block;
     position: relative;
+    z-index: 99;
+    transform: translateX(1.6em);
     width: 36px;
     height: 4px;
     border-radius: 2px;
@@ -53,6 +66,7 @@
   
     .show &:nth-child(1) {
       transform: translateY(11px) rotate(45deg);
+      
     }
   
     .show &:nth-child(2) {

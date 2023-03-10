@@ -23,7 +23,6 @@ const About = () => {
         <>
         { isLoaded ?
             <article id={`post-${restData.id}`}>
-                <h1>{restData.title.rendered}</h1>
                 <div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
                 </div>
             </article>

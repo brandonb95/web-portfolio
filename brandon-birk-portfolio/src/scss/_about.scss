@@ -1,8 +1,18 @@
 @use "variables" as *;
 
 
-.entry-content-about{
-    img{
-        width: 0vw;
+// Bio Image
+.wp-image-31{
+    display: flex;
+    margin: $default-spacing auto;
+    max-width: 75%;
+    height: auto;
+}
+
+.entry-content{
+    position: relative;
+    z-index: -5;
+    p{
+        margin: $default-spacing;
     }
 }
