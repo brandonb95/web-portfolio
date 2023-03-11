@@ -56,7 +56,7 @@
     display: block;
     position: relative;
     z-index: 99;
-    transform: translateX(1.6em);
+    transform: translate(1.6em);
     width: 36px;
     height: 4px;
     border-radius: 2px;
@@ -66,6 +66,7 @@
   
     .show &:nth-child(1) {
       transform: translateY(11px) rotate(45deg);
+      
       
     }
   
@@ -83,6 +84,7 @@
     .btn-main-nav {
       visibility: hidden;
       margin: 0;
+      
       padding: 0;
       list-style: none;
       line-height: 1;
