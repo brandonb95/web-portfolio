@@ -5,7 +5,7 @@
 .wp-image-31{
     display: flex;
     margin: $default-spacing auto;
-    max-width: 75%;
+    max-width: 50%;
     height: auto;
 }
 
@@ -14,5 +14,43 @@
     z-index: -5;
     p{
         margin: $default-spacing;
+    }
+}
+
+// 768px - Tablet
+@media screen and (min-width: 48rem) {
+
+    .wp-image-31{
+        max-width: 70%;
+    }
+
+    .entry-content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+        p{
+            max-width: 50%;
+        }
+    }
+}
+
+// 1296px
+@media screen and (min-width: 81rem) {
+
+    .wp-image-31{
+        max-width: 100%;
+    }
+
+    .entry-content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+        p{
+            max-width: 50%;
+        }
     }
 }

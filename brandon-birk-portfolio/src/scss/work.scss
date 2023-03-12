@@ -3,6 +3,7 @@
 .work-container{
     display: flex;
     flex-wrap: wrap;
+    
     justify-content: space-around;
     margin: $default-spacing;
     text-align: center;
@@ -10,7 +11,8 @@
     .single-project{
         gap: $default-spacing;
         max-width: 50%;
-
+        position: relative;
+        z-index: -99;
         .project-title{
             padding: $default-spacing 0;
         }
@@ -18,6 +20,7 @@
         img{
             padding: 1rem 0;
             max-width: 100%;
+            
         }
     }
 }
@@ -27,6 +30,17 @@
     .work-container {
         .single-project{
         max-width: 50%;
+        }
+    }
+}
+
+// 1296px
+@media screen and (min-width: 81rem) {
+    .work-container {
+        justify-content: center;
+        gap: $default-spacing;
+        .single-project{
+        max-width: 20%;
         }
     }
 }
