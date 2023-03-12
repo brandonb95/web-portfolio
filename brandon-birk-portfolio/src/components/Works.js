@@ -1,42 +1,47 @@
 import { useState, useEffect } from 'react'
+import Post from './Post'
 
 const Works = () => {
-    const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?_fields=id,title,content,acf.title,acf.image_1,acf.content_description_1,acf.content_description_2,acf.image_2,acf.content_description_3'
-    const [restData, setData] = useState({});
-    const [isLoaded, setLoadStatus] = useState(false)
+  const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?_embed'
+  const [restData, setData] = useState([]);
+  const [isLoaded, setLoadStatus] = useState(false)
+  const [imagePath, setImagePath] = useState(null)
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch(restPath)
-            if ( response.ok ) {
-                const data = await response.json()
-                setData(data)
-                setLoadStatus(true)
-            } else {
-                setLoadStatus(false)
-            }
-        }
-        fetchData()
-    }, [restPath])
-    
-    return (
-        <>
-        { isLoaded && restData.length > 0 && restData[0].content ?
-        
-            <article id={`post-${restData[0].id}`}>
-                <h1>{restData[0].title.rendered}</h1>
-                <div className="entry-content" dangerouslySetInnerHTML={{__html:restData[0].content.rendered}}>
-                </div>
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(restPath)
+      if ( response.ok ) {
+        const data = await response.json()
+        setData(data)
+        setLoadStatus(true)
+      } else {
+        setLoadStatus(false)
+      }
+    } 
+    fetchData()
+  }, [restPath])
 
-                <div className="works-container" dangerouslySetInnerHTML={{__html:restData[0].title.rendered}}>
-                    </div>
-            </article>
+  // Update the image path when needed
+  useEffect(() => {
+    if (restData.length > 0 && restData[0].acf.cover) {
+      const newImagePath = "http://localhost/brandonbirk/wp-content/uploads/2023/03/sample.jpg";
+      setImagePath(newImagePath)
+    }
+  }, [restData])
 
-        :
-        <h2>Works Not Loaded</h2>       
-        }
-        </>
-    )
+  return (
+    <>
+      { isLoaded && restData.length > 0 ? (
+        <article className="work-container">
+          {restData.map((post) => (
+            <Post key={post.id} post={post} imagePath={imagePath} />
+          ))}
+        </article>
+      ) : (
+        <h2>Works Not Loaded</h2>
+      )}
+    </>
+  )
 }
 
 export default Works

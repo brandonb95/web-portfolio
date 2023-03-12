@@ -1,0 +1,32 @@
+@use "variables" as *;
+
+.work-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: $default-spacing;
+    text-align: center;
+    
+    .single-project{
+        gap: $default-spacing;
+        max-width: 50%;
+
+        .project-title{
+            padding: $default-spacing 0;
+        }
+
+        img{
+            padding: 1rem 0;
+            max-width: 100%;
+        }
+    }
+}
+
+// 496px 
+@media screen and (min-width: 31rem) {
+    .work-container {
+        .single-project{
+        max-width: 50%;
+        }
+    }
+}
