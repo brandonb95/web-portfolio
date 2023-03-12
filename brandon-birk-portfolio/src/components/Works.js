@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 
 const Works = () => {
-    const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works'
-    const [restData, setData] = useState([])
+    const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?_fields=id,title,content,acf.title,acf.image_1,acf.content_description_1,acf.content_description_2,acf.image_2,acf.content_description_3'
+    const [restData, setData] = useState({});
     const [isLoaded, setLoadStatus] = useState(false)
 
     useEffect(() => {
@@ -21,11 +21,17 @@ const Works = () => {
     
     return (
         <>
-        { isLoaded ?
-            <article id={`post-${restData.id}`}>
-                <div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
+        { isLoaded && restData.length > 0 && restData[0].content ?
+        
+            <article id={`post-${restData[0].id}`}>
+                <h1>{restData[0].title.rendered}</h1>
+                <div className="entry-content" dangerouslySetInnerHTML={{__html:restData[0].content.rendered}}>
                 </div>
+
+                <div className="works-container" dangerouslySetInnerHTML={{__html:restData[0].title.rendered}}>
+                    </div>
             </article>
+
         :
         <h2>Works Not Loaded</h2>       
         }
