@@ -1,0 +1,10 @@
+@use "variables" as *;
+
+.contact-container{
+    margin: 0 $default-spacing;
+    text-align: center;
+
+    .contact-title{
+        margin: $default-spacing 0;
+    }
+}

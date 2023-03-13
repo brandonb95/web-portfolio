@@ -12,6 +12,7 @@ function Post({ post, imagePath }) {
       ></div>
       <img src={imagePath || acf.cover} alt={acf.cover}></img>
       <p>{acf.excerpt}</p>
+      <button className="read-more-button">Read More</button>
     </div>
   );
 }
