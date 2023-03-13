@@ -10,7 +10,7 @@ function Post({ post, imagePath }) {
         className="entry-content"
         dangerouslySetInnerHTML={{ __html: content.rendered }}
       ></div>
-      <img src={imagePath || acf.cover} alt={acf.cover}></img>
+      <img src={post.acf.cover.url} alt={post.acf.cover.alt}></img>
       <p>{acf.excerpt}</p>
       <button className="read-more-button">Read More</button>
     </div>

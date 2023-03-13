@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Post from './Post'
 
 const Works = () => {
-  const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?_embed'
+  const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?_embed&acf_format=standard'
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false)
   const [imagePath, setImagePath] = useState(null)
@@ -24,7 +24,7 @@ const Works = () => {
   // Update the image path when needed
   useEffect(() => {
     if (restData.length > 0 && restData[0].acf.cover) {
-      const newImagePath = "http://localhost/brandonbirk/wp-content/uploads/2023/03/sample.jpg";
+      const newImagePath = restData[0].acf.cover.url;
       setImagePath(newImagePath)
     }
   }, [restData])
