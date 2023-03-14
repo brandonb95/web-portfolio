@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     position: fixed;
-    z-index: -1;
+    z-index: 98;
     width: 100vw;
     justify-content: center;
     bottom: 0;
@@ -94,11 +94,12 @@
     }
 
     .main-nav {
-      position: relative;
+      position: absolute;
+      top: 0;
       background-color: transparent;
-      z-index: 99;
-      color: $text-color-dark;
-      height: auto;
+      z-index: 15;
+      color: $text-color-light;
+      height: 100px;
       width: 100vw;
       display: flex;
       flex-wrap: wrap;

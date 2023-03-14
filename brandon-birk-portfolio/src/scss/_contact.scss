@@ -3,8 +3,14 @@
 .contact-container{
     margin: 0 $default-spacing;
     text-align: center;
+    height: 40vh;
+    margin: 15rem 0;
 
     .contact-title{
         margin: $default-spacing 0;
+    }
+
+    .contact-blurb{
+        margin: 0 $default-spacing;
     }
 }
