@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function Post({ post, imagePath }) {
   const { acf, content, id } = post;
@@ -12,7 +13,9 @@ function Post({ post, imagePath }) {
       ></div>
       <img src={post.acf.cover.url} alt={post.acf.cover.alt}></img>
       <p>{acf.excerpt}</p>
-      <button className="read-more-button">Read More</button>
+      <Link to="/projects">Go to Another Page</Link>
+      
+
     </div>
   );
 }

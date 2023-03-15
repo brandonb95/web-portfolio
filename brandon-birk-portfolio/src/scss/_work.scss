@@ -12,7 +12,7 @@
         gap: $default-spacing;
         max-width: 50%;
         position: relative;
-        z-index: -99;
+        z-index: 5;
         .project-title{
             padding: $default-spacing 0;
         }

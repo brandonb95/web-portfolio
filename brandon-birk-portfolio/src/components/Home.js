@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import Navbar from './Navbar';
+import About from './About';
+import Works from './Works';
+
 
 const Home = () => {
     const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/pages/6'
@@ -45,7 +48,8 @@ const Home = () => {
       
     return (
         <>
-        { isLoaded ?
+        { isLoaded ? <>
+
         <header id="masthead" className="site-header">
          
          <div className={navOpen ? 'show' : undefined}>
@@ -79,6 +83,12 @@ const Home = () => {
 
             
                 </header>
+
+                <About />
+                <Works />
+
+                </>
+
                 :
             <h2>Nothing</h2>       
             }
