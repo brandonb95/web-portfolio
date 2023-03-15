@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import Header from './Header'
 
 const PostPage = () => {
     const { slug } = useParams()
@@ -28,8 +29,8 @@ const PostPage = () => {
         <>
         { isLoaded ?
                 <>
-
-        {console.log(restData)}
+        <Header />
+        
             <article className="project-container" id={`post-${restData.id}`}>
                 <h3 className="project-title">{restData.acf.title}</h3>
       <div
