@@ -21,7 +21,7 @@ function App() {
     <Route path='/about' exact element={<About />}/>
     <Route path='/works' exact element={<Works />}/>
     <Route path="/contact" element={<Contact />} />
-    <Route path="/posts/:postId" element={<PostPage />} />
+    <Route path="/works/:slug" element={<PostPage />} />
 
   </Routes>
         </header>

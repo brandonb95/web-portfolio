@@ -2,31 +2,34 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 const PostPage = () => {
-    const { postId } = useParams()
-    const restPath = `http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works/${postId}?_embed&acf_format=standard`
+    const { slug } = useParams()
+    const restPath = `http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?slug=${slug}&_embed&acf_format=standard`
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 
     useEffect(() => {
-        if (postId) {
+        
         const fetchData = async () => {
             const response = await fetch(restPath)
             if ( response.ok ) {
                 const data = await response.json()
-                setData(data)
+                setData(data[0])
                 setLoadStatus(true)
             } else {
                 setLoadStatus(false)
             }
         }
         fetchData()
-        }
+        
     }, [restPath])
     
     
     return (
         <>
         { isLoaded ?
+                <>
+
+        {console.log(restData)}
             <article className="project-container" id={`post-${restData.id}`}>
                 <h3 className="project-title">{restData.acf.title}</h3>
       <div
@@ -36,8 +39,11 @@ const PostPage = () => {
       <img src={restData.acf.cover.url} alt={restData.acf.cover.alt}></img>
 
             </article>
+            </>   
+
         :
-        <h2>Post Content Not Loaded</h2>       
+        
+        <h2>Post Content Not Loaded</h2>    
         }
         </>
     )
