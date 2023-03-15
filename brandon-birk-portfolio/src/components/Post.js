@@ -13,7 +13,7 @@ function Post({ post, imagePath }) {
       ></div>
       <img src={post.acf.cover.url} alt={post.acf.cover.alt}></img>
       <p>{acf.excerpt}</p>
-      <Link to="/projects">Go to Another Page</Link>
+      <Link to={`/posts/${post.id}`}>Go to Another Page</Link>
       
 
     </div>

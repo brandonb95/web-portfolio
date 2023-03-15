@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 import Navbar from './Navbar';
 import About from './About';
 import Works from './Works';
+import Contact from './Contact';
 
 
 const Home = () => {
@@ -86,7 +87,7 @@ const Home = () => {
 
                 <About />
                 <Works />
-
+                <Contact />
                 </>
 
                 :

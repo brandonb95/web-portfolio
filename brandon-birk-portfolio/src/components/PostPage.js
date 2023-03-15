@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 
 const PostPage = () => {
-    const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/pages/61?_embed'
+    const { postId } = useParams()
+    const restPath = `http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works/${postId}?_embed&acf_format=standard`
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 
     useEffect(() => {
+        if (postId) {
         const fetchData = async () => {
             const response = await fetch(restPath)
             if ( response.ok ) {
@@ -17,21 +20,24 @@ const PostPage = () => {
             }
         }
         fetchData()
+        }
     }, [restPath])
+    
     
     return (
         <>
         { isLoaded ?
-            <article className="contact-container" id={`post-${restData.id}`}>
-                <h2 className="contact-title">{restData.acf.heading}</h2>
-                <p className="contact-blurb">{restData.acf.blurb}</p>
-
-                <div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
-                </div>
+            <article className="project-container" id={`post-${restData.id}`}>
+                <h3 className="project-title">{restData.acf.title}</h3>
+      <div
+        // className="entry-content"
+        // dangerouslySetInnerHTML={{ __html: postId.content.rendered }}
+      ></div>
+      <img src={restData.acf.cover.url} alt={restData.acf.cover.alt}></img>
 
             </article>
         :
-        <h2>About Not Loaded</h2>       
+        <h2>Post Content Not Loaded</h2>       
         }
         </>
     )
