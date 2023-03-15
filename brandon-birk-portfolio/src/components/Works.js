@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Post from './Post'
 
 const Works = () => {
-  const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?_embed&acf_format=standard'
+  const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?_embed&acf_format=standard&orderby=date&order=asc'
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false)
   const [imagePath, setImagePath] = useState(null)
