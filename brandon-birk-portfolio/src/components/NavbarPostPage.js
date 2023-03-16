@@ -13,14 +13,13 @@ const Navbar = ({ handleShowHideNav }) => {
     <nav className="main-nav" onClick={closeNav}>
       <ul>
         <li>
-          <a href="#about">About</a>
+          <Link to="../home/#about">About</Link>
         </li>
         <li>
-        <a href="#works">Works</a>
+          <Link to="../home/#works">Works</Link>
         </li>
         <li>
-        <a href="#contact">Contact</a>
-
+          <Link to="../home/#contact">Contact</Link>
         </li>
       </ul>
     </nav>

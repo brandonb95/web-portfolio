@@ -47,9 +47,16 @@ const Home = () => {
             
                 </header>
 
+                <section id="about">
                 <About />
+                </section>
+                <section id="works">
                 <Works />
+                </section>
+                <section id="contact">
                 <Contact />
+                </section>
+
                 </>
 
                 :
