@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = ({ handleShowHideNav }) => {
   function closeNav(e) {
@@ -13,13 +13,13 @@ const Navbar = ({ handleShowHideNav }) => {
     <nav className="main-nav" onClick={closeNav}>
       <ul>
         <li>
-          <Link to="../home/#about">About</Link>
+          <HashLink to="/brandonbirk/home#about">About</HashLink>
         </li>
         <li>
-          <Link to="../home/#works">Works</Link>
+          <HashLink to="/brandonbirk/home#works">Works</HashLink>
         </li>
         <li>
-          <Link to="../home/#contact">Contact</Link>
+          <HashLink to="/brandonbirk/home#contact">Contact</HashLink>
         </li>
       </ul>
     </nav>

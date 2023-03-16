@@ -13,11 +13,11 @@ import './scss/styles.scss';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter >
 
     <header id="masthead" className="site-header">
     <Routes>
-    <Route path='/home' exact element={<Home />}/>
+    <Route path='brandonbirk/home' exact element={<Home />}/>
     <Route path='/about' exact element={<About />}/>
     <Route path='/works' exact element={<Works />}/>
     <Route path="/contact" element={<Contact />} />
