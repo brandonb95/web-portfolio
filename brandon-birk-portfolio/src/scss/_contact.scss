@@ -1,13 +1,12 @@
 @use "variables" as *;
 
 .contact-container{
-    margin: 0 $default-spacing;
     text-align: center;
     height: 40vh;
-    margin: 15rem 0;
+    background-color: $first-color-theme;
 
     .contact-title{
-        margin: $default-spacing 0;
+        padding: $default-spacing 0;
     }
 
     .contact-blurb{

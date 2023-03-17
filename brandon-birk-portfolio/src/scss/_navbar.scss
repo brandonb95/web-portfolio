@@ -10,7 +10,7 @@
     bottom: 0;
     height: 0;
     color: $text-color-light;
-    background-color: $background-color-dark;
+    background-color: $fourth-color-theme;
     margin: 0 auto;
     transition: height 0.5s ease, visibility 0s;
 
@@ -18,8 +18,20 @@
         display: block;
         list-style: none;
         padding: $default-spacing 0;
+        transition: height 0.5s ease, visibility 0s;
+
         li{
           padding: 1rem 0;
+
+          a{
+            color: $text-color-light;
+            text-decoration: none;
+            transition:  0.5s ease;
+
+            &:hover{
+              color: $fourth-color-theme;
+            }
+          }
         }
     }
 
@@ -38,9 +50,9 @@
     left: 1rem;
     display: block;
     color: transparent;
-    background-color: $primary-theme-color;
-    width: 6rem;
-    height: 6rem;
+    background-color: $third-color-theme;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     border: none;
   }
@@ -52,11 +64,11 @@
   }
   
   .line {
-    background: $background-color-dark;
+    background: $first-color-theme;
     display: block;
     position: relative;
     z-index: 99;
-    transform: translate(1.6em);
+    transform: translate(1.05em);
     width: 36px;
     height: 4px;
     border-radius: 2px;

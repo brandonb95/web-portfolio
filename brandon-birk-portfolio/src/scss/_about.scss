@@ -1,7 +1,11 @@
 @use "variables" as *;
 
+#about{
+}
+
 #post-13{
     height: 100vh;
+
 }
 
 // Bio Image
@@ -14,7 +18,7 @@
 
 .entry-content{
     position: relative;
-    z-index: -5;
+    z-index: 1;
     p{
         margin: $default-spacing;
     }
@@ -43,7 +47,7 @@
 @media screen and (min-width: 81rem) {
 
     .wp-image-31{
-        max-width: 100%;
+        max-width: 80%;
     }
 
     .entry-content{

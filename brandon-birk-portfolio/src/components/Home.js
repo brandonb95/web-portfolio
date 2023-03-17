@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import { NavLink } from 'react-router-dom'
+import 'animate.css';
 import Header from './Header';
 import About from './About';
 import Works from './Works';
@@ -38,12 +37,42 @@ const Home = () => {
         <Header />
         
         <article className="landing-banner">
-                <h1 className="landing-title">{restData.title.rendered}</h1>
+
+            <div className="bubbles">
+                <span style={{'--i': '19'}}></span>
+                <span style={{'--i': '15'}}></span>
+                <span style={{'--i': '22'}}></span>
+                <span style={{'--i': '18'}}></span>
+                <span style={{'--i': '12'}}></span>
+                <span style={{'--i': '21'}}></span>
+                <span style={{'--i': '17'}}></span>
+                <span style={{'--i': '11'}}></span>
+                <span style={{'--i': '13'}}></span>
+                <span style={{'--i': '24'}}></span>
+                <span style={{'--i': '16'}}></span>
+                <span style={{'--i': '14'}}></span>
+                <span style={{'--i': '19'}}></span>
+                <span style={{'--i': '15'}}></span>
+                <span style={{'--i': '22'}}></span>
+                <span style={{'--i': '18'}}></span>
+                <span style={{'--i': '12'}}></span>
+                <span style={{'--i': '21'}}></span>
+                <span style={{'--i': '17'}}></span>
+                <span style={{'--i': '11'}}></span>
+                <span style={{'--i': '13'}}></span>
+                <span style={{'--i': '24'}}></span>
+                <span style={{'--i': '16'}}></span>
+                <span style={{'--i': '14'}}></span>
+            </div>
+            
+                <h1 className="landing-title animate__animated animate__bounce">{restData.title.rendered}</h1>
                 <div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
-                 
                 </div>
+                
             </article>
 
+
+            
             
                 </header>
 

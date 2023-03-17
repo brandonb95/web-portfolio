@@ -3,9 +3,8 @@
 .work-container{
     display: flex;
     flex-wrap: wrap;
-    // height: 100vh;
+    background-color: $second-color-theme;
     justify-content: space-around;
-    margin: $default-spacing;
     text-align: center;
     
     .single-project{
