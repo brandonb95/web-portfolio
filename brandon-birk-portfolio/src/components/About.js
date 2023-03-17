@@ -23,7 +23,7 @@ const About = () => {
         <>
         { isLoaded ?
             <article id={`post-${restData.id}`}>
-                <div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
+                <div className="entry-content animate__animated animate__lightSpeedInRight" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
                 </div>
             </article>
         :

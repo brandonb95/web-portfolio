@@ -65,7 +65,7 @@ const Home = () => {
                 <span style={{'--i': '14'}}></span>
             </div>
             
-                <h1 className="landing-title animate__animated animate__bounce">{restData.title.rendered}</h1>
+                <h1 className="landing-title animate__animated animate__bounceIn">{restData.title.rendered}</h1>
                 <div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
                 </div>
                 
