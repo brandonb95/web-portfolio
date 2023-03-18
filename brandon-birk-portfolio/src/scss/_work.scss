@@ -8,27 +8,53 @@
     text-align: center;
     
     .single-project{
-        gap: $default-spacing;
-        max-width: 50%;
+        max-width: 35%;
         position: relative;
         z-index: 5;
+        margin: 0 $default-spacing;
+        justify-content: center;
+
         .project-title{
             padding: $default-spacing 0;
+            color: $text-color-light;
         }
 
-        img{
+        .project-image{
             padding: 1rem 0;
             max-width: 100%;
-            
+        }
+
+        .project-excerpt{
+            margin: 0 0 3rem 0;
+            height: 3rem;
+            color: $text-color-light;
         }
     }
 }
 
-// 496px 
-@media screen and (min-width: 31rem) {
+.project-button {
+    margin: $default-spacing;
+    
+    a{
+    text-decoration: none;
+    display: inline-block;
+    justify-content: center;
+    color: $text-color-light;
+    border: 2px solid $fourth-color-theme;
+    border-radius: 2rem;
+    padding: 1rem 1rem;
+    transition: ease-in-out 0.2s;
+    &:hover{
+        background-color: $fourth-color-theme;
+    }
+    }
+}
+
+// 768px 
+@media screen and (min-width: 48rem) {
     .work-container {
         .single-project{
-        max-width: 50%;
+        max-width: 20%;
         }
     }
 }

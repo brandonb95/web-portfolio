@@ -7,15 +7,29 @@
     height: 100vh;
     overflow: hidden;
 
+    // Profile Image
+    img{
+        display: flex;
+        margin: $default-spacing auto;
+        width: 40%;
+        height: auto;
+    }
+
+    .about-description{
+        margin: $default-spacing 3rem;
+        font-family: 'Karla', Arial, Helvetica, sans-serif;
+        line-height: 2rem;
+
+    }
 }
 
-// Bio Image
-.wp-image-31{
-    display: flex;
-    margin: $default-spacing auto;
-    max-width: 50%;
-    height: auto;
-}
+// // Bio Image
+// .wp-image-31{
+//     display: flex;
+//     margin: $default-spacing auto;
+//     max-width: 25%;
+//     height: auto;
+// }
 
 .entry-content{
     position: relative;
@@ -28,32 +42,56 @@
 // 768px - Tablet
 @media screen and (min-width: 48rem) {
 
-    .wp-image-31{
-        max-width: 70%;
-    }
-
-    .entry-content{
+    #post-13{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+    img{
+        max-width: 25%;
+        margin: $default-spacing;
+    }
+
+    .about-description{
+        max-width: 30%;
+        margin: $default-spacing 1rem;
+        font-size: 1rem;
+    }
+    }
+
+    .entry-content{
+        display: flex;
+        // flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
         
-        p{
-            max-width: 50%;
-        }
+        
     }
 }
 
 // 1296px
 @media screen and (min-width: 81rem) {
 
-    .wp-image-31{
-        max-width: 80%;
+    #post-13{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    img{
+        max-width: 20%;
+        margin: $default-spacing;
     }
+
+    .about-description{
+        max-width: 40%;
+        font-size: 1.2rem;
+
+    }
+}
 
     .entry-content{
         display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         

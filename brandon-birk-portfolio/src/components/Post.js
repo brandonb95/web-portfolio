@@ -7,13 +7,11 @@ function Post({ post, imagePath }) {
   return (
     <div className="single-project" id={`post-${id}`}>
       <h3 className="project-title">{acf.title}</h3>
-      <div
-        className="entry-content"
-        dangerouslySetInnerHTML={{ __html: content.rendered }}
-      ></div>
-      <img src={post.acf.cover.url} alt={post.acf.cover.alt}></img>
-      <p>{acf.excerpt}</p>
-      <Link to={`/works/${post.slug}`}>Go to Another Page</Link>
+   
+      <img className="project-image" src={post.acf.cover.url} alt={post.acf.cover.alt}></img>
+      <p className="project-excerpt">{acf.excerpt}</p>
+      
+      <div className='project-button'><Link to={`/works/${post.slug}`}>Read More</Link></div>
       
 
     </div>

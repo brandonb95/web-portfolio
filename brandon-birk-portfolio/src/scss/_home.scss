@@ -11,8 +11,11 @@ color: $text-color-light;
 
 .landing-title{
     font-size: 2.5rem;
+    font-weight: 800;
+    font-family: Archivo, Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
     position: relative;
-    top: 17rem;
+    top: 15rem;
     text-transform: uppercase;
     align-items: center;
     margin: 0 $default-spacing;
@@ -25,7 +28,7 @@ color: $text-color-light;
     display: flex;
     z-index: -100;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     span{
         position: relative;
         width: 30px;
@@ -38,7 +41,7 @@ color: $text-color-light;
         0 0 50px $third-color-theme,
         0 0 100px $third-color-theme;
         animation: animate 15s linear infinite;
-        animation-duration: calc(180s/var(--i));
+        animation-duration: calc(160s/var(--i));
         max-width: 30px;
     }
     span:nth-child(even){
@@ -65,7 +68,7 @@ color: $text-color-light;
     .landing-banner{
 
         .landing-title{
-            top: 20rem;
+            top: 17rem;
         }
     }
 }
