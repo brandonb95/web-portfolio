@@ -1,0 +1,109 @@
+@use "variables" as *;
+
+
+.project-page-title{
+    position: absolute;
+    top: 5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 $default-spacing 0;
+}
+
+section {
+    display: block;
+    position: relative;
+    width: 100%;
+    top: 12rem;
+}
+
+// 768px
+@media screen and (min-width: 48rem) {
+    .project-page-title{
+        top: 10rem;
+    }
+}
+
+.block-1{
+    background-color: $second-color-theme;
+    padding: $default-spacing;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    
+    .project-page-cover{
+        margin: 0 auto;
+        width: 40%;
+        height: 200px;
+        object-fit: cover;
+        margin: $default-spacing;
+
+    }
+
+    .project-page-desc1{
+        width: 60%;
+        color: $text-color-light;
+    }
+
+    .project-link-1{
+        width: 100%;
+        text-align: center;
+        margin: $default-spacing 0;
+
+        a{
+        color: $text-color-light;
+        text-decoration: none;
+        display: inline-block;
+        justify-content: center;
+        border: 2px solid $fourth-color-theme;
+        border-radius: 2rem;
+        padding: 1rem 1rem;
+        transition: ease-in-out 0.2s;
+
+            &:hover{
+                color: $text-color-light;
+                background-color: $fourth-color-theme;
+            }
+        }
+    }
+}
+
+
+// 1296px
+@media screen and (min-width: 81rem) {
+    .project-page-container{
+        justify-content: center;
+
+        .project-page-cover{
+            margin: 0 auto;
+            max-width: 40%;
+            height: 200px;
+            object-fit: cover;
+            margin: $default-spacing;
+    
+        }
+    
+        .project-page-desc1{
+            width: 40%;
+            margin: $default-spacing;
+        }
+
+    }
+}
+
+.block-2{
+    background-color: $third-color-theme;
+    padding: $default-spacing;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+
+        .project-page-image2{
+            max-width: 40%;
+        }
+   
+}

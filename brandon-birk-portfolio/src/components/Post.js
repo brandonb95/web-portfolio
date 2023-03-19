@@ -10,7 +10,6 @@ function Post({ post, imagePath }) {
    
       <img className="project-image" src={post.acf.cover.url} alt={post.acf.cover.alt}></img>
       <p className="project-excerpt">{acf.excerpt}</p>
-      
       <div className='project-button'><Link to={`/works/${post.slug}`}>Read More</Link></div>
       
 

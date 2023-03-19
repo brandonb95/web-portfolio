@@ -11,7 +11,7 @@ const Navbar = ({ handleShowHideNav }) => {
 
   return (
     <nav className="main-nav" onClick={closeNav}>
-      <ul>
+      <ul className='navbar-postpage'>
         <li>
           <HashLink to="/brandonbirk/home#about">About</HashLink>
         </li>
