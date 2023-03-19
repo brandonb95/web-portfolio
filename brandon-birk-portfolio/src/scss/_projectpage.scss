@@ -10,11 +10,22 @@
     margin: 0 0 $default-spacing 0;
 }
 
+// Handle the section spacing between each area
 section {
     display: block;
     position: relative;
     width: 100%;
-    top: 12rem;
+    top: 11rem;
+}
+
+.block-1, .block-2, .block-3, .block-4, .block-5{
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
 }
 
 // 768px
@@ -22,21 +33,20 @@ section {
     .project-page-title{
         top: 10rem;
     }
+
+    section {
+        top: 15rem;
+    }
 }
 
+// Problem/Solution Block
 .block-1{
     background-color: $second-color-theme;
-    padding: $default-spacing;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    position: relative;
-    justify-content: space-around;
-    align-items: center;
+   
     
     .project-page-cover{
         margin: 0 auto;
-        width: 40%;
+        width: 80%;
         height: 200px;
         object-fit: cover;
         margin: $default-spacing;
@@ -44,7 +54,7 @@ section {
     }
 
     .project-page-desc1{
-        width: 60%;
+        width: 80%;
         color: $text-color-light;
     }
 
@@ -75,7 +85,7 @@ section {
 // 1296px
 @media screen and (min-width: 81rem) {
     .project-page-container{
-        justify-content: center;
+        justify-content: space-around;
 
         .project-page-cover{
             margin: 0 auto;
@@ -94,16 +104,122 @@ section {
     }
 }
 
+// Software/Tools Used Block
 .block-2{
     background-color: $third-color-theme;
-    padding: $default-spacing;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    position: relative;
+    color: $text-color-light;
+
 
         .project-page-image2{
-            max-width: 40%;
+            margin: 0 auto;
+            width: 80%;
+            height: 200px;
+            object-fit: cover;
+            margin: $default-spacing;
         }
-   
+        
+        .project-page-desc2{
+            width: 80%;
+            margin: $default-spacing 0;
+        }
+
+        .project-page-desc3{
+            width: 80%;
+            margin: $default-spacing 0;
+        }
+}
+
+// 1296px
+@media screen and (min-width: 81rem) {
+    .block2{
+        .project-page-image2{
+            margin: 0 auto;
+            max-width: 30%;
+            height: 200px;
+            object-fit: cover;
+            margin: $default-spacing;
+    
+        }
+    
+        .project-page-desc2{
+            width: 40%;
+            margin: $default-spacing;
+        }
+
+        .project-page-desc3{
+            width: 40%;
+            margin: $default-spacing;
+        }
+
+    }
+}
+
+
+// Inspiration/Process Block
+
+.block-3{
+    // background-color: $third-color-theme;
+    // color: $text-color-light;
+
+        .project-page-image3{
+            margin: 0 auto;
+            width: 80%;
+            height: 200px;
+            object-fit: cover;
+            margin: $default-spacing;
+        }
+        
+        .project-page-desc4{
+            width: 80%;
+            margin: $default-spacing 0;
+        }
+
+}
+
+// Examples Block
+    .block-4{
+        background-color: $second-color-theme;
+        color: $text-color-light;
+
+        .project-page-image4{
+            margin: 0 auto;
+            width: 80%;
+            height: 200px;
+            object-fit: cover;
+            margin: $default-spacing;
+        }
+
+        .project-page-image5{
+            margin: 0 auto;
+            width: 80%;
+            height: 200px;
+            object-fit: cover;
+            margin: $default-spacing;
+        }
+
+        .project-page-desc5{
+            width: 80%;
+            margin: $default-spacing 0;
+        }
+    }
+
+// Final Result Block
+.block-5{
+    background-color: $third-color-theme;
+    color: $text-color-light;
+
+    .project-page-image6{
+        margin: 0 auto;
+        width: 80%;
+        height: 200px;
+        object-fit: cover;
+        margin: $default-spacing;
+    }
+
+
+    .project-page-desc6{
+        width: 80%;
+        margin: $default-spacing 0;
+        
+    }
 }
