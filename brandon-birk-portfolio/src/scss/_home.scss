@@ -1,74 +1,86 @@
 @use "variables" as *;
 
-.landing-banner{
-position: relative;
-z-index: -1;
-text-align: center;
-width: 100%;
-height: 100vh;
-background-color: $first-color-theme;
-color: $text-color-light;
+.landing-banner {
+  position: relative;
+  z-index: -1;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-color: $first-color-theme;
+  color: $text-color-light;
 
-.landing-title{
+  .landing-title {
     font-size: 2.5rem;
     font-weight: 800;
     font-family: Archivo, Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
     position: relative;
-    top: 15rem;
+    top: 11rem;
     text-transform: uppercase;
     align-items: center;
     margin: 0 $default-spacing;
-}
+  }
 
-}
-
-.bubbles{
+  .landing-subheading {
+    font-size: 1.4rem;
+    font-weight: 800;
+    font-family: Archivo, Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
     position: relative;
-    display: flex;
-    z-index: -100;
-    width: 100%;
-    justify-content: center;
-    span{
-        position: relative;
-        width: 30px;
-        height: 30px;
-        aspect-ratio: 1 / 1;
-        background: $fourth-color-theme;
-        margin: 0 4px;
-        border-radius: 50%;
-        box-shadow: 0 0 0 10px $second-color-theme,
-        0 0 50px $third-color-theme,
-        0 0 100px $third-color-theme;
-        animation: animate 15s linear infinite;
-        animation-duration: calc(160s/var(--i));
-        max-width: 30px;
-    }
-    span:nth-child(even){
-        background: $third-color-theme;
-        box-shadow: 0 0 0 10px $second-color-theme,
-        0 0 50px $fourth-color-theme,
-        0 0 100px $fourth-color-theme;
+    top: 12rem;
+    text-transform: uppercase;
+    align-items: center;
+    margin: 0 $default-spacing;
+  }
+}
+
+.bubbles {
+  position: relative;
+  display: flex;
+  z-index: -100;
+  width: 100%;
+  justify-content: center;
+
+  span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    aspect-ratio: 1 / 1;
+    background: $fourth-color-theme;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px $second-color-theme, 0 0 50px $third-color-theme,
+      0 0 100px $third-color-theme;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(160s / var(--i));
+    max-width: 30px;
+  }
+  span:nth-child(even) {
+    background: $third-color-theme;
+    box-shadow: 0 0 0 10px $second-color-theme, 0 0 50px $fourth-color-theme,
+      0 0 100px $fourth-color-theme;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: translateY(100vh) scale(0);
     }
 
-    @keyframes animate{
-        0%{
-            transform: translateY(100vh) scale(0);
-        }
-
-        100%{
-            transform: translateY(-10vh) scale(1);
-        }
+    100% {
+      transform: translateY(-10vh) scale(1);
     }
+  }
 }
 
 // 768px - Tablet
 @media screen and (min-width: 48rem) {
-
-    .landing-banner{
-
-        .landing-title{
-            top: 17rem;
-        }
+  .landing-banner {
+    .landing-title {
+      top: 15rem;
     }
+
+    .landing-subheading {
+      top: 15rem;
+    }
+  }
 }

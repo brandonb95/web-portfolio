@@ -1,5 +1,9 @@
 @use "variables" as *;
 
+.project-page-container {
+  background-color: $background-color-light;
+}
+
 .project-page-title {
   position: absolute;
   top: 5rem;
@@ -30,6 +34,7 @@ section {
   justify-content: space-around;
   align-items: center;
   line-height: 2rem;
+  min-height: 100vh;
 }
 
 // 768px

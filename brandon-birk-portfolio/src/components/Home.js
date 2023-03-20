@@ -8,7 +8,7 @@ import Contact from './Contact';
 
 
 const Home = () => {
-    const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/pages/6'
+    const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/pages/6?_embed'
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 
@@ -65,10 +65,9 @@ const Home = () => {
                 <span style={{'--i': '14'}}></span>
             </div>
             
-                <h1 className="landing-title animate__animated animate__bounceIn">{restData.title.rendered}</h1>
-                <div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
-                </div>
-                
+                <h1 className="landing-title animate__animated animate__bounceIn">{restData.acf.heading}</h1>
+                <h2 className="landing-subheading animate__animated animate__bounceIn">{restData.acf.subheading}</h2>
+
             </article>
 
 
@@ -76,15 +75,15 @@ const Home = () => {
             
                 </header>
 
-                <section id="about">
+                <article id="about">
                 <About />
-                </section>
-                <section id="works">
+                </article>
+                <article id="works">
                 <Works />
-                </section>
-                <section id="contact">
+                </article>
+                <article id="contact">
                 <Contact />
-                </section>
+                </article>
 
                 </>
 

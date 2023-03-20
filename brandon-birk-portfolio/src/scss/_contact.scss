@@ -2,14 +2,20 @@
 
 .contact-container{
     text-align: center;
-    height: 40vh;
+    height: 100vh;
     background-color: $first-color-theme;
-
+    padding: $default-spacing;
+    
     .contact-title{
         padding: $default-spacing 0;
+        font-size: 3rem;
+        color: $second-color-theme;
     }
 
     .contact-blurb{
         margin: 0 $default-spacing;
+        color: $second-color-theme;
+
     }
+    
 }

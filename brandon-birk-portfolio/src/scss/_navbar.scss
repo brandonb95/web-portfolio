@@ -9,8 +9,7 @@
     justify-content: center;
     bottom: 0;
     height: 0;
-    color: $text-color-light;
-    background-color: $fourth-color-theme;
+    background-color: #FFF;
     margin: 0 auto;
     transition: height 0.5s ease, visibility 0s;
 
@@ -26,12 +25,14 @@
           padding: 1rem 0;
 
           a{
-            color: $text-color-light;
+            color: $first-color-theme;
             text-decoration: none;
             transition:  0.5s ease;
 
             &:hover{
-              color: $fourth-color-theme;
+              padding: 0.5rem;
+              border-radius: 5%;
+              background-color: $second-color-theme;
             }
           }
         }
@@ -52,11 +53,18 @@
     left: 1rem;
     display: block;
     color: transparent;
-    background-color: $third-color-theme;
+    background-color: $second-color-theme;
+    border: 5px solid $fourth-color-theme;
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    border: none;
+    transition: 0.3s ease-in-out;
+    
+    &:hover, &:active, &:focus{
+      background-color: $fourth-color-theme;
+      cursor: pointer;
+
+    }
   }
   
   .hamburger-icon {
@@ -70,7 +78,7 @@
     display: block;
     position: relative;
     z-index: 99;
-    transform: translate(1.05em);
+    transform: translate(0.75em);
     width: 36px;
     height: 4px;
     border-radius: 2px;
@@ -121,6 +129,20 @@
       transition: none;
       overflow: visible;
       
+      ul{
+        li{
+          a{
+            color: $text-color-light;
+
+            &:hover{
+              padding: 0.2rem;
+              color: $text-color-light;
+              background-color: $second-color-theme;
+              border-radius: 5%;
+            }
+          }
+        }
+      }
       // For Single Project Page
     .navbar-postpage{
       li{

@@ -1,11 +1,11 @@
 @use "variables" as *;
 
-#about{
-}
+
 
 #post-13{
     height: 100vh;
     overflow: hidden;
+    background-color: $background-color-light;
 
     // Profile Image
     img{
@@ -17,6 +17,7 @@
 
     .about-description{
         margin: $default-spacing 3rem;
+        color: $first-color-theme;
         font-family: 'Karla', Arial, Helvetica, sans-serif;
         line-height: 2rem;
 

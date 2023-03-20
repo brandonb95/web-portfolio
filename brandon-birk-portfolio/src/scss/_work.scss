@@ -3,9 +3,10 @@
 .work-container{
     display: flex;
     flex-wrap: wrap;
-    background-color: $second-color-theme;
+    background-color: $background-color-light;
     justify-content: space-around;
     text-align: center;
+    min-height: 100vh;
     
     .single-project{
         max-width: 35%;
@@ -16,7 +17,8 @@
 
         .project-title{
             padding: $default-spacing 0;
-            color: $text-color-light;
+            font-size: 1.4rem;
+            color: $third-color-theme;
         }
 
         .project-image{
@@ -31,7 +33,7 @@
         .project-excerpt{
             margin: 0 0 3rem 0;
             height: 3rem;
-            color: $text-color-light;
+            color: $first-color-theme;
         }
     }
 }
@@ -43,13 +45,14 @@
     text-decoration: none;
     display: inline-block;
     justify-content: center;
-    color: $text-color-light;
-    border: 2px solid $fourth-color-theme;
+    color: $first-color-theme;
+    border: 2px solid $first-color-theme;
     border-radius: 2rem;
     padding: 1rem 1rem;
     transition: ease-in-out 0.2s;
     &:hover{
-        background-color: $fourth-color-theme;
+        background-color: $first-color-theme;
+        color: $text-color-light;
     }
     }
 }
