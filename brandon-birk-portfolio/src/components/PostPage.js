@@ -80,7 +80,7 @@ const PostPage = () => {
             <section id="final-result">
                 <div className="block-5">
 
-                <img className="project-page-image6"src={restData.acf.image_5.url} alt={restData.acf.image_5.alt}></img>
+                <img className="project-page-image6"src={restData.acf.image_6.url} alt={restData.acf.image_6.alt}></img>
 
                 <p className="project-page-desc6">{restData.acf.content_description_5}</p>
 
