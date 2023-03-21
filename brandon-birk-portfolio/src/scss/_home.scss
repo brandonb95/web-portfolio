@@ -37,6 +37,7 @@
 .bubbles {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   z-index: -100;
   width: 100%;
   justify-content: center;

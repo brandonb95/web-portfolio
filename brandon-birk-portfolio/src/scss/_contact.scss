@@ -4,7 +4,7 @@
     text-align: center;
     height: 100vh;
     background-color: $first-color-theme;
-    padding: $default-spacing;
+    padding: 10rem $default-spacing;
     
     .contact-title{
         padding: $default-spacing 0;
@@ -18,4 +18,25 @@
 
     }
     
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 5rem;
+    font-size: 3rem;
+
+    .solo-social{ 
+        transition: 0.5s ease;
+        margin: 0 1rem;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+
+        a{
+            color: $second-color-theme;
+        }
+    }
 }

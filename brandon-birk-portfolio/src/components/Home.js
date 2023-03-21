@@ -59,7 +59,7 @@ const Home = () => {
                 <span style={{'--i': '21'}}></span>
                 <span style={{'--i': '17'}}></span>
                 <span style={{'--i': '11'}}></span>
-                <span style={{'--i': '13'}}></span>
+                <span style={{'--i': '10'}}></span>
                 <span style={{'--i': '24'}}></span>
                 <span style={{'--i': '16'}}></span>
                 <span style={{'--i': '14'}}></span>
