@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import HeaderPostPage from './HeaderPostPage'
+import ScrollButton from './ScrollButton';
 
 const PostPage = () => {
     const { slug } = useParams()
@@ -88,6 +89,8 @@ const PostPage = () => {
             </section>
 
             </article>
+            
+            <ScrollButton />
             </>   
 
         :

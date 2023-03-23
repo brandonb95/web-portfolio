@@ -1,0 +1,26 @@
+@use "variables" as *;
+
+.to-top{
+   position: fixed; 
+   background-color: transparent;
+   border: none;
+   right: 5%;
+   bottom: 40px;
+   height: 20px;
+   font-size: 3rem;
+   z-index: 1;
+   cursor: pointer;
+   color: $second-color-theme;
+   transition: 0.3s ease-in-out;
+
+   &:active{
+    color: $fourth-color-theme;
+   }
+}
+
+@media screen and (min-width: 48rem) {
+    .to-top{
+        font-size: 4rem;
+        bottom: 80px;
+    }
+  }

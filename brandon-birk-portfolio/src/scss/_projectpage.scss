@@ -11,6 +11,7 @@
   text-align: center;
   width: 100%;
   margin: 0 0 $default-spacing 0;
+  color: $third-color-theme;
 }
 
 // Handle the section spacing between each area
@@ -50,7 +51,7 @@ section {
 
 // Problem/Solution Block
 .block-1 {
-  background-color: $second-color-theme;
+  background-color: $background-color-light;
 
   .project-page-cover {
     margin: 0 auto;
@@ -62,7 +63,7 @@ section {
 
   .project-page-desc1 {
     width: 80%;
-    color: $text-color-light;
+    color: $first-color-theme;
   }
 
   .project-link-1 {
@@ -71,18 +72,19 @@ section {
     margin: $default-spacing 0;
 
     a {
-      color: $text-color-light;
+      color: $third-color-theme;
+      font-weight: 500;
       text-decoration: none;
       display: inline-block;
       justify-content: center;
-      border: 2px solid $fourth-color-theme;
+      border: 2px solid $third-color-theme;
       border-radius: 2rem;
       padding: 1rem 1rem;
       transition: ease-in-out 0.2s;
 
       &:hover {
         color: $text-color-light;
-        background-color: $fourth-color-theme;
+        background-color: $third-color-theme;
       }
     }
   }
@@ -188,6 +190,7 @@ section {
 .block-3 {
   // background-color: $third-color-theme;
   // color: $text-color-light;
+  color: $first-color-theme;
   margin: $default-spacing 0;
   .project-page-image3 {
     margin: 0 auto;
@@ -221,7 +224,7 @@ section {
 
 // Examples Block
 .block-4 {
-  background-color: $second-color-theme;
+  background-color: $third-color-theme;
   color: $text-color-light;
 
   .project-page-image4 {
@@ -276,8 +279,8 @@ section {
 
 // Final Result Block
 .block-5 {
-  background-color: $third-color-theme;
-  color: $text-color-light;
+  background-color: $background-color-light;
+  color: $first-color-theme;
 
   .project-page-image6 {
     margin: 0 auto;

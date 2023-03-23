@@ -5,6 +5,7 @@ import Header from './Header';
 import About from './About';
 import Works from './Works';
 import Contact from './Contact';
+import ScrollButton from './ScrollButton';
 
 
 const Home = () => {
@@ -85,6 +86,7 @@ const Home = () => {
                 <Contact />
                 </article>
 
+                <ScrollButton />
                 </>
 
                 :
