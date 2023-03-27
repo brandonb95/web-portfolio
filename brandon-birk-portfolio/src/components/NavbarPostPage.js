@@ -1,6 +1,10 @@
 import { HashLink } from 'react-router-hash-link';
+import { useState, useEffect } from 'react'
 
 const Navbar = ({ handleShowHideNav }) => {
+
+  const [isLoading, setIsLoading] = useState(true);
+
   function closeNav(e) {
     if (window.innerWidth < 600) {
       handleShowHideNav();
@@ -10,6 +14,9 @@ const Navbar = ({ handleShowHideNav }) => {
   }
 
   return (
+    <>
+    {isLoading ?
+                <>
     <nav className="main-nav" onClick={closeNav}>
       <ul className='navbar-postpage'>
         <li>
@@ -23,7 +30,15 @@ const Navbar = ({ handleShowHideNav }) => {
         </li>
       </ul>
     </nav>
-  );
-};
+
+    </> 
+    :
+        
+        <h2>Post Content Not Loaded</h2>    
+        }
+    </>
+
+  )
+}
 
 export default Navbar;

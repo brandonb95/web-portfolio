@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import HeaderPostPage from './HeaderPostPage'
 import ScrollButton from './ScrollButton';
+import RelatedPosts from './RelatedPosts';
 
 const PostPage = () => {
     const { slug } = useParams()
@@ -25,6 +26,20 @@ const PostPage = () => {
         
     }, [restPath])
     
+
+    // This code will retrieve the previous and next post
+    const [relatedPosts, setRelatedPosts] = useState([])
+
+        useEffect(() => {
+            const fetchRelatedPosts = async () => {
+            const response = await fetch('http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works')
+            if (response.ok) {
+                const data = await response.json()
+                setRelatedPosts(data)
+            }
+            }
+            fetchRelatedPosts()
+        }, [])
     
     return (
         <>
@@ -88,10 +103,15 @@ const PostPage = () => {
                 </div>
             </section>
 
+            {relatedPosts.length > 0 && <RelatedPosts relatedPosts={relatedPosts} />}
+
             </article>
             
+
             <ScrollButton />
+            
             </>   
+
 
         :
         

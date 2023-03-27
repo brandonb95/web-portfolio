@@ -13,6 +13,7 @@ const Home = () => {
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 
+    
     useEffect(() => {
         const fetchData = async () => {
             const response = await fetch(restPath)
@@ -26,6 +27,41 @@ const Home = () => {
         }
         fetchData()
     }, [restPath])
+
+    useEffect(() => {
+        console.log('Delaying scrolling...');
+        // Wait 1 second and then scroll to the hash
+        const timeoutId = setTimeout(() => {
+          console.log('Scrolling to the hash...');
+          const hash = window.location.hash;
+          if (hash) {
+            const element = document.querySelector(hash);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        }, 2000);
+    
+        // Wait for NavbarPostPage to mount before scrolling to the hash
+        const observer = new MutationObserver(() => {
+          const hash = window.location.hash;
+          if (hash) {
+            const element = document.querySelector(hash);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        });
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
+    
+        return () => {
+          clearTimeout(timeoutId);
+          observer.disconnect();
+        };
+      }, []);
     
       
     return (
