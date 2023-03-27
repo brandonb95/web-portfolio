@@ -314,3 +314,52 @@ section {
       }
     }
   }
+
+  #related-posts{
+    background-color: $first-color-theme;
+    color: $second-color-theme;
+    height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 17rem;
+
+    h3{
+      width: 100%;
+      padding: $default-spacing;
+      text-align: center;
+    }
+
+    ul{
+      list-style: none;
+      display: flex;
+      justify-content: center;
+
+      li{
+      
+        a{
+          text-decoration: none;
+          color: $text-color-light;
+          border: 2px solid $fourth-color-theme;
+          border-radius: 2rem;
+          padding: 0.3rem 1rem;
+          transition: 0.3s ease;
+          margin: 0 1rem;
+          background-color: $fourth-color-theme;
+
+          &:hover{
+            background-color: $second-color-theme;
+          }
+        }
+    }
+  }
+}
+
+@media screen and (min-width: 48rem) {
+#related-posts{
+  padding-bottom: 12rem;
+}
+
+
+}
