@@ -14,6 +14,19 @@
   color: $third-color-theme;
 }
 
+
+.logo-name-postpage{
+  padding-top: 1rem;
+  text-transform: uppercase;
+
+  a{
+    color: $third-color-theme;
+    text-decoration: none;
+    font-family: Archivo, Arial, Helvetica, sans-serif;
+    font-weight: 800;
+
+  }
+}
 // Handle the section spacing between each area
 section {
   display: block;
@@ -30,6 +43,7 @@ section {
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
+  gap: 0;
   width: 100%;
   position: relative;
   justify-content: space-around;

@@ -18,6 +18,8 @@ const Navbar = ({ handleShowHideNav }) => {
     {isLoading ?
                 <>
     <nav className="main-nav" onClick={closeNav}>
+    <h2 className='logo-name-postpage'><HashLink to="/brandonbirk/home">BrandonBirk</HashLink></h2>
+
       <ul className='navbar-postpage'>
         <li>
           <HashLink to="/brandonbirk/home#about">About</HashLink>

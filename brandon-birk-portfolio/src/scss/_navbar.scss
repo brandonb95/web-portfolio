@@ -1,8 +1,8 @@
 @use "variables" as *;
 
 .main-nav {
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
+    text-align: center;
     position: fixed;
     z-index: 98;
     width: 100vw;
@@ -12,13 +12,24 @@
     background-color: #FFF;
     margin: 0 auto;
     transition: height 0.5s ease, visibility 0s;
+  
+    .logo-name{
+      padding-top: 1rem;
+      text-transform: uppercase;
 
-    
+      a{
+        color: $third-color-theme;
+        text-decoration: none;
+        font-family: Archivo, Arial, Helvetica, sans-serif;
+        font-weight: 800;
+
+      }
+    }
 
     ul{
         display: block;
         list-style: none;
-        padding: $default-spacing 0;
+        // padding: 1rem 0;
         transition: height 0.5s ease, visibility 0s;
 
         li{
@@ -43,6 +54,92 @@
         visibility: visible;
         height: 240px;
       }
+}
+
+ // 768px - Tablet
+ @media screen and (min-width: 48rem) {
+
+  .main-nav {
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    z-index: 15;
+    color: $text-color-light;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    transition: none;
+    overflow: visible;
+    
+    .logo-name{
+      position: relative;
+      color: $text-color-light;
+      padding-top: 0.5rem;
+      
+      a{
+        color: $text-color-light;
+      }
+    }
+
+    ul{
+      li{
+        a{
+          color: $text-color-light;
+
+          &:hover{
+            // padding: 0.2rem;
+            color: $text-color-light;
+            background-color: $second-color-theme;
+            border-radius: 5%;
+          }
+        }
+      }
+    }
+    // For Single Project Page
+  .navbar-postpage{
+    li{
+        a{
+        color: $text-color-dark;
+        }
+    }
+  }
+    .show & {
+      display: flex;
+      transition: none;
+    }
+
+    ul{
+      display: flex;
+      text-align: center;
+
+    li {
+      text-decoration: none;
+      list-style: none;
+      padding: 1rem;
+    }
+
+    a {
+      padding: 0;
+      text-align: center;
+      border-top: none;
+      @at-root .main-nav li:not(:first-child) a {
+        border-top: none;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent;
+        color: $primary-theme-color;
+        transition: 0.5s;
+      }
+    }
+
+  }
+  }
+
 }
 
 // Mobile Menu
@@ -113,77 +210,6 @@
       border: none;
       background: none;
       margin-right: 0.75em;
-    }
-
-    .main-nav {
-      position: absolute;
-      top: 0;
-      background-color: transparent;
-      z-index: 15;
-      color: $text-color-light;
-      height: 100px;
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      transition: none;
-      overflow: visible;
-      
-      ul{
-        li{
-          a{
-            color: $text-color-light;
-
-            &:hover{
-              padding: 0.2rem;
-              color: $text-color-light;
-              background-color: $second-color-theme;
-              border-radius: 5%;
-            }
-          }
-        }
-      }
-      // For Single Project Page
-    .navbar-postpage{
-      li{
-          a{
-          color: $text-color-dark;
-          }
-      }
-    }
-      .show & {
-        display: flex;
-        transition: none;
-      }
-  
-      ul{
-        display: flex;
-        text-align: center;
-
-      li {
-        text-decoration: none;
-        list-style: none;
-        padding: 1rem;
-      }
-  
-      a {
-        padding: 0;
-        text-align: center;
-        border-top: none;
-        @at-root .main-nav li:not(:first-child) a {
-          border-top: none;
-        }
-  
-        &:hover,
-        &:focus,
-        &:active {
-          background-color: transparent;
-          color: $primary-theme-color;
-          transition: 0.5s;
-        }
-      }
-
-    }
     }
   
   }

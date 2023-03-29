@@ -11,6 +11,7 @@ const Navbar = ({ handleShowHideNav }) => {
 
   return (
     <nav className="main-nav" onClick={closeNav}>
+      <h2 className='logo-name'><a href="#home">BrandonBirk</a></h2>
       <ul>
         <li>
           <a href="#about">About</a>

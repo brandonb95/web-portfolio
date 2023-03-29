@@ -59,7 +59,7 @@ const PostPage = () => {
 
                 <p className="project-page-desc1">{restData.acf.problem}</p>
 
-                <p className="project-link-1"><a href={restData.acf.link_1} target="_blank">{restData.acf.link_1}</a></p>
+                <p className="project-link-1"><a href={restData.acf.link_1.url} target="_blank">{restData.acf.link_1.title}</a></p>
                 </div>
             </section>
 

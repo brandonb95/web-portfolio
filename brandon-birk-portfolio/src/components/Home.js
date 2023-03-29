@@ -73,7 +73,7 @@ const Home = () => {
          
         <Header />
         
-        <article className="landing-banner">
+        <article id='home' className="landing-banner">
 
             <div className="bubbles">
                 <span style={{'--i': '19'}}></span>
