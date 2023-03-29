@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 const Navbar = ({ handleShowHideNav }) => {
   function closeNav(e) {
@@ -11,7 +12,7 @@ const Navbar = ({ handleShowHideNav }) => {
 
   return (
     <nav className="main-nav" onClick={closeNav}>
-      <h2 className='logo-name'><a href="home">BrandonBirk</a></h2>
+      <div className='logo-name'><a href="home"><Logo /></a></div>
       <ul>
         <li>
           <a href="#about">About</a>

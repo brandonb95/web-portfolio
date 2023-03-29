@@ -17,17 +17,22 @@
       padding-top: 1rem;
       text-transform: uppercase;
       transition: 0.3s ease;
-    
+      width: 8rem;
+      position: absolute;
+      justify-content: center;
+      fill: $third-color-theme;
+
       &:hover, &:focus, &:active {
-        transform: scale(1.05);
+        transform: scale(1.1);
         
       }
+
       a{
         color: $third-color-theme;
         text-decoration: none;
         font-family: Archivo, Arial, Helvetica, sans-serif;
         font-weight: 800;
-        
+
       }
     }
 
@@ -74,21 +79,26 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     transition: none;
     overflow: visible;
     
     .logo-name{
       position: relative;
-      color: $text-color-light;
       padding-top: 0.5rem;
+      width: 7rem;
+      fill: #fff;
+      align-items: center;
       
       a{
         color: $text-color-light;
+
       }
     }
 
     ul{
+      padding-top: 1rem;
+
       li{
         a{
           color: $text-color-light;

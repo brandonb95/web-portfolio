@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 27.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#3E1162;}
-</style>
-<g>
+import React from 'react';
+
+const Logo = () => {
+  return (
+    <div className="logo-name">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.9 595.3">
+      <g>
 	<g>
 		<path class="st0" d="M368.89,190.32l-8.87,32.95c-4.12,15.52-14.89,24.71-32.32,27.88c15.21,5.7,20.28,17.43,15.21,35.49
 			L327.7,344.3c-5.7,20.59-21.23,30.73-47.53,30.73h-56.4l29.15-109.62H233.6l7.92-30.1h19.64l25.98-97.58h42.14
@@ -21,4 +20,8 @@
 			C245.33,132.01,240.58,125.04,227.27,125.04z"/>
 	</g>
 </g>
-</svg>
+      </svg>
+    </div>
+  );
+}
+export default Logo;

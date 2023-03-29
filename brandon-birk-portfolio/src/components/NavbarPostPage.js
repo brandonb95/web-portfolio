@@ -1,5 +1,6 @@
 import { HashLink } from 'react-router-hash-link';
 import { useState, useEffect } from 'react'
+import Logo from '../logo.svg';
 
 const Navbar = ({ handleShowHideNav }) => {
 
@@ -18,7 +19,7 @@ const Navbar = ({ handleShowHideNav }) => {
     {isLoading ?
                 <>
     <nav className="main-nav" onClick={closeNav}>
-    <h2 className='logo-name-postpage'><HashLink to="/brandonbirk/home">BrandonBirk</HashLink></h2>
+    <div className='logo-name'><HashLink to="/brandonbirk/home"><img src={Logo} alt="Site Logo" /></HashLink></div>
 
       <ul className='navbar-postpage'>
         <li>
