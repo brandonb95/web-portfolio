@@ -23,15 +23,16 @@
             padding: $default-spacing 0;
             font-size: 1.4rem;
             color: $third-color-theme;
+            font-family: 'Tilt Warp', Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            font-weight: 800;
         }
 
         .project-image{
             padding: 1rem 0;
             max-width: 100%;
-            // position: absolute;
             width: 200px;
-            height: 200px;
-            object-fit: cover;
+            height: auto;
         }
 
         .project-excerpt{
