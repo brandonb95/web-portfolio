@@ -7,13 +7,17 @@
     justify-content: space-around;
     text-align: center;
     min-height: 100vh;
-    
+    padding: $default-spacing 0;
+
     .single-project{
-        max-width: 35%;
+        background-color: #fff;
+        padding: $default-spacing;
+        width: 80%;
         position: relative;
         z-index: 5;
-        margin: 0 $default-spacing;
+        margin: $default-spacing;
         justify-content: center;
+        
 
         .project-title{
             padding: $default-spacing 0;
@@ -31,9 +35,19 @@
         }
 
         .project-excerpt{
-            margin: 0 0 3rem 0;
-            height: 5rem;
             color: $first-color-theme;
+            position: relative;
+        }
+    }
+
+    // 512px 
+@media screen and (min-width: 32rem) {
+        .single-project{
+        max-width: 45%;
+        }
+        
+        .project-excerpt{
+            min-height: 5rem;
         }
     }
 }
@@ -61,7 +75,11 @@
 @media screen and (min-width: 48rem) {
     .work-container {
         .single-project{
-        max-width: 20%;
+        max-width: 35%;
+        }
+
+        .project-excerpt{
+            min-height: 4rem;
         }
     }
 }
@@ -72,7 +90,7 @@
         justify-content: center;
         gap: $default-spacing;
         .single-project{
-        max-width: 20%;
+        max-width: 25%;
         }
     }
 }

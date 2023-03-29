@@ -3,10 +3,10 @@
 
 
 #post-13{
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     background-color: $background-color-light;
-    padding: 5rem 0;
+    padding: $default-spacing 0;
 
     // Profile Image
     img{
@@ -21,17 +21,18 @@
         color: $first-color-theme;
         font-family: 'Karla', Arial, Helvetica, sans-serif;
         line-height: 2rem;
-
+        position: relative;
     }
 }
 
-// // Bio Image
-// .wp-image-31{
-//     display: flex;
-//     margin: $default-spacing auto;
-//     max-width: 25%;
-//     height: auto;
-// }
+// 512px 
+@media screen and (min-width: 32rem) {
+    #post-13{
+        img{
+            width: 30%;
+        }
+    }
+}
 
 .entry-content{
     position: relative;

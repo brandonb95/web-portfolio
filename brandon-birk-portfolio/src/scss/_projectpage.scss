@@ -18,13 +18,19 @@
 .logo-name-postpage{
   padding-top: 1rem;
   text-transform: uppercase;
+  transition: 0.3s ease;
+  &:hover, &:focus, &:active {
+    transform: scale(1.05);
+    
+  }
 
   a{
     color: $third-color-theme;
     text-decoration: none;
     font-family: Archivo, Arial, Helvetica, sans-serif;
     font-weight: 800;
-
+    transition: 0.3s ease;
+  
   }
 }
 // Handle the section spacing between each area
@@ -70,8 +76,8 @@ section {
   .project-page-cover {
     margin: 0 auto;
     width: 80%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
+    // object-fit: cover;
     margin: $default-spacing;
   }
 
@@ -136,8 +142,8 @@ section {
   .project-page-image2 {
     margin: 0 auto;
     width: 80%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
+    // object-fit: cover;
     margin: $default-spacing;
   }
 
@@ -157,8 +163,7 @@ section {
   .block-2 {
     .project-page-image2 {
       margin: 0 auto;
-      max-width: 40%;
-      height: 200px;
+      max-width: 30%;
       object-fit: cover;
       margin: $default-spacing;
     }
@@ -181,9 +186,7 @@ section {
     justify-content: center;
     .project-page-image2 {
       margin: 0 auto;
-      max-width: 30%;
-      height: 200px;
-      object-fit: cover;
+      // object-fit: cover;
       margin: $default-spacing;
     }
 
@@ -209,8 +212,8 @@ section {
   .project-page-image3 {
     margin: 0 auto;
     width: 80%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
+    // object-fit: cover;
     margin: $default-spacing;
   }
 
@@ -224,8 +227,7 @@ section {
 @media screen and (min-width: 48rem) {
   .project-page-image3 {
     margin: 0 auto;
-    max-width: 50%;
-    height: 200px;
+    max-width: 40%;
     object-fit: cover;
     margin: $default-spacing;
   }
@@ -271,7 +273,7 @@ section {
     .project-page-image4 {
       margin: 0 auto;
       max-width: 30%;
-      height: 200px;
+      height: 300px;
       object-fit: cover;
       margin: $default-spacing;
     }
@@ -279,7 +281,7 @@ section {
     .project-page-image5 {
       margin: 0 auto;
       max-width: 30%;
-      height: 200px;
+      height: 300px;
       object-fit: cover;
       margin: $default-spacing;
     }
@@ -299,12 +301,12 @@ section {
   .project-page-image6 {
     margin: 0 auto;
     width: 80%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
     margin: $default-spacing;
   }
 
-  .project-page-desc5 {
+  .project-page-desc6 {
     width: 80%;
     margin: $default-spacing 0;
   }
@@ -313,11 +315,12 @@ section {
 @media screen and (min-width: 48rem) {
     .block-5 {
       justify-content: center;
+      gap: $default-spacing;
   
       .project-page-image6 {
         margin: 0 auto;
         max-width: 30%;
-        height: 200px;
+        height: auto;
         object-fit: cover;
         margin: $default-spacing;
       }

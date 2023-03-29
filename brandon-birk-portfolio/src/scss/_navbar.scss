@@ -16,13 +16,18 @@
     .logo-name{
       padding-top: 1rem;
       text-transform: uppercase;
-
+      transition: 0.3s ease;
+    
+      &:hover, &:focus, &:active {
+        transform: scale(1.05);
+        
+      }
       a{
         color: $third-color-theme;
         text-decoration: none;
         font-family: Archivo, Arial, Helvetica, sans-serif;
         font-weight: 800;
-
+        
       }
     }
 
@@ -39,10 +44,10 @@
             color: $first-color-theme;
             text-decoration: none;
             transition:  0.5s ease;
-
+            padding: 0.5rem;
+            border-radius: 5%;
             &:hover{
-              padding: 0.5rem;
-              border-radius: 5%;
+              
               background-color: $second-color-theme;
             }
           }
@@ -97,6 +102,7 @@
         }
       }
     }
+    
     // For Single Project Page
   .navbar-postpage{
     li{
