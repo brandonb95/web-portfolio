@@ -13,11 +13,11 @@
     margin: 0 auto;
     transition: height 0.5s ease, visibility 0s;
   
-    .logo-name{
+    .logo-name-postpage{
       padding-top: 1rem;
       text-transform: uppercase;
       transition: 0.3s ease;
-      width: 8rem;
+      width: 4rem;
       position: absolute;
       justify-content: center;
       fill: $third-color-theme;
@@ -94,6 +94,10 @@
         color: $text-color-light;
 
       }
+    }
+
+    .logo-name-postpage{
+      position: relative;
     }
 
     ul{

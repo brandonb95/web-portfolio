@@ -74,11 +74,11 @@ const PostPage = () => {
             <section id="software-tools-used" >
                 <div className="block-2" data-aos="fade-up" data-aos-duration="1000">
 
-                <a href="#proj-image2-lightbox">
+                <a href="#proj-image2-lightbox" className='lightbox-container-image2'>
                 <img className="project-page-image2"src={restData.acf.image_2.url} alt={restData.acf.image_2.alt}></img>
                 </a>
 
-                <a href="#software-tools-used" class="lightbox" id="proj-image2-lightbox">
+                <a href="#software-tools-used" className="lightbox" id="proj-image2-lightbox">
                 <span style={{ backgroundImage: `url(${restData.acf.image_2.url})` }}></span>
                 </a>
 
@@ -92,11 +92,11 @@ const PostPage = () => {
             <section id="inspiration">
                 <div className="block-3" data-aos="fade-down" data-aos-duration="1000">
 
-                <a href="#proj-image3-lightbox">
+                <a href="#proj-image3-lightbox" className='lightbox-container-image3'>
                 <img className="project-page-image3"src={restData.acf.image_3.url} alt={restData.acf.image_3.alt}></img>
                 </a>
 
-                <a href="#inspiration" class="lightbox" id="proj-image3-lightbox">
+                <a href="#inspiration" className="lightbox" id="proj-image3-lightbox">
                 <span style={{ backgroundImage: `url(${restData.acf.image_3.url})` }}></span>
                 </a>
 
@@ -108,19 +108,19 @@ const PostPage = () => {
             <section id="examples">
                 <div className="block-4" data-aos="fade-up" data-aos-duration="1000">
 
-                <a href="#proj-image4-lightbox">
+                <a href="#proj-image4-lightbox" className='lightbox-container-image4'>
                 <img className="project-page-image4"src={restData.acf.image_4.url} alt={restData.acf.image_4.alt}></img>
                 </a>
 
-                <a href="#examples" class="lightbox" id="proj-image4-lightbox">
+                <a href="#examples" className="lightbox" id="proj-image4-lightbox">
                 <span style={{ backgroundImage: `url(${restData.acf.image_4.url})` }}></span>
                 </a>
 
-                <a href="#proj-image5-lightbox">
+                <a href="#proj-image5-lightbox" className='lightbox-container-image5'>
                 <img className="project-page-image5"src={restData.acf.image_5.url} alt={restData.acf.image_5.alt}></img>
                 </a>
 
-                <a href="#examples" class="lightbox" id="proj-image5-lightbox">
+                <a href="#examples" className="lightbox" id="proj-image5-lightbox">
                 <span style={{ backgroundImage: `url(${restData.acf.image_5.url})` }}></span>
                 </a>
 
@@ -132,11 +132,11 @@ const PostPage = () => {
             <section id="final-result">
                 <div className="block-5" data-aos="fade-down" data-aos-duration="1000">
 
-                <a href="#proj-image6-lightbox">
+                <a href="#proj-image6-lightbox" className='lightbox-container-image6'>
                 <img className="project-page-image6"src={restData.acf.image_6.url} alt={restData.acf.image_6.alt}></img>
                 </a>
 
-                <a href="#final-result" class="lightbox" id="proj-image6-lightbox">
+                <a href="#final-result" className="lightbox" id="proj-image6-lightbox">
                 <span style={{ backgroundImage: `url(${restData.acf.image_6.url})` }}></span>
                 </a>
 

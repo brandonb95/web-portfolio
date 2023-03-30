@@ -28,7 +28,7 @@ const Navbar = ({ handleShowHideNav }) => {
     {isLoading ?
                 <>
     <nav className="main-nav" onClick={closeNav} data-aos="fade-down" data-aos-duration="1000">
-    <div className='logo-name'><HashLink to="/brandonbirk/home"><img src={Logo} alt="Site Logo" /></HashLink></div>
+    <div className='logo-name-postpage'><HashLink to="/brandonbirk/home"><img src={Logo} alt="Site Logo" /></HashLink></div>
 
       <ul className='navbar-postpage'>
         <li>

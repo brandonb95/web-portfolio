@@ -50,11 +50,18 @@ section {
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0;
   width: 100%;
   position: relative;
   justify-content: space-around;
+  align-items: center;
   line-height: 2rem;
+}
+
+#problems,
+#software-tools-used,
+#inspiration,
+#examples,
+#final-result {
   min-height: 100vh;
 }
 
@@ -70,7 +77,9 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
+  height: 100vh;
   padding: 1em;
+  margin: 0;
   background: rgba(0, 0, 0, 0.8);
 }
 
@@ -177,12 +186,21 @@ section {
   color: $text-color-light;
 
   .block-2 {
-    .project-page-image2 {
+    .lightbox-container-image2 {
       margin: 0 auto;
       width: 80%;
       height: auto;
       // object-fit: cover;
       margin: $default-spacing;
+      transition: 0.3s ease;
+
+      &:hover,
+      &:focus {
+        filter: brightness(0.4);
+      }
+      img {
+        width: 100%;
+      }
     }
 
     .project-page-desc2 {
@@ -201,11 +219,15 @@ section {
 @media screen and (min-width: 48rem) {
   #software-tools-used {
     .block-2 {
-      .project-page-image2 {
+      padding-top: 5rem;
+      .lightbox-container-image2 {
         margin: 0 auto;
-        max-width: 30%;
+        width: 40%;
         object-fit: cover;
         margin: $default-spacing;
+        img {
+          width: 100%;
+        }
       }
 
       .project-page-desc2 {
@@ -226,10 +248,19 @@ section {
   #software-tools-used {
     .block-2 {
       justify-content: center;
-      .project-page-image2 {
+      padding-top: 9rem;
+
+      .lightbox-container-image2 {
         margin: 0 auto;
-        // object-fit: cover;
         margin: $default-spacing;
+        max-width: 100%;
+        object-fit: cover;
+
+        img {
+          min-width: 100%;
+          object-fit: cover;
+          height: 300px;
+        }
       }
 
       .project-page-desc2 {
@@ -247,16 +278,29 @@ section {
 
 // Inspiration/Process Block
 #inspiration {
+  padding-top: 4rem;
+
   .block-3 {
     color: $first-color-theme;
     margin: $default-spacing 0;
 
-    .project-page-image3 {
+    .lightbox-container-image3 {
       margin: 0 auto;
-      width: 80%;
-      height: auto;
-      // object-fit: cover;
+      width: 100%;
+      object-fit: cover;
       margin: $default-spacing;
+      transition: 0.3s ease;
+
+      &:hover,
+      &:focus {
+        filter: brightness(0.4);
+      }
+
+      img {
+        min-width: 100%;
+        object-fit: cover;
+        height: 300px;
+      }
     }
 
     .project-page-desc4 {
@@ -269,15 +313,17 @@ section {
 // 768px
 @media screen and (min-width: 48rem) {
   #inspiration {
-    .project-page-image3 {
+    padding-top: 10rem;
+    .lightbox-container-image3 {
       margin: 0 auto;
-      max-width: 40%;
+      max-width: 60%;
       object-fit: cover;
       margin: $default-spacing;
     }
 
     .project-page-desc4 {
-      max-width: 70%;
+      max-width: 60%;
+      height: 400px;
       margin: $default-spacing 0;
     }
   }
@@ -289,24 +335,35 @@ section {
   color: $text-color-light;
 
   .block-4 {
-    .project-page-image4 {
+    margin: $default-spacing 0;
+    padding-top: 5rem;
+
+    .lightbox-container-image4 {
       margin: 0 auto;
-      width: 80%;
-      height: 200px;
-      object-fit: cover;
-      margin: $default-spacing;
+      height: 300px;
+      width: 30%;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+      }
     }
 
-    .project-page-image5 {
+    .lightbox-container-image5 {
       margin: 0 auto;
-      width: 80%;
-      height: 200px;
-      object-fit: cover;
-      margin: $default-spacing;
+      height: 300px;
+      width: 30%;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+      }
     }
 
     .project-page-desc5 {
-      width: 80%;
+      width: 60%;
       margin: $default-spacing 0;
     }
   }
@@ -316,21 +373,39 @@ section {
   #examples {
     .block-4 {
       justify-content: center;
-
-      .project-page-image4 {
+      padding-top: 7rem;
+      .lightbox-container-image4 {
         margin: 0 auto;
         max-width: 30%;
-        height: 300px;
+        max-height: 300px;
         object-fit: cover;
         margin: $default-spacing;
+        transition: 0.3s ease;
+        &:hover,
+        &:focus {
+          filter: brightness(0.4);
+        }
+
+        img {
+          width: 100%;
+        }
       }
 
-      .project-page-image5 {
+      .lightbox-container-image5 {
         margin: 0 auto;
         max-width: 30%;
         height: 300px;
         object-fit: cover;
         margin: $default-spacing;
+        transition: 0.3s ease;
+
+        &:hover,
+        &:focus {
+          filter: brightness(0.4);
+        }
+        img {
+          width: 100%;
+        }
       }
 
       .project-page-desc4 {
@@ -347,32 +422,51 @@ section {
   color: $first-color-theme;
 
   .block-5 {
-    .project-page-image6 {
+    justify-content: center;
+    vertical-align: middle;
+    padding-top: 5rem;
+
+    .lightbox-container-image6 {
       margin: 0 auto;
       width: 80%;
+      gap: 0;
       height: auto;
       object-fit: cover;
-      margin: $default-spacing;
-    }
+      transition: 0.3s ease;
 
+      &:hover,
+      &:focus {
+        filter: brightness(0.4);
+      }
+      .project-page-image6 {
+        width: 100%;
+      }
+    }
     .project-page-desc6 {
       width: 80%;
       margin: $default-spacing 0;
     }
   }
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 72rem) {
   #final-result {
     .block-5 {
       justify-content: center;
       gap: $default-spacing;
+      align-content: center;
+      height: 100vh;
+      padding-top: 0;
 
-      .project-page-image6 {
+      .lightbox-container-image6 {
         margin: 0 auto;
         max-width: 30%;
         height: auto;
         object-fit: cover;
         margin: $default-spacing;
+
+        .project-page-image6 {
+          width: 100%;
+        }
       }
 
       .project-page-desc6 {
