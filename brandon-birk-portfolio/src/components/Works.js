@@ -43,7 +43,7 @@ const Works = () => {
   return (
     <>
       { isLoaded && restData.length > 0 ? (
-        <article className="work-container" data-aos="fade-down" data-aos-duration="1000">
+        <article className="work-container" >
           {restData.map((post) => (
             <Post key={post.id} post={post} imagePath={imagePath} />
           ))}

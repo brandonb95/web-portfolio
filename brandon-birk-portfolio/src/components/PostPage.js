@@ -61,9 +61,9 @@ const PostPage = () => {
             
             <section id="problems">
                 <div className="block-1">
-      
+            
                 <img className="project-page-cover"src={restData.acf.cover.url} alt={restData.acf.cover.alt}
-                 data-aos="fade-right" data-aos-duration="1000"></img>
+                 data-aos="fade-right" data-aos-duration="1000"></img>   
 
                 <p className="project-page-desc1"  data-aos="fade-left" data-aos-duration="1000">{restData.acf.problem}</p>
 
@@ -72,9 +72,15 @@ const PostPage = () => {
             </section>
 
             <section id="software-tools-used" >
-                <div className="block-2">
-                    
+                <div className="block-2" data-aos="fade-up" data-aos-duration="1000">
+
+                <a href="#proj-image2-lightbox">
                 <img className="project-page-image2"src={restData.acf.image_2.url} alt={restData.acf.image_2.alt}></img>
+                </a>
+
+                <a href="#software-tools-used" class="lightbox" id="proj-image2-lightbox">
+                <span style={{ backgroundImage: `url(${restData.acf.image_2.url})` }}></span>
+                </a>
 
                 <p className="project-page-desc2">{restData.acf.tools_used}</p>
 
@@ -84,8 +90,15 @@ const PostPage = () => {
             </section>
 
             <section id="inspiration">
-                <div className="block-3">
+                <div className="block-3" data-aos="fade-down" data-aos-duration="1000">
+
+                <a href="#proj-image3-lightbox">
                 <img className="project-page-image3"src={restData.acf.image_3.url} alt={restData.acf.image_3.alt}></img>
+                </a>
+
+                <a href="#inspiration" class="lightbox" id="proj-image3-lightbox">
+                <span style={{ backgroundImage: `url(${restData.acf.image_3.url})` }}></span>
+                </a>
 
                 <p className="project-page-desc4">{restData.acf.inspiration}</p>
 
@@ -93,10 +106,23 @@ const PostPage = () => {
             </section>
 
             <section id="examples">
-                <div className="block-4">
+                <div className="block-4" data-aos="fade-up" data-aos-duration="1000">
 
+                <a href="#proj-image4-lightbox">
                 <img className="project-page-image4"src={restData.acf.image_4.url} alt={restData.acf.image_4.alt}></img>
+                </a>
+
+                <a href="#examples" class="lightbox" id="proj-image4-lightbox">
+                <span style={{ backgroundImage: `url(${restData.acf.image_4.url})` }}></span>
+                </a>
+
+                <a href="#proj-image5-lightbox">
                 <img className="project-page-image5"src={restData.acf.image_5.url} alt={restData.acf.image_5.alt}></img>
+                </a>
+
+                <a href="#examples" class="lightbox" id="proj-image5-lightbox">
+                <span style={{ backgroundImage: `url(${restData.acf.image_5.url})` }}></span>
+                </a>
 
                 <p className="project-page-desc5">{restData.acf.examples}</p>
 
@@ -104,9 +130,15 @@ const PostPage = () => {
             </section>
 
             <section id="final-result">
-                <div className="block-5">
+                <div className="block-5" data-aos="fade-down" data-aos-duration="1000">
 
+                <a href="#proj-image6-lightbox">
                 <img className="project-page-image6"src={restData.acf.image_6.url} alt={restData.acf.image_6.alt}></img>
+                </a>
+
+                <a href="#final-result" class="lightbox" id="proj-image6-lightbox">
+                <span style={{ backgroundImage: `url(${restData.acf.image_6.url})` }}></span>
+                </a>
 
                 <p className="project-page-desc6">{restData.acf.final_result}</p>
 
