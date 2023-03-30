@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import "animate.css/animate.min.css";
 
 const Navbar = ({ handleShowHideNav }) => {
   function closeNav(e) {
@@ -10,8 +13,14 @@ const Navbar = ({ handleShowHideNav }) => {
     }
   }
 
+  // initialize the animate-on-scroll 
+  AOS.init({
+    duration: 1000, // set the animation duration
+    once: true, // only animate once per viewport on page load
+  });
+
   return (
-    <nav className="main-nav" onClick={closeNav}>
+    <nav className="main-nav" onClick={closeNav} data-aos="fade-down" data-aos-duration="1000">
       <div className='logo-name'><a href="home"><Logo /></a></div>
       <ul>
         <li>

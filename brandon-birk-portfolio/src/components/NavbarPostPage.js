@@ -1,6 +1,9 @@
 import { HashLink } from 'react-router-hash-link';
 import { useState, useEffect } from 'react'
 import Logo from '../logo.svg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import "animate.css/animate.min.css";
 
 const Navbar = ({ handleShowHideNav }) => {
 
@@ -14,11 +17,17 @@ const Navbar = ({ handleShowHideNav }) => {
     }
   }
 
+  // initialize the animate-on-scroll 
+  AOS.init({
+    duration: 1000, // set the animation duration
+    once: true, // only animate once per viewport on page load
+  });
+
   return (
     <>
     {isLoading ?
                 <>
-    <nav className="main-nav" onClick={closeNav}>
+    <nav className="main-nav" onClick={closeNav} data-aos="fade-down" data-aos-duration="1000">
     <div className='logo-name'><HashLink to="/brandonbirk/home"><img src={Logo} alt="Site Logo" /></HashLink></div>
 
       <ul className='navbar-postpage'>

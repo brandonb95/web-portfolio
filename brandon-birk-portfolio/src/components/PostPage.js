@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import HeaderPostPage from './HeaderPostPage'
 import ScrollButton from './ScrollButton';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import "animate.css/animate.min.css";
 
 const PostPage = () => {
     const { slug } = useParams()
@@ -39,7 +42,11 @@ const PostPage = () => {
         
     }, [restPath])
     
-
+    // initialize the animate-on-scroll 
+    AOS.init({
+        duration: 1000, // set the animation duration
+        once: true, // only animate once per viewport on page load
+    });
  
     
     return (
@@ -50,21 +57,23 @@ const PostPage = () => {
 
             <article className="project-page-container" id={`post-${restData.id}`}>
 
-            <h3 className="project-page-title">{restData.acf.title}</h3>
+            <h3 className="project-page-title"  data-aos="fade-down" data-aos-duration="1000">{restData.acf.title}</h3>
             
             <section id="problems">
                 <div className="block-1">
       
-                <img className="project-page-cover"src={restData.acf.cover.url} alt={restData.acf.cover.alt}></img>
+                <img className="project-page-cover"src={restData.acf.cover.url} alt={restData.acf.cover.alt}
+                 data-aos="fade-right" data-aos-duration="1000"></img>
 
-                <p className="project-page-desc1">{restData.acf.problem}</p>
+                <p className="project-page-desc1"  data-aos="fade-left" data-aos-duration="1000">{restData.acf.problem}</p>
 
-                <p className="project-link-1"><a href={restData.acf.link_1.url} target="_blank">{restData.acf.link_1.title}</a></p>
+                <p className="project-link-1"  data-aos="fade-up" data-aos-duration="1000"><a href={restData.acf.link_1.url} target="_blank">{restData.acf.link_1.title}</a></p>
                 </div>
             </section>
 
-            <section id="software-tools-used">
+            <section id="software-tools-used" >
                 <div className="block-2">
+                    
                 <img className="project-page-image2"src={restData.acf.image_2.url} alt={restData.acf.image_2.alt}></img>
 
                 <p className="project-page-desc2">{restData.acf.tools_used}</p>

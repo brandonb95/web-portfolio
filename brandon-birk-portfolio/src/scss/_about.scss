@@ -15,7 +15,8 @@
             width: 40%;
             height: auto;
         }
-    
+
+        
     .about-description{
         margin: $default-spacing 3rem;
         color: $first-color-theme;
@@ -23,7 +24,18 @@
         line-height: 2rem;
         position: relative;
     }
+
+    img::after{
+        border: 2px solid $fourth-color-theme;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+    }
+
+    
 }
+
+
 
 // 512px 
 @media screen and (min-width: 32rem) {
@@ -56,6 +68,7 @@
         margin: $default-spacing;
         
     }
+    
 
     .about-description{
         max-width: 30%;
