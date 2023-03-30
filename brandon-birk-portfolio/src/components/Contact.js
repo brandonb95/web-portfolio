@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import "animate.css/animate.min.css";
 
 const Contact = () => {
     const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/pages/61?_embed'
@@ -20,10 +23,17 @@ const Contact = () => {
         fetchData()
     }, [restPath])
     
+        // initialize the animate-on-scroll 
+    AOS.init({
+        duration: 1000, // set the animation duration
+        once: true, // only animate once per viewport on page load
+    });
+    
     return (
         <>
         { isLoaded ?
-            <article className="contact-container" id={`post-${restData.id}`}>
+            <article className="contact-container" id={`post-${restData.id}`} >
+                <div data-aos="fade-up" data-aos-duration="1000">
                 <h2 className="contact-title">{restData.acf.heading}</h2>
                 <p className="contact-blurb">{restData.acf.blurb}</p>
 
@@ -41,7 +51,7 @@ const Contact = () => {
 
                 <div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
                 </div>
-
+                </div>
             </article>
         :
         <h2>About Not Loaded</h2>       

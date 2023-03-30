@@ -7,15 +7,15 @@
     overflow: hidden;
     background-color: $background-color-light;
     padding: $default-spacing 0;
-
+    
     // Profile Image
-    img{
-        display: flex;
-        margin: $default-spacing auto;
-        width: 40%;
-        height: auto;
-    }
-
+        img{
+            display: flex;
+            margin: $default-spacing auto;
+            width: 40%;
+            height: auto;
+        }
+    
     .about-description{
         margin: $default-spacing 3rem;
         color: $first-color-theme;
@@ -29,7 +29,7 @@
 @media screen and (min-width: 32rem) {
     #post-13{
         img{
-            width: 30%;
+            width: 60%;
         }
     }
 }
@@ -51,8 +51,10 @@
         justify-content: center;
         align-items: center;
     img{
-        max-width: 25%;
+        max-width: 20%;
+        object-fit: contain;
         margin: $default-spacing;
+        
     }
 
     .about-description{
@@ -82,6 +84,7 @@
         align-items: center;
     img{
         max-width: 20%;
+        height: auto;
         margin: $default-spacing;
     }
 
