@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 import "animate.css/animate.min.css";
 
 const Works = () => {
-  const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?_embed&acf_format=standard&orderby=date&order=asc'
+  const restPath = 'https://brandonbirk.ca/portfolio-backend/wp-json/wp/v2/brandonbirk-works?_embed&acf_format=standard&orderby=date&order=asc'
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false)
   const [imagePath, setImagePath] = useState(null)
@@ -49,7 +49,7 @@ const Works = () => {
           ))}
         </article>
       ) : (
-        <h2>Works Not Loaded</h2>
+        <h2>Works Loading...</h2>
       )}
     </>
   )

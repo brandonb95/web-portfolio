@@ -28,17 +28,17 @@ const Navbar = ({ handleShowHideNav }) => {
     {isLoading ?
                 <>
     <nav className="main-nav" onClick={closeNav} data-aos="fade-down" data-aos-duration="1000">
-    <div className='logo-name-postpage'><HashLink to="/brandonbirk/home"><img src={Logo} alt="Site Logo" /></HashLink></div>
+    <div className='logo-name-postpage'><HashLink to="/"><img src={Logo} alt="Site Logo" aria-label="Home"/></HashLink></div>
 
       <ul className='navbar-postpage'>
         <li>
-          <HashLink to="/brandonbirk/home#about">About</HashLink>
+          <HashLink to="/#about" aria-label="About Section">About</HashLink>
         </li>
         <li>
-          <HashLink to="/brandonbirk/home#works">Works</HashLink>
+          <HashLink to="/#works" aria-label="Works Section"> Works</HashLink>
         </li>
         <li>
-          <HashLink to="/brandonbirk/home#contact">Contact</HashLink>
+          <HashLink to="/#contact" aria-label="Contact Section">Contact</HashLink>
         </li>
       </ul>
     </nav>
@@ -46,7 +46,7 @@ const Navbar = ({ handleShowHideNav }) => {
     </> 
     :
         
-        <h2>Post Content Not Loaded</h2>    
+        <h2>Loading...</h2>    
         }
     </>
 

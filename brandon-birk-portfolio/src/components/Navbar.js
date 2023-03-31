@@ -21,16 +21,16 @@ const Navbar = ({ handleShowHideNav }) => {
 
   return (
     <nav className="main-nav" onClick={closeNav} data-aos="fade-down" data-aos-duration="1000">
-      <div className='logo-name'><a href="home"><Logo /></a></div>
+      <div className='logo-name'><a href="/" aria-label="Home"><Logo /></a></div>
       <ul>
         <li>
-          <a href="#about">About</a>
+          <a href="#about" aria-label="About Section">About</a>
         </li>
         <li>
-        <a href="#works">Works</a>
+        <a href="#works" aria-label="Works Section">Works</a>
         </li>
         <li>
-        <a href="#contact">Contact</a>
+        <a href="#contact" aria-label="Contact Section">Contact</a>
 
         </li>
       </ul>

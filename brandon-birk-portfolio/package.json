@@ -1,6 +1,6 @@
 {
   "name": "brandon-birk-portfolio",
-  "homepage": "http://localhost/brandonbirk/home",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 import "animate.css/animate.min.css";
 
 const Contact = () => {
-    const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/pages/61?_embed'
+    const restPath = 'https://brandonbirk.ca/portfolio-backend/wp-json/wp/v2/pages/61?_embed'
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 
@@ -39,13 +39,14 @@ const Contact = () => {
 
                 <div className='social-icons'>
                     <div className='solo-social'>
-                    <a href="https://www.linkedin.com/in/brandon-birk-36b4a3114/?originalSubdomain=ca" rel="noreferrer" target="_blank"><FaLinkedin /></a>
+                    <a href="https://www.linkedin.com/in/brandon-birk-36b4a3114/?originalSubdomain=ca" rel="noreferrer" target="_blank"
+                    aria-label="LinkedIn Button"><FaLinkedin /></a>
                     </div>
                     <div className='solo-social'>
-                    <a href="https://github.com/brandonb95" rel="noreferrer" target="_blank"><FaGithub /></a>
+                    <a href="https://github.com/brandonb95" rel="noreferrer" target="_blank" aria-label="GitHub Button"><FaGithub /></a>
                     </div>
                     <div className='solo-social'>
-                    <a href="mailto:brandonbirk1995@gmail.com" rel="noreferrer" target="_blank"><FaEnvelope /></a>
+                    <a href="mailto:brandonbirk1995@gmail.com" rel="noreferrer" target="_blank" aria-label="Email Button"><FaEnvelope /></a>
                     </div>
                 </div>
 
@@ -54,7 +55,7 @@ const Contact = () => {
                 </div>
             </article>
         :
-        <h2>About Not Loaded</h2>       
+        <h2>Contact loading...</h2>       
         }
         </>
     )

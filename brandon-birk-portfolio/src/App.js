@@ -19,7 +19,7 @@ function App() {
 
     <header id="masthead" className="site-header">
     <Routes>
-    <Route path='brandonbirk/home' exact element={<Home />}/>
+    <Route path='/' exact element={<Home />}/>
     <Route path='/about' exact element={<About />}/>
     <Route path='/works' exact element={<Works />}/>
     <Route path="/contact" element={<Contact />} />

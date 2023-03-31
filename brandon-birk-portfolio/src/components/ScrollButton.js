@@ -25,7 +25,7 @@ const ScrollButton = () =>{
     window.addEventListener('scroll', toggleVisible);
     
     return (
-        <button className='to-top'>
+        <button className='to-top' aria-label="To Top">
        <FaArrowCircleUp onClick={scrollToTop} 
        style={{display: visible ? 'inline' : 'none'}} />
        </button>

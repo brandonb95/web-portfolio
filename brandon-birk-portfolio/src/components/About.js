@@ -5,7 +5,7 @@ import "animate.css/animate.min.css";
 
 
 const About = () => {
-    const restPath = 'http://localhost/brandonbirk/wp-json/wp/v2/posts/13?_embed'
+    const restPath = 'https://brandonbirk.ca/portfolio-backend/wp-json/wp/v2/posts/13?_embed'
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 
@@ -45,7 +45,7 @@ const About = () => {
                 </div>
             </article>
         :
-        <h2>About Not Loaded</h2>       
+        <h2>About loading...</h2>       
         }
         </>
     )
