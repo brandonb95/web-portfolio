@@ -286,7 +286,7 @@ section {
 
     .lightbox-container-image3 {
       margin: 0 auto;
-      width: 100%;
+      width: 80%;
       object-fit: cover;
       margin: $default-spacing;
       transition: 0.3s ease;
@@ -297,7 +297,7 @@ section {
       }
 
       img {
-        min-width: 100%;
+        width: 100%;
         object-fit: cover;
         height: 300px;
       }

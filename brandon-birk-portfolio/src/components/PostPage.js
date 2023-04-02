@@ -26,13 +26,11 @@ const PostPage = () => {
                 setLoadStatus(true)
 
                 // Get related posts
-                const relatedPostsResponse = await fetch(`http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?per_page=3&_embed&exclude=${data[0].id}`)
+                const relatedPostsResponse = await fetch(`https://brandonbirk.ca/portfolio-backend/wp-json/wp/v2/brandonbirk-works?per_page=3&_embed&exclude=${data[0].id}`)
                 if (relatedPostsResponse.ok) {
                   const relatedPostsData = await relatedPostsResponse.json()
                   setRelatedPosts(relatedPostsData)
-                  console.log('Related Posts:', relatedPostsData)
                 } else {
-                  console.log('Error fetching related posts')
                 }
             } else {
                 setLoadStatus(false)
