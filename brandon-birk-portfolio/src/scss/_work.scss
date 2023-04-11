@@ -1,62 +1,62 @@
 @use "variables" as *;
 
-.work-container{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: $background-color-light;
-    justify-content: space-around;
-    text-align: center;
-    min-height: 100vh;
-    padding: $default-spacing 0;
+.work-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $background-color-light;
+  justify-content: space-around;
+  text-align: center;
+  min-height: 100vh;
+  padding: $default-spacing 0;
 
-    .single-project{
-        background-color: #fff;
-        padding: $default-spacing;
-        width: 80%;
-        position: relative;
-        z-index: 5;
-        margin: $default-spacing;
-        justify-content: center;
-        
+  .single-project {
+    background-color: #fff;
+    padding: $default-spacing;
+    width: 80%;
+    height: 80%;
+    position: relative;
+    z-index: 5;
+    margin: $default-spacing;
+    justify-content: center;
 
-        .project-title{
-            padding: $default-spacing 0;
-            font-size: 1.4rem;
-            color: $third-color-theme;
-            font-family: 'Tilt Warp', Arial, Helvetica, sans-serif;
-            text-transform: uppercase;
-            font-weight: 800;
-        }
-
-        .project-image{
-            padding: 1rem 0;
-            max-width: 100%;
-            width: 200px;
-            height: auto;
-        }
-
-        .project-excerpt{
-            color: $first-color-theme;
-            position: relative;
-        }
+    .project-title {
+      padding: $default-spacing 0;
+      font-size: 1.4rem;
+      color: $third-color-theme;
+      font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      font-weight: 800;
     }
 
-    // 512px 
-@media screen and (min-width: 32rem) {
-        .single-project{
-        max-width: 65%;
-        }
-        
-        .project-excerpt{
-            min-height: 5rem;
-        }
+    .project-image {
+      padding: 1rem 0;
+      max-width: 100%;
+      width: 200px;
+      height: auto;
     }
+
+    .project-excerpt {
+      color: $first-color-theme;
+      position: relative;
+    }
+  }
+
+  // 512px
+  @media screen and (min-width: 32rem) {
+    .single-project {
+      max-width: 65%;
+    }
+
+    .project-excerpt {
+      min-height: 5rem;
+    }
+  }
 }
 
 .project-button {
-    margin: $default-spacing;
-    
-    a{
+  margin: $default-spacing;
+
+  a {
     text-decoration: none;
     display: inline-block;
     justify-content: center;
@@ -65,33 +65,33 @@
     border-radius: 2rem;
     padding: 1rem 1rem;
     transition: ease-in-out 0.2s;
-    &:hover{
-        background-color: $first-color-theme;
-        color: $text-color-light;
+    &:hover {
+      background-color: $first-color-theme;
+      color: $text-color-light;
     }
-    }
+  }
 }
 
-// 768px 
+// 768px
 @media screen and (min-width: 48rem) {
-    .work-container {
-        .single-project{
-        max-width: 35%;
-        }
-
-        .project-excerpt{
-            min-height: 4rem;
-        }
+  .work-container {
+    .single-project {
+      max-width: 35%;
     }
+
+    .project-excerpt {
+      min-height: 4rem;
+    }
+  }
 }
 
 // 1296px
 @media screen and (min-width: 81rem) {
-    .work-container {
-        justify-content: center;
-        gap: $default-spacing;
-        .single-project{
-        max-width: 25%;
-        }
+  .work-container {
+    justify-content: center;
+    gap: $default-spacing;
+    .single-project {
+      max-width: 25%;
     }
+  }
 }
