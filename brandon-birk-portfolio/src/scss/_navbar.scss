@@ -31,7 +31,7 @@
     a {
       color: $third-color-theme;
       text-decoration: none;
-      font-family: 'Archivo', Arial, Helvetica, sans-serif;
+      font-family: "Archivo", Arial, Helvetica, sans-serif;
       font-weight: 800;
     }
   }
@@ -193,7 +193,9 @@
   z-index: 99;
   bottom: 1vh;
   left: 1rem;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: transparent;
   background-color: $second-color-theme;
   border: 5px solid $fourth-color-theme;
@@ -202,7 +204,6 @@
   border-radius: 50%;
   transition: 0.3s ease-in-out;
 
-  &:hover,
   &:active,
   &:focus {
     background-color: $fourth-color-theme;
@@ -211,8 +212,8 @@
 }
 
 .hamburger-icon {
-  margin: 0 3rem;
   cursor: pointer;
+  position: inherit;
 }
 
 .line {
@@ -220,7 +221,6 @@
   display: block;
   position: relative;
   z-index: 99;
-  transform: translate(0.75em);
   width: 36px;
   height: 4px;
   border-radius: 2px;
@@ -238,6 +238,13 @@
   .show &:nth-child(3) {
     transform: translateY(-11px) rotate(-45deg);
   }
+}
+
+// Custom animation modification from aos package
+[data-aos^="fade"][data-aos^="fade"].aos-animate {
+  opacity: 1;
+  transform: translateZ(0);
+  transition: 0.8s ease;
 }
 
 // 768px - Tablet
