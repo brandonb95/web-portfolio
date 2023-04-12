@@ -27,10 +27,8 @@ const Home = () => {
   }, [restPath]);
 
   useEffect(() => {
-    console.log("Delaying scrolling...");
     // Wait 1 second and then scroll to the hash
     const timeoutId = setTimeout(() => {
-      console.log("Scrolling to the hash...");
       const hash = window.location.hash;
       if (hash) {
         const element = document.querySelector(hash);
