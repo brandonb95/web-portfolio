@@ -7,12 +7,32 @@
   padding: $default-spacing 0;
 
   // Profile Image
-  img {
+  .image-container {
+    position: relative;
+
+    img {
+      display: flex;
+      margin: $default-spacing auto;
+      width: 40%;
+      height: auto;
+      // box-shadow: -12px 12px 0px $second-color-theme;
+    }
+  }
+
+  .overlay {
     display: flex;
-    margin: $default-spacing auto;
+    position: absolute;
+    top: 0;
+    left: 30%;
     width: 40%;
-    height: auto;
-    // box-shadow: -12px 12px 0px $second-color-theme;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      opacity: 0;
+    }
   }
 
   .about-description {
@@ -34,8 +54,15 @@
 // 512px
 @media screen and (min-width: 32rem) {
   #post-13 {
-    img {
-      width: 30%;
+    .image-container {
+      img {
+        width: 30%;
+      }
+
+      .overlay {
+        left: 35%;
+        width: 30%;
+      }
     }
   }
 }
@@ -55,12 +82,18 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    img {
-      max-width: 25%;
-      object-fit: contain;
-      margin: $default-spacing;
-    }
+    .image-container {
+      img {
+        max-width: 25%;
+        object-fit: contain;
+        margin: $default-spacing;
+      }
 
+      .overlay {
+        left: 0;
+        width: 25%;
+      }
+    }
     .about-description {
       max-width: 30%;
       margin: $default-spacing 1rem;
@@ -83,10 +116,12 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    img {
-      max-width: 15%;
-      height: auto;
-      margin: $default-spacing;
+    .image-container {
+      img {
+        max-width: 15%;
+        height: auto;
+        margin: $default-spacing;
+      }
     }
 
     .about-description {

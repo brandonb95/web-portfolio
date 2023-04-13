@@ -34,12 +34,17 @@ const About = () => {
         <article id={`post-${restData.id}`}>
           {/* <div className="entry-content animate__animated animate__lightSpeedInRight" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
                 </div> */}
-          <img
-            src={restData.acf.profile.url}
-            alt={restData.acf.profile.alt}
+          <div
+            className="image-container"
             data-aos="fade-down"
             data-aos-duration="1000"
-          ></img>
+          >
+            <img
+              src={restData.acf.profile.url}
+              alt={restData.acf.profile.alt}
+            ></img>
+            <div className="overlay"></div>
+          </div>
 
           <div
             className="about-description"
