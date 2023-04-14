@@ -7,32 +7,34 @@
   padding: $default-spacing 0;
 
   // Profile Image
+
   .image-container {
     position: relative;
+    display: inline-block;
+    display: flex;
+    max-width: 60%;
+    margin: 0 auto;
 
     img {
-      display: flex;
-      margin: $default-spacing auto;
-      width: 40%;
-      height: auto;
-      // box-shadow: -12px 12px 0px $second-color-theme;
+      display: block;
+      width: 100%;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $second-color-theme;
+      opacity: 0.8; // set the color and opacity of the overlay
+      transition: width 0.5s, opacity 0.5s ease; // add a transition for the transform property
+      transform: translateX(0); // move the overlay offscreen
     }
   }
 
-  .overlay {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 30%;
-    width: 40%;
-    height: 100%;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    background-color: rgba(0, 0, 0, 0.5);
-
-    &:hover {
-      opacity: 0;
-    }
+  .image-container .overlay.show {
+    transform: translateX(-100%); // move the overlay back onto the image
   }
 
   .about-description {
@@ -55,14 +57,7 @@
 @media screen and (min-width: 32rem) {
   #post-13 {
     .image-container {
-      img {
-        width: 30%;
-      }
-
-      .overlay {
-        left: 35%;
-        width: 30%;
-      }
+      max-width: 40%;
     }
   }
 }
@@ -82,18 +77,13 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    .image-container {
-      img {
-        max-width: 25%;
-        object-fit: contain;
-        margin: $default-spacing;
-      }
 
-      .overlay {
-        left: 0;
-        width: 25%;
-      }
+    .image-container {
+      max-width: 25%;
+      object-fit: contain;
+      margin: $default-spacing;
     }
+
     .about-description {
       max-width: 30%;
       margin: $default-spacing 1rem;
@@ -116,12 +106,11 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
     .image-container {
-      img {
-        max-width: 15%;
-        height: auto;
-        margin: $default-spacing;
-      }
+      max-width: 17%;
+      height: auto;
+      margin: $default-spacing;
     }
 
     .about-description {

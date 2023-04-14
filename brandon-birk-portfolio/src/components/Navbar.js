@@ -28,7 +28,7 @@ const Navbar = ({ handleShowHideNav }) => {
         } else {
           AOS.init({
             duration: 0,
-            once: false,
+            once: true,
           });
           AOS.refresh();
         }
