@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
 .landing-banner {
   position: relative;
-  z-index: -1;
+  z-index: 100;
   text-align: center;
   width: 100%;
   height: 100vh;
@@ -34,15 +34,16 @@
 }
 
 .bubbles {
-  position: relative;
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
-  z-index: -100;
+  z-index: 100;
   width: 100%;
   justify-content: center;
+  z-index: 100;
 }
 .bubbles span {
-  position: relative;
+  position: absolute;
   width: 30px;
   height: 30px;
   aspect-ratio: 1/1;
@@ -51,8 +52,11 @@
   border-radius: 50%;
   box-shadow: 0 0 0 10px #DD7157, 0 0 50px #3E1162, 0 0 100px #3E1162;
   animation: animate 15s linear infinite;
-  animation-duration: calc(160s / var(--i));
+  animation-duration: calc(320s / var(--i));
   max-width: 30px;
+  z-index: 100;
+  left: calc(100vw * var(--random-x));
+  top: calc(100vh * var(--random-y));
 }
 .bubbles span:nth-child(even) {
   background: #3E1162;
@@ -62,8 +66,11 @@
   0% {
     transform: translateY(100vh) scale(0);
   }
+  20% {
+    transform: translateY(calc(-10vh - 30px)) scale(1);
+  }
   100% {
-    transform: translateY(-10vh) scale(1);
+    transform: translateY(calc(-110vh - 30px)) scale(1);
   }
 }
 
