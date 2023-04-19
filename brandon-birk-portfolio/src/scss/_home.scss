@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 .landing-banner {
-  z-index: 100;
+  z-index: 1;
   text-align: center;
   width: 100%;
   height: 100vh;
@@ -9,28 +9,32 @@
   color: $text-color-light;
 
   .landing-title {
+    width: 100%;
     position: absolute;
     display: flex;
     text-align: center;
+    justify-content: center;
     margin: 0 auto;
     font-size: 2.5rem;
     font-weight: 800;
     font-family: "Archivo", Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
-    top: 9rem;
+    top: 35%;
     text-transform: uppercase;
+    z-index: 999;
   }
 
   .landing-subheading {
+    width: 100%;
     font-size: 1.4rem;
     font-weight: 800;
     font-family: Archivo, Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
     position: absolute;
-    top: 17rem;
+    top: 43%;
     text-transform: uppercase;
     align-items: center;
-    margin: 0 $default-spacing;
+    z-index: 999;
   }
 }
 
@@ -61,6 +65,10 @@
 
     left: calc(100vw * var(--random-x));
     top: calc(100vh * var(--random-y));
+
+    &:hover {
+      cursor: pointer;
+    }
   }
   span:nth-child(even) {
     background: $third-color-theme;
@@ -87,11 +95,11 @@
 @media screen and (min-width: 48rem) {
   .landing-banner {
     .landing-title {
-      top: 15rem;
+      font-size: 3.5rem;
     }
 
     .landing-subheading {
-      top: 15rem;
+      font-size: 1.8rem;
     }
   }
 }

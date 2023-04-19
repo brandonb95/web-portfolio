@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
 .landing-banner {
-  z-index: 100;
+  z-index: 1;
   text-align: center;
   width: 100%;
   height: 100vh;
@@ -10,27 +10,31 @@
   color: #FFFFFF;
 }
 .landing-banner .landing-title {
+  width: 100%;
   position: absolute;
   display: flex;
   text-align: center;
+  justify-content: center;
   margin: 0 auto;
   font-size: 2.5rem;
   font-weight: 800;
   font-family: "Archivo", Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
-  top: 9rem;
+  top: 35%;
   text-transform: uppercase;
+  z-index: 999;
 }
 .landing-banner .landing-subheading {
+  width: 100%;
   font-size: 1.4rem;
   font-weight: 800;
   font-family: Archivo, Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
   position: absolute;
-  top: 17rem;
+  top: 43%;
   text-transform: uppercase;
   align-items: center;
-  margin: 0 2rem;
+  z-index: 999;
 }
 
 .bubbles {
@@ -60,6 +64,9 @@
   left: calc(100vw * var(--random-x));
   top: calc(100vh * var(--random-y));
 }
+.bubbles span:hover {
+  cursor: pointer;
+}
 .bubbles span:nth-child(even) {
   background: #3E1162;
   box-shadow: 0 0 0 10px #DD7157, 0 0 50px #AA402B, 0 0 100px #AA402B;
@@ -78,10 +85,10 @@
 
 @media screen and (min-width: 48rem) {
   .landing-banner .landing-title {
-    top: 15rem;
+    font-size: 3.5rem;
   }
   .landing-banner .landing-subheading {
-    top: 15rem;
+    font-size: 1.8rem;
   }
 }
 .main-nav {
@@ -162,7 +169,7 @@
     position: absolute;
     top: 0;
     background-color: transparent;
-    z-index: 15;
+    z-index: 999;
     color: #FFFFFF;
     height: 100px;
     width: 100%;
@@ -232,7 +239,7 @@
 }
 .btn-main-nav {
   position: fixed;
-  z-index: 99;
+  z-index: 999;
   bottom: 1vh;
   left: 1rem;
   display: flex;

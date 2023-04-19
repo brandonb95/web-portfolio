@@ -94,7 +94,7 @@
     position: absolute;
     top: 0;
     background-color: transparent;
-    z-index: 15;
+    z-index: 999;
     color: $text-color-light;
     height: 100px;
     width: 100%;
@@ -190,7 +190,7 @@
 // Mobile Menu
 .btn-main-nav {
   position: fixed;
-  z-index: 99;
+  z-index: 999;
   bottom: 1vh;
   left: 1rem;
   display: flex;
