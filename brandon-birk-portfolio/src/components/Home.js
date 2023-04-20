@@ -6,11 +6,14 @@ import About from "./About";
 import Works from "./Works";
 import Contact from "./Contact";
 import ScrollButton from "./ScrollButton";
+import Arrow from "./Arrow";
 
 const Home = () => {
   const restPath = "http://localhost/brandonbirk/wp-json/wp/v2/pages/6?_embed";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
+
+  const anchorRef = useRef(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -114,6 +117,7 @@ const Home = () => {
     [coordinates, dragging, draggingIndex]
   );
 
+  // Functions to move bubbles around
   const handleMouseUp = useCallback(() => {
     setDragging(false); // set dragging to false
     setDraggingIndex(null);
@@ -152,6 +156,40 @@ const Home = () => {
     }));
   }, []);
 
+  // Cycle through subheading text
+  const subheadingValues = [
+    "Frontend Developer",
+    "UX Designer",
+    "Creative Enthusiast",
+    "Spider-Man Fanatic",
+  ];
+
+  const [subheadingIndex, setSubheadingIndex] = useState(0);
+  const [subheadingChanged, setSubheadingChanged] = useState(false);
+  const [subheadingAnimating, setSubheadingAnimating] = useState(false);
+
+  // Interval to change text
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSubheadingAnimating("bounceOut");
+      setTimeout(() => {
+        setSubheadingIndex((subheadingIndex + 1) % subheadingValues.length);
+        setSubheadingChanged(true);
+        setSubheadingAnimating(false);
+      }, 500);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [subheadingIndex, subheadingChanged]);
+
+  useEffect(() => {
+    if (subheadingChanged) {
+      setSubheadingAnimating(true);
+    } else {
+      setSubheadingAnimating(false);
+    }
+  }, [subheadingChanged]);
+
   return (
     <>
       {isLoaded ? (
@@ -178,8 +216,15 @@ const Home = () => {
               <h1 className="landing-title animate__animated animate__bounceIn">
                 {restData.acf.heading}
               </h1>
-              <h2 className="landing-subheading animate__animated animate__bounceIn">
-                {restData.acf.subheading}
+
+              <h2
+                className={`landing-subheading animate__animated ${
+                  subheadingAnimating === "bounceOut"
+                    ? "animate__bounceOut"
+                    : "animate__bounceIn"
+                }`}
+              >
+                {subheadingValues[subheadingIndex]}
               </h2>
             </article>
           </header>

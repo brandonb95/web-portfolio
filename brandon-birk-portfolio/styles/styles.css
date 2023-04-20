@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
 .landing-banner {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  overflow: hidden;
   z-index: 1;
   text-align: center;
   width: 100%;
@@ -35,6 +39,43 @@
   text-transform: uppercase;
   align-items: center;
   z-index: 999;
+  transition: opacity 0.5s ease-out;
+  opacity: 1;
+  animation-name: bounceIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes bounceOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+}
+.landing-banner .landing-subheading.animate__bounceOut {
+  animation-name: bounceOut;
+  animation-delay: 0.5s; /* Add a delay of 0.5 seconds */
 }
 
 .bubbles {
@@ -42,10 +83,9 @@
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  z-index: 100;
+  z-index: 1;
   width: 100%;
   justify-content: center;
-  z-index: 100;
   height: 100vh;
 }
 .bubbles span {
@@ -76,7 +116,7 @@
     transform: translateY(100vh) scale(0);
   }
   20% {
-    transform: translateY(calc(-10vh - 30px)) scale(1);
+    transform: translateY(calc(-10vh - 10px)) scale(1);
   }
   100% {
     transform: translateY(calc(-110vh - 30px)) scale(1);
@@ -91,6 +131,28 @@
     font-size: 1.8rem;
   }
 }
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  z-index: 999;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease-in-out;
+}
+
+.arrow:hover {
+  transform: rotate(225deg);
+  cursor: pointer;
+}
+
 .main-nav {
   display: block;
   text-align: center;
