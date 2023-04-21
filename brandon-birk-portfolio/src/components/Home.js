@@ -226,6 +226,10 @@ const Home = () => {
               >
                 {subheadingValues[subheadingIndex]}
               </h2>
+
+              <p className="landing-description animate__animated animate__bounceIn">
+                {restData.acf.landing_description}
+              </p>
             </article>
 
             <Arrow />
