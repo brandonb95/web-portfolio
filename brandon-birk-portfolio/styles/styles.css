@@ -133,13 +133,13 @@
 }
 /* Down arrow */
 .arrow-down {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 999;
   width: 60px;
   height: 40px;
-  margin: 0 0 0 -30px;
-  position: absolute;
-  left: 50%;
-  bottom: 220px;
   animation: arrow 0.5s 1s infinite ease-out alternate;
 }
 .arrow-down:hover {
@@ -165,7 +165,6 @@
 .left:hover {
   animation-play-state: paused;
   -webkit-animation-play-state: paused;
-  box-shadow: 0px 0px 20px #AA402B;
 }
 
 /* Right arrow */
@@ -185,7 +184,6 @@
 .right:hover {
   animation-play-state: paused;
   -webkit-animation-play-state: paused;
-  box-shadow: 0px 0px 20px #AA402B;
 }
 
 /* Animations */
