@@ -11,8 +11,11 @@ const Arrow = () => {
   };
 
   return (
-    <div className="arrow-container" onClick={scrollToAnchor}>
-      <div className="arrow"></div>
+    <div className="arrow-down">
+      <a href="#about" aria-label="About Section">
+        <div className="left"></div>
+        <div className="right"></div>
+      </a>
     </div>
   );
 };

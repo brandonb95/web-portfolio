@@ -67,7 +67,7 @@ const Home = () => {
   // for dragging bubbles
   const [dragging, setDragging] = useState(false);
   const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
-  const bubbleRefs = useRef(Array(20).fill(null));
+  const bubbleRefs = useRef(Array(50).fill(null));
   const [draggingIndex, setDraggingIndex] = useState(null);
 
   const setBubbleRef = (index) => (element) => {
@@ -227,6 +227,8 @@ const Home = () => {
                 {subheadingValues[subheadingIndex]}
               </h2>
             </article>
+
+            <Arrow />
           </header>
 
           <article id="about">
