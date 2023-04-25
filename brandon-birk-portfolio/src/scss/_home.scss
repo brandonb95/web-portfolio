@@ -152,6 +152,15 @@
   }
 }
 
+// 361px (For title and subtitle)
+@media screen and (min-width: 22.563rem) {
+  .landing-banner {
+    .landing-title {
+      top: 37%;
+    }
+  }
+}
+
 // 768px - Tablet
 @media screen and (min-width: 48rem) {
   .landing-banner {
@@ -177,7 +186,7 @@
   bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 999;
+  z-index: 1;
   width: 60px;
   height: 40px;
   animation: arrow 0.5s 1s infinite ease-out alternate;

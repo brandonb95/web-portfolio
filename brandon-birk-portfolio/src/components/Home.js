@@ -7,6 +7,7 @@ import Works from "./Works";
 import Contact from "./Contact";
 import ScrollButton from "./ScrollButton";
 import Arrow from "./Arrow";
+import SectionHandler from "./SectionHandler";
 
 const Home = () => {
   const restPath = "http://localhost/brandonbirk/wp-json/wp/v2/pages/6?_embed";
@@ -246,6 +247,7 @@ const Home = () => {
           </article>
 
           <ScrollButton />
+          <SectionHandler />
         </>
       ) : (
         <h2>Loading...</h2>

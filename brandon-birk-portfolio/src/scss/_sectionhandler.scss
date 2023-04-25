@@ -1,0 +1,52 @@
+@use "variables" as *;
+
+.circles {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  z-index: 99;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-bottom: 10px;
+
+  .about {
+    background-color: #ff5733;
+  }
+
+  .work {
+    background-color: #9b59b6;
+  }
+
+  .contact {
+    background-color: #3498db;
+  }
+
+  .indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px #ff5733;
+    position: absolute;
+    top: 0;
+    left: -24px;
+  }
+}
+
+.about.active ~ .indicator {
+  box-shadow: 0 0 0 2px #ff5733;
+}
+
+.work.active ~ .indicator {
+  box-shadow: 0 0 0 2px #9b59b6;
+}
+
+.contact.active ~ .indicator {
+  box-shadow: 0 0 0 2px #3498db;
+}

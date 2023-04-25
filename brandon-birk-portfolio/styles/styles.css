@@ -140,6 +140,11 @@
   }
 }
 
+@media screen and (min-width: 22.563rem) {
+  .landing-banner .landing-title {
+    top: 37%;
+  }
+}
 @media screen and (min-width: 48rem) {
   .landing-banner .landing-title {
     top: 35%;
@@ -159,7 +164,7 @@
   bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 999;
+  z-index: 1;
   width: 60px;
   height: 40px;
   animation: arrow 0.5s 1s infinite ease-out alternate;
@@ -1119,6 +1124,53 @@ section {
     bottom: 80px;
   }
 }
+.circles {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  z-index: 99;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-bottom: 10px;
+}
+.circle .about {
+  background-color: #ff5733;
+}
+.circle .work {
+  background-color: #9b59b6;
+}
+.circle .contact {
+  background-color: #3498db;
+}
+.circle .indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px #ff5733;
+  position: absolute;
+  top: 0;
+  left: -24px;
+}
+
+.about.active ~ .indicator {
+  box-shadow: 0 0 0 2px #ff5733;
+}
+
+.work.active ~ .indicator {
+  box-shadow: 0 0 0 2px #9b59b6;
+}
+
+.contact.active ~ .indicator {
+  box-shadow: 0 0 0 2px #3498db;
+}
+
 * {
   margin: 0;
   padding: 0;
