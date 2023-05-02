@@ -1,49 +1,66 @@
 @use "variables" as *;
 
-.contact-container{
-    text-align: center;
-    height: 100vh;
-    background-color: $first-color-theme;
-    padding: 10rem $default-spacing;
-    
-    .contact-title{
-        padding: $default-spacing 0;
-        font-size: 3rem;
-        color: $second-color-theme;
-    }
+.contact-container {
+  text-align: center;
+  height: 100vh;
+  background-color: $first-color-theme;
+  padding: 10rem $default-spacing;
 
-    .contact-blurb{
-        margin: 0 $default-spacing;
-        color: $text-color-light;
+  .contact-title {
+    padding: $default-spacing 0;
+    font-size: 3rem;
+    color: $second-color-theme;
+  }
 
-    }
-    
+  .contact-blurb {
+    margin: 0 $default-spacing;
+    color: $text-color-light;
+  }
 }
 
-.social-icons{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 5rem;
-    font-size: 3rem;
-
-    .solo-social{ 
-        transition: 0.5s ease;
-        margin: 0 1rem;
-
-        &:hover{
-            transform: scale(1.1);
-            
-        }
-
-        a{
-            color: $second-color-theme;
-            transition: 0.3s ease;
-            
-            &:hover, &:active,&:focus{
-                color: $fourth-color-theme;
-
-            }
-        }
+@media screen and (min-width: 48rem) {
+  .contact-container {
+    padding: 15rem $default-spacing;
+    .contact-title {
+      font-size: 4rem;
     }
+
+    .contact-blurb {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 5rem;
+  font-size: 3rem;
+
+  .solo-social {
+    transition: 0.5s ease;
+    margin: 0 1rem;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    a {
+      color: $second-color-theme;
+      transition: 0.3s ease;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $fourth-color-theme;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .social-icons {
+    font-size: 4rem;
+  }
 }

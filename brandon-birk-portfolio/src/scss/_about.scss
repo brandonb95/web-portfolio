@@ -18,10 +18,12 @@
     img {
       display: block;
       width: 100%;
+      z-index: 2;
     }
 
     .overlay {
       position: absolute;
+      scale: 1.1;
       top: 0;
       left: 0;
       width: 100%;
@@ -30,6 +32,7 @@
       opacity: 0.8; // set the color and opacity of the overlay
       transition: width 0.5s, opacity 0.5s ease; // add a transition for the transform property
       transform: translateX(0); // move the overlay offscreen
+      z-index: 1;
     }
   }
 

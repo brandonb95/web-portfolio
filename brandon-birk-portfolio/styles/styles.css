@@ -232,6 +232,20 @@
     transform: rotate(-45deg);
   }
 }
+.hint {
+  display: none;
+}
+
+@media screen and (min-width: 48rem) {
+  .hint {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 2rem;
+    opacity: 0.5;
+  }
+}
 .main-nav {
   display: block;
   text-align: center;
@@ -459,9 +473,11 @@
 #post-13 .image-container img {
   display: block;
   width: 100%;
+  z-index: 2;
 }
 #post-13 .image-container .overlay {
   position: absolute;
+  scale: 1.1;
   top: 0;
   left: 0;
   width: 100%;
@@ -470,6 +486,7 @@
   opacity: 0.8;
   transition: width 0.5s, opacity 0.5s ease;
   transform: translateX(0);
+  z-index: 1;
 }
 #post-13 .image-container .overlay.show {
   transform: translateX(-100%);
@@ -646,6 +663,17 @@
   color: #FFFFFF;
 }
 
+@media screen and (min-width: 48rem) {
+  .contact-container {
+    padding: 15rem 2rem;
+  }
+  .contact-container .contact-title {
+    font-size: 4rem;
+  }
+  .contact-container .contact-blurb {
+    font-size: 1.7rem;
+  }
+}
 .social-icons {
   display: flex;
   justify-content: center;
@@ -668,6 +696,11 @@
   color: #AA402B;
 }
 
+@media screen and (min-width: 48rem) {
+  .social-icons {
+    font-size: 4rem;
+  }
+}
 .project-page-container {
   background-color: #eeeeee;
 }

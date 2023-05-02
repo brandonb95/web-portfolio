@@ -8,6 +8,7 @@ import Contact from "./Contact";
 import ScrollButton from "./ScrollButton";
 import Arrow from "./Arrow";
 import SectionHandler from "./SectionHandler";
+import PacmanLoader from "react-spinners/PacmanLoader";
 
 const Home = () => {
   const restPath = "http://localhost/brandonbirk/wp-json/wp/v2/pages/6?_embed";
@@ -191,6 +192,23 @@ const Home = () => {
     }
   }, [subheadingChanged]);
 
+  // Loading Spinner
+  const override = {
+    display: "block",
+    margin: "0 auto",
+    borderColor: "red",
+  };
+
+  let [loading, setLoading] = useState(true);
+  let [color, setColor] = useState("#ffffff");
+
+  useEffect(() => {
+    setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
   return (
     <>
       {isLoaded ? (
@@ -231,6 +249,10 @@ const Home = () => {
               <p className="landing-description animate__animated animate__bounceIn">
                 {restData.acf.landing_description}
               </p>
+
+              <h3 className="hint">
+                Psst.. bubbles like to be dragged around!
+              </h3>
             </article>
 
             <Arrow />
@@ -250,7 +272,13 @@ const Home = () => {
           <SectionHandler />
         </>
       ) : (
-        <h2>Loading...</h2>
+        <PacmanLoader
+          color={"#DD7157"}
+          loading={loading}
+          size={25}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
       )}
     </>
   );

@@ -60,7 +60,7 @@ const Contact = () => {
               </div>
               <div className="solo-social">
                 <a
-                  href="mailto:brandonbirk1995@gmail.com"
+                  href="mailto:brandonbirkdev@outlook.com"
                   rel="noreferrer"
                   target="_blank"
                   aria-label="Email Button"

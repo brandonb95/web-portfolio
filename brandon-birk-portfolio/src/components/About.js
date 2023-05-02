@@ -42,12 +42,34 @@ const About = () => {
       width: 0,
       opacity: 0.8,
     });
+
+    setData({
+      ...restData,
+      acf: {
+        ...restData.acf,
+        profile: {
+          url: "http://localhost/brandonbirk/wp-content/uploads/2023/03/brandon-birks.jpg",
+          alt: "Brandon-Birk-Hover",
+        },
+      },
+    });
   };
 
   const handleMouseLeave = () => {
     // add event handler for mouse leave
     setOverlayStyle({
       width: "100%",
+    });
+
+    setData({
+      ...restData,
+      acf: {
+        ...restData.acf,
+        profile: {
+          url: "http://localhost/brandonbirk/wp-content/uploads/2023/04/brandon-edited.jpg",
+          alt: "Brandon-Birk-Hover",
+        },
+      },
     });
   };
 
