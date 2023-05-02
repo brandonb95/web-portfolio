@@ -91,6 +91,16 @@ const PostPage = () => {
                     {restData.acf.link_1.title}
                   </a>
                 </p>
+
+                <p
+                  className="project-link-1"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <a href={restData.acf.link_2.url} target="_blank">
+                    {restData.acf.link_2.title}
+                  </a>
+                </p>
               </div>
             </section>
 

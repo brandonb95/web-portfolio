@@ -198,7 +198,7 @@ const Home = () => {
           <header id="masthead" className="site-header">
             <Header />
 
-            <article id="home" className="landing-banner">
+            <article id="home" className="landing-banner" data-section="home">
               <div className="bubbles">
                 {positions.map((position, i) => (
                   <span
@@ -236,13 +236,13 @@ const Home = () => {
             <Arrow />
           </header>
 
-          <article id="about">
+          <article id="about" data-section="about">
             <About />
           </article>
-          <article id="works">
+          <article id="works" data-section="works">
             <Works />
           </article>
-          <article id="contact">
+          <article id="contact" data-section="contact">
             <Contact />
           </article>
 
