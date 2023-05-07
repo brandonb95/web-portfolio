@@ -4,7 +4,7 @@
   display: block;
   text-align: center;
   position: fixed;
-  z-index: 98;
+  z-index: 100;
   width: 100vw;
   justify-content: center;
   bottom: 0;
@@ -73,7 +73,7 @@
         text-decoration: none;
         transition: 0.5s ease;
         padding: 0.5rem;
-        border-radius: 5%;
+        border-radius: 50%;
         &:hover {
           background-color: $second-color-theme;
         }
@@ -133,12 +133,12 @@
       li {
         a {
           color: $text-color-light;
-
+          padding: 1rem;
           &:hover {
             // padding: 0.2rem;
             color: $text-color-light;
             background-color: $second-color-theme;
-            border-radius: 5%;
+            border-radius: 50%;
           }
         }
       }

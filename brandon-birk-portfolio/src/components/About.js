@@ -39,8 +39,9 @@ const About = () => {
   const handleMouseEnter = () => {
     // add event handler for mouse enter
     setOverlayStyle({
-      width: 0,
+      transform: "scaleX(0)",
       opacity: 0.8,
+      transition: "transform 0.3s ease-out",
     });
 
     setData({
@@ -58,7 +59,8 @@ const About = () => {
   const handleMouseLeave = () => {
     // add event handler for mouse leave
     setOverlayStyle({
-      width: "100%",
+      transform: "scaleX(1)",
+      transition: "transform 0.3s ease-out",
     });
 
     setData({

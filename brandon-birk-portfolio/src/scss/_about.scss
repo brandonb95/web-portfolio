@@ -4,7 +4,7 @@
   min-height: 100vh;
   overflow: hidden;
   background-color: $background-color-light;
-  padding: $default-spacing 0;
+  padding: 6rem 0;
 
   // Profile Image
 
@@ -19,10 +19,12 @@
       display: block;
       width: 100%;
       z-index: 2;
+      border-radius: 50%;
     }
 
     .overlay {
       position: absolute;
+      border-radius: 50%;
       scale: 1.1;
       top: 0;
       left: 0;
