@@ -649,9 +649,13 @@
 }
 .contact-container {
   text-align: center;
+  width: 100%;
   height: 100vh;
   background-color: #21013A;
   padding: 10rem 2rem;
+  position: absolute;
+  overflow: hidden;
+  z-index: 99;
 }
 .contact-container .contact-title {
   padding: 2rem 0;
@@ -701,6 +705,122 @@
     font-size: 4rem;
   }
 }
+@keyframes animateshapes {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-2000px);
+  }
+}
+.main-area {
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+.main-area .shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+.main-area .shapes div {
+  position: absolute;
+  display: block;
+  z-index: -1;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  bottom: -150px;
+  border-radius: 50%;
+  opacity: 1;
+  animation: animateshapes 25s linear infinite;
+}
+.main-area .shapes div:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+.main-area .shapes div:nth-child(2) {
+  left: 45%;
+  width: 75px;
+  height: 75px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+.main-area .shapes div:nth-child(3) {
+  left: 85%;
+  width: 90px;
+  height: 90px;
+  animation-delay: 4s;
+}
+.main-area .shapes div:nth-child(4) {
+  left: 30%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+.main-area .shapes div:nth-child(5) {
+  left: 65%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+}
+.main-area .shapes div:nth-child(6) {
+  left: 18%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+.main-area .shapes div:nth-child(7) {
+  left: 90%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 15s;
+  animation-duration: 20s;
+}
+.main-area .shapes div:nth-child(8) {
+  left: 25%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+.main-area .shapes div:nth-child(9) {
+  left: 75%;
+  width: 70px;
+  height: 70px;
+  animation-delay: 0s;
+  animation-duration: 10s;
+}
+.main-area .shapes div:nth-child(10) {
+  left: 35%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 0s;
+}
+.main-area .shapes div:nth-child(11) {
+  left: 65%;
+  width: 135px;
+  height: 135px;
+  animation-delay: 6s;
+}
+.main-area .shapes div:nth-child(12) {
+  left: 25%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 0s;
+  animation-duration: 8s;
+}
+
 .project-page-container {
   background-color: #eeeeee;
 }

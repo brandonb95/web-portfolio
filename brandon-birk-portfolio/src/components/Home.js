@@ -160,7 +160,7 @@ const Home = () => {
 
   // Cycle through subheading text
   const subheadingValues = [
-    "Frontend Developer",
+    "Front-End Web Developer",
     "UX Designer",
     "Creative Enthusiast",
     "Spider-Man Fanatic",

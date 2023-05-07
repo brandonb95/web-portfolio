@@ -3,6 +3,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "animate.css/animate.min.css";
+import ContactAnimation from "./ContactAnimation";
 
 const Contact = () => {
   const restPath = "http://localhost/brandonbirk/wp-json/wp/v2/pages/61?_embed";
@@ -75,6 +76,7 @@ const Contact = () => {
               dangerouslySetInnerHTML={{ __html: restData.content.rendered }}
             ></div>
           </div>
+          <ContactAnimation />
         </article>
       ) : (
         <h2>Contact loading...</h2>
