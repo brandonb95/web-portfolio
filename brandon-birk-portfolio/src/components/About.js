@@ -4,7 +4,8 @@ import "aos/dist/aos.css";
 import "animate.css/animate.min.css";
 
 const About = () => {
-  const restPath = "http://localhost/brandonbirk/wp-json/wp/v2/posts/13?_embed";
+  const restPath =
+    "https://brandonbirk.ca/portfolio-backend/wp-json/wp/v2/posts/13?_embed";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false); // add state variable for overlay display
@@ -49,7 +50,7 @@ const About = () => {
       acf: {
         ...restData.acf,
         profile: {
-          url: "http://localhost/brandonbirk/wp-content/uploads/2023/03/brandon-birks.jpg",
+          url: "https://brandonbirk.ca/portfolio-backend/wp-content/uploads/2023/05/brandon-birks.jpg",
           alt: "Brandon-Birk-Hover",
         },
       },
@@ -68,7 +69,7 @@ const About = () => {
       acf: {
         ...restData.acf,
         profile: {
-          url: "http://localhost/brandonbirk/wp-content/uploads/2023/04/brandon-edited.jpg",
+          url: "https://brandonbirk.ca/portfolio-backend/wp-content/uploads/2023/04/brandon-edited.jpg",
           alt: "Brandon-Birk-Hover",
         },
       },

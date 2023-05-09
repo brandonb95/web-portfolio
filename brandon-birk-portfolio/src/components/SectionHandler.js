@@ -20,13 +20,14 @@ const SectionHandler = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            console.log(entry.target.dataset.section);
             setActiveCircle(entry.target.dataset.section);
           }
         });
       },
       {
         rootMargin: "-50px 0px -50px 0px",
-        threshold: 0.5,
+        threshold: 0.2,
       }
     );
 

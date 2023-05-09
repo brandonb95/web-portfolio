@@ -13,7 +13,10 @@
   .contact-title {
     padding: $default-spacing 0;
     font-size: 3rem;
+    font-weight: 800;
     color: $second-color-theme;
+    font-family: "Archivo", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
   }
 
   .contact-blurb {
