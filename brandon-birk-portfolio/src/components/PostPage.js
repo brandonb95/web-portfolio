@@ -8,7 +8,7 @@ import "animate.css/animate.min.css";
 
 const PostPage = () => {
   const { slug } = useParams();
-  const restPath = `https://brandonbirk.ca/portfolio-backend/wp-json/wp/v2/brandonbirk-works?slug=${slug}&_embed&acf_format=standard`;
+  const restPath = `http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?slug=${slug}&_embed&acf_format=standard`;
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -68,11 +68,11 @@ const PostPage = () => {
               <div className="block-1">
                 <img
                   className="project-page-cover"
-                  src={restData.acf.cover.url}
-                  alt={restData.acf.cover.alt}
+                  src={restData.acf.image_1.url}
+                  alt={restData.acf.image_1.alt}
                   data-aos="fade-right"
                   data-aos-duration="1000"
-                ></img>
+                />
 
                 <p
                   className="project-page-desc1"
@@ -81,15 +81,19 @@ const PostPage = () => {
                 >
                   {restData.acf.problem}
                 </p>
+              </div>
 
+              <div className="project-links-container">
                 <p
                   className="project-link-1"
                   data-aos="fade-up"
                   data-aos-duration="1000"
                 >
-                  <a href={restData.acf.link_1.url} target="_blank">
-                    {restData.acf.link_1.title}
-                  </a>
+                  {restData.acf.link_1.url && (
+                    <a href={restData.acf.link_1.url} target="_blank">
+                      {restData.acf.link_1.title}
+                    </a>
+                  )}
                 </p>
 
                 <p
@@ -97,14 +101,25 @@ const PostPage = () => {
                   data-aos="fade-up"
                   data-aos-duration="1000"
                 >
-                  <a href={restData.acf.link_2.url} target="_blank">
-                    {restData.acf.link_2.title}
-                  </a>
+                  {restData.acf.link_2.url && (
+                    <a href={restData.acf.link_2.url} target="_blank">
+                      {restData.acf.link_2.title}
+                    </a>
+                  )}
                 </p>
               </div>
+
+              <article id={`post-${restData.id}`}>
+                <div
+                  className="entry-content"
+                  dangerouslySetInnerHTML={{
+                    __html: restData.content.rendered,
+                  }}
+                ></div>
+              </article>
             </section>
 
-            <section id="software-tools-used">
+            {/* <section id="software-tools-used">
               <div
                 className="block-2"
                 data-aos="fade-up"
@@ -139,7 +154,7 @@ const PostPage = () => {
                   {restData.acf.tools_used_2}
                 </p>
               </div>
-            </section>
+            </section> */}
 
             <section id="inspiration">
               <div
@@ -174,7 +189,7 @@ const PostPage = () => {
               </div>
             </section>
 
-            <section id="examples">
+            {/* <section id="examples">
               <div
                 className="block-4"
                 data-aos="fade-up"
@@ -228,7 +243,7 @@ const PostPage = () => {
 
                 <p className="project-page-desc5">{restData.acf.examples}</p>
               </div>
-            </section>
+            </section> */}
 
             <section id="final-result">
               <div

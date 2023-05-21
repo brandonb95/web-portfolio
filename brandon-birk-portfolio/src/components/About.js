@@ -40,9 +40,8 @@ const About = () => {
   const handleMouseEnter = () => {
     // add event handler for mouse enter
     setOverlayStyle({
-      transform: "scaleX(0)",
       opacity: 0.8,
-      transition: "transform 0.3s ease-out",
+      transition: "0.3s ease",
     });
 
     setData({
@@ -60,8 +59,7 @@ const About = () => {
   const handleMouseLeave = () => {
     // add event handler for mouse leave
     setOverlayStyle({
-      transform: "scaleX(1)",
-      transition: "transform 0.3s ease-out",
+      transition: "0.3s ease",
     });
 
     setData({
@@ -94,7 +92,7 @@ const About = () => {
               src={restData.acf.profile.url}
               alt={restData.acf.profile.alt}
             />
-            <div className="overlay" style={{ ...overlayStyle }} />
+            {/* <div className="overlay" style={{ ...overlayStyle }} /> */}
           </div>
 
           <div

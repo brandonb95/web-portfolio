@@ -115,24 +115,25 @@ section {
   justify-content: center;
   .project-page-cover {
     margin: 0 auto;
-    max-width: 40%;
+    max-width: 50%;
     height: auto;
     // object-fit: cover;
     margin: $default-spacing;
   }
 
   .project-page-desc1 {
-    width: 80%;
+    width: 50%;
     color: $first-color-theme;
   }
+}
 
+.project-links-container {
+  width: 100%;
   .project-link-1 {
-    width: 80%;
-    text-align: center;
     margin: $default-spacing 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     a {
       color: $third-color-theme;
       font-weight: 500;
@@ -155,53 +156,56 @@ section {
 @media screen and (min-width: 48rem) {
   .block-1 {
     .project-page-cover {
-      max-width: 30%;
-    }
-
-    .project-link-1 {
-      width: 30%;
-    }
-  }
-}
-
-@media screen and (min-width: 72rem) {
-  .block-1 {
-    .project-link-1 {
-      width: 15%;
+      max-width: 50%;
     }
 
     .project-page-desc1 {
-      width: 90%;
-      color: $first-color-theme;
+      max-width: 50%;
+    }
+    .project-link-1 {
+      width: 100%;
     }
   }
 }
 
-// 1296px
-@media screen and (min-width: 81rem) {
-  .project-page-container {
-    // justify-content: space-around;
+// @media screen and (min-width: 72rem) {
+//   .block-1 {
+//     .project-link-1 {
+//       width: 15%;
+//     }
 
-    .project-page-cover {
-      margin: 0 auto;
-      width: 30%;
-      max-width: 100%;
-      height: 20%;
-      // object-fit: cover;
-      margin: $default-spacing;
-    }
+//     .project-page-desc1 {
+//       width: 90%;
+//       color: $first-color-theme;
+//     }
+//   }
+// }
 
-    .project-page-desc1 {
-      width: 60%;
-      margin: $default-spacing;
-      padding: 0 5rem;
-    }
-  }
+// // 1296px
+// @media screen and (min-width: 81rem) {
+//   .project-page-container {
+//     // justify-content: space-around;
 
-  .block-1 {
-    justify-content: center;
-  }
-}
+//     .project-page-cover {
+//       margin: 0 auto;
+//       width: 30%;
+//       max-width: 100%;
+//       height: 20%;
+//       // object-fit: cover;
+//       margin: $default-spacing;
+//     }
+
+//     .project-page-desc1 {
+//       width: 60%;
+//       margin: $default-spacing;
+//       padding: 0 5rem;
+//     }
+//   }
+
+//   .block-1 {
+//     justify-content: center;
+//   }
+// }
 
 // Software/Tools Used Block
 #software-tools-used {
@@ -530,9 +534,11 @@ section {
   ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 
     li {
+      height: 4rem;
       a {
         text-decoration: none;
         color: $text-color-light;
@@ -554,5 +560,18 @@ section {
 @media screen and (min-width: 48rem) {
   #related-posts {
     padding-bottom: 12rem;
+  }
+}
+
+// WordPress block code
+
+.entry-content {
+  .wp-block-quote {
+    .wp-block-code {
+      background-color: $first-color-theme;
+      color: $text-color-light;
+      padding: 3rem;
+      border-radius: 2%;
+    }
   }
 }
