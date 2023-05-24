@@ -9,7 +9,7 @@ import "animate.css/animate.min.css";
 const PostPage = () => {
   const { slug } = useParams();
   const restPath = `http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?slug=${slug}&_embed&acf_format=standard`;
-  const [restData, setData] = useState([]);
+  const [restData, setData] = useState({});
   const [isLoaded, setLoadStatus] = useState(false);
 
   const [relatedPosts, setRelatedPosts] = useState([]);
@@ -107,16 +107,95 @@ const PostPage = () => {
                     </a>
                   )}
                 </p>
+
+                {restData.acf.logos && restData.acf.logos.length > 0 ? (
+                  <>
+                    {restData.acf.logos && restData.acf.logos.length > 0 && (
+                      <>
+                        {restData.acf.logos.map((logo, index) => (
+                          <div key={index} className="tools-container">
+                            <h2>Tools Used</h2>
+
+                            {logo.logo_1 && (
+                              <img
+                                src={logo.logo_1.url}
+                                alt={logo.logo_1.alt}
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                              />
+                            )}
+
+                            {logo.logo_2 && (
+                              <img
+                                src={logo.logo_2.url}
+                                alt={logo.logo_2.alt}
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                              />
+                            )}
+
+                            {logo.logo_3 && (
+                              <img
+                                src={logo.logo_3.url}
+                                alt={logo.logo_3.alt}
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                              />
+                            )}
+
+                            {logo.logo_4 && (
+                              <img
+                                src={logo.logo_4.url}
+                                alt={logo.logo_4.alt}
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                              />
+                            )}
+
+                            {logo.logo_5 && (
+                              <img
+                                src={logo.logo_5.url}
+                                alt={logo.logo_5.alt}
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                              />
+                            )}
+
+                            {logo.logo_6 && (
+                              <img
+                                src={logo.logo_6.url}
+                                alt={logo.logo_6.alt}
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                              />
+                            )}
+
+                            {logo.logo_7 && (
+                              <img
+                                src={logo.logo_7.url}
+                                alt={logo.logo_7.alt}
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                              />
+                            )}
+                          </div>
+                        ))}
+                      </>
+                    )}
+                  </>
+                ) : (
+                  <p>No repeater data available</p>
+                )}
               </div>
 
-              <article id={`post-${restData.id}`}>
+              {/* <article id={`post-${restData.id}`}>
                 <div
                   className="entry-content"
                   dangerouslySetInnerHTML={{
                     __html: restData.content.rendered,
                   }}
                 ></div>
-              </article>
+              </article> */}
             </section>
 
             {/* <section id="software-tools-used">

@@ -970,6 +970,25 @@ section {
   color: #ffffff;
   background-color: #3e1162;
 }
+.project-links-container .tools-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 50%;
+  margin: 0 auto;
+}
+.project-links-container .tools-container h2 {
+  width: 100%;
+  color: #3e1162;
+  font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2rem 0;
+}
+.project-links-container .tools-container img {
+  max-width: 30%;
+  margin: 0.5rem;
+}
 
 @media screen and (min-width: 48rem) {
   .block-1 .project-page-cover {
@@ -980,6 +999,9 @@ section {
   }
   .block-1 .project-link-1 {
     width: 100%;
+  }
+  .project-links-container .tools-container img {
+    max-width: 15%;
   }
 }
 #software-tools-used {
