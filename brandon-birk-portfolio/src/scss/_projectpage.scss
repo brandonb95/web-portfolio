@@ -57,7 +57,7 @@ section {
   line-height: 2rem;
 }
 
-#problems,
+#overview,
 #software-tools-used,
 #inspiration,
 #examples,
@@ -113,16 +113,25 @@ section {
 .block-1 {
   background-color: $background-color-light;
   justify-content: center;
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    color: $third-color-theme;
+    font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 2rem 0;
+  }
   .project-page-cover {
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 80%;
     height: auto;
     // object-fit: cover;
     margin: $default-spacing;
   }
 
   .project-page-desc1 {
-    width: 50%;
+    width: 80%;
     color: $first-color-theme;
   }
 }
@@ -151,26 +160,25 @@ section {
       }
     }
   }
+}
 
-  .tools-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 50%;
-    margin: 0 auto;
+.tools-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 50%;
+  margin: 0 auto;
 
-    h2 {
-      width: 100%;
-      color: $third-color-theme;
-      font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
-      text-transform: uppercase;
-      text-align: center;
-      margin: 2rem 0;
-    }
-    img {
-      max-width: 30%;
-      margin: 0.5rem;
-    }
+  h2 {
+    width: 100%;
+    color: $third-color-theme;
+    font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  img {
+    width: 30%;
+    margin: 0.5rem;
   }
 }
 
@@ -187,11 +195,10 @@ section {
       width: 100%;
     }
   }
-  .project-links-container {
-    .tools-container {
-      img {
-        max-width: 15%;
-      }
+
+  .tools-container {
+    img {
+      max-width: 10%;
     }
   }
 }
@@ -359,8 +366,14 @@ section {
     }
 
     .project-page-desc4 {
-      width: 80%;
+      width: 100%;
       margin: $default-spacing 0;
+    }
+
+    .image-click {
+      font-size: 1rem;
+      color: $third-color-theme;
+      text-align: center;
     }
   }
 }
@@ -371,13 +384,14 @@ section {
     padding-top: 10rem;
     .lightbox-container-image3 {
       margin: 0 auto;
-      max-width: 60%;
+      max-width: 100%;
       object-fit: cover;
       margin: $default-spacing;
     }
 
     .project-page-desc4 {
-      max-width: 60%;
+      position: relative;
+      max-width: 100%;
       height: 400px;
       margin: $default-spacing 0;
     }

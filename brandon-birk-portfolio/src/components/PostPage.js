@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import HeaderPostPage from "./HeaderPostPage";
 import ScrollButton from "./ScrollButton";
+import Tabs from "./Tabs";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "animate.css/animate.min.css";
@@ -64,7 +65,7 @@ const PostPage = () => {
               {restData.acf.title}
             </h3>
 
-            <section id="problems">
+            <section id="overview">
               <div className="block-1">
                 <img
                   className="project-page-cover"
@@ -74,12 +75,16 @@ const PostPage = () => {
                   data-aos-duration="1000"
                 />
 
+                <h2 data-aos="fade-up" data-aos-duration="1000">
+                  Overview
+                </h2>
+
                 <p
                   className="project-page-desc1"
                   data-aos="fade-left"
                   data-aos-duration="1000"
                 >
-                  {restData.acf.problem}
+                  {restData.acf.overview}
                 </p>
               </div>
 
@@ -107,86 +112,114 @@ const PostPage = () => {
                     </a>
                   )}
                 </p>
-
-                {restData.acf.logos && restData.acf.logos.length > 0 ? (
-                  <>
-                    {restData.acf.logos && restData.acf.logos.length > 0 && (
-                      <>
-                        {restData.acf.logos.map((logo, index) => (
-                          <div key={index} className="tools-container">
-                            <h2>Tools Used</h2>
-
-                            {logo.logo_1 && (
-                              <img
-                                src={logo.logo_1.url}
-                                alt={logo.logo_1.alt}
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                              />
-                            )}
-
-                            {logo.logo_2 && (
-                              <img
-                                src={logo.logo_2.url}
-                                alt={logo.logo_2.alt}
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                              />
-                            )}
-
-                            {logo.logo_3 && (
-                              <img
-                                src={logo.logo_3.url}
-                                alt={logo.logo_3.alt}
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                              />
-                            )}
-
-                            {logo.logo_4 && (
-                              <img
-                                src={logo.logo_4.url}
-                                alt={logo.logo_4.alt}
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                              />
-                            )}
-
-                            {logo.logo_5 && (
-                              <img
-                                src={logo.logo_5.url}
-                                alt={logo.logo_5.alt}
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                              />
-                            )}
-
-                            {logo.logo_6 && (
-                              <img
-                                src={logo.logo_6.url}
-                                alt={logo.logo_6.alt}
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                              />
-                            )}
-
-                            {logo.logo_7 && (
-                              <img
-                                src={logo.logo_7.url}
-                                alt={logo.logo_7.alt}
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                              />
-                            )}
-                          </div>
-                        ))}
-                      </>
-                    )}
-                  </>
-                ) : (
-                  <p>No repeater data available</p>
-                )}
               </div>
+
+              {restData.acf.logos && restData.acf.logos.length > 0 ? (
+                <>
+                  {restData.acf.logos && restData.acf.logos.length > 0 && (
+                    <>
+                      {restData.acf.logos.map((logo, index) => (
+                        <div key={index} className="tools-container">
+                          <h2 data-aos="fade-up" data-aos-duration="1000">
+                            Tools Used
+                          </h2>
+                          {logo.logo_1 && (
+                            <img
+                              src={logo.logo_1.url}
+                              alt={logo.logo_1.alt}
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                            />
+                          )}
+
+                          {logo.logo_2 && (
+                            <img
+                              src={logo.logo_2.url}
+                              alt={logo.logo_2.alt}
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                            />
+                          )}
+
+                          {logo.logo_3 && (
+                            <img
+                              src={logo.logo_3.url}
+                              alt={logo.logo_3.alt}
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                            />
+                          )}
+
+                          {logo.logo_4 && (
+                            <img
+                              src={logo.logo_4.url}
+                              alt={logo.logo_4.alt}
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                            />
+                          )}
+
+                          {logo.logo_5 && (
+                            <img
+                              src={logo.logo_5.url}
+                              alt={logo.logo_5.alt}
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                            />
+                          )}
+
+                          {logo.logo_6 && (
+                            <img
+                              src={logo.logo_6.url}
+                              alt={logo.logo_6.alt}
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                            />
+                          )}
+
+                          {logo.logo_7 && (
+                            <img
+                              src={logo.logo_7.url}
+                              alt={logo.logo_7.alt}
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                            />
+                          )}
+
+                          {logo.logo_8 && (
+                            <img
+                              src={logo.logo_8.url}
+                              alt={logo.logo_8.alt}
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                            />
+                          )}
+
+                          {logo.logo_9 && (
+                            <img
+                              src={logo.logo_9.url}
+                              alt={logo.logo_9.alt}
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                            />
+                          )}
+
+                          {logo.logo_10 && (
+                            <img
+                              src={logo.logo_10.url}
+                              alt={logo.logo_10.alt}
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                            />
+                          )}
+                        </div>
+                      ))}
+                    </>
+                  )}
+                </>
+              ) : (
+                <p>No repeater data available</p>
+              )}
 
               {/* <article id={`post-${restData.id}`}>
                 <div
@@ -198,74 +231,8 @@ const PostPage = () => {
               </article> */}
             </section>
 
-            {/* <section id="software-tools-used">
-              <div
-                className="block-2"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <a
-                  href="#proj-image2-lightbox"
-                  className="lightbox-container-image2"
-                >
-                  <img
-                    className="project-page-image2"
-                    src={restData.acf.image_2.url}
-                    alt={restData.acf.image_2.alt}
-                  ></img>
-                </a>
-
-                <a
-                  href="#software-tools-used"
-                  className="lightbox"
-                  id="proj-image2-lightbox"
-                >
-                  <span
-                    style={{
-                      backgroundImage: `url(${restData.acf.image_2.url})`,
-                    }}
-                  ></span>
-                </a>
-
-                <p className="project-page-desc2">{restData.acf.tools_used}</p>
-
-                <p className="project-page-desc3">
-                  {restData.acf.tools_used_2}
-                </p>
-              </div>
-            </section> */}
-
             <section id="inspiration">
-              <div
-                className="block-3"
-                data-aos="fade-down"
-                data-aos-duration="1000"
-              >
-                <a
-                  href="#proj-image3-lightbox"
-                  className="lightbox-container-image3"
-                >
-                  <img
-                    className="project-page-image3"
-                    src={restData.acf.image_3.url}
-                    alt={restData.acf.image_3.alt}
-                  ></img>
-                </a>
-
-                <a
-                  href="#inspiration"
-                  className="lightbox"
-                  id="proj-image3-lightbox"
-                >
-                  <span
-                    style={{
-                      backgroundImage: `url(${restData.acf.image_3.url})`,
-                    }}
-                  ></span>
-                </a>
-
-                <p className="project-page-desc4">{restData.acf.inspiration}</p>
-              </div>
+              <Tabs />
             </section>
 
             {/* <section id="examples">
@@ -324,7 +291,7 @@ const PostPage = () => {
               </div>
             </section> */}
 
-            <section id="final-result">
+            {/* <section id="final-result">
               <div
                 className="block-5"
                 data-aos="fade-down"
@@ -357,7 +324,7 @@ const PostPage = () => {
                   {restData.acf.final_result}
                 </p>
               </div>
-            </section>
+            </section> */}
 
             {relatedPosts.length > 0 && (
               <section id="related-posts">

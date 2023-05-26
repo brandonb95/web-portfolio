@@ -1,0 +1,96 @@
+@use "variables" as *;
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 80%;
+  background: $background-color-light;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 48rem) {
+  .details-container {
+    width: 50%;
+  }
+}
+
+.bloc-tabs {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  button {
+    font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
+    color: $third-color-theme;
+  }
+}
+.tabs {
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  background: $background-color-light;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+.tabs:not(:last-child) {
+  border: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+@media screen and (min-width: 48rem) {
+  .bloc-tabs {
+    display: flex;
+  }
+  .tabs:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.274);
+  }
+}
+
+.active-tabs {
+  background: $background-color-light;
+  border-bottom: 1px solid transparent;
+}
+
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  background: $third-color-theme;
+}
+
+button {
+  border: none;
+}
+.content-tabs {
+  flex-grow: 1;
+}
+.content {
+  background: $background-color-light;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.content h2 {
+  padding: 0px 0 5px 0px;
+}
+.content hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+.content p {
+  width: 100%;
+  height: 100%;
+}
+.active-content {
+  display: block;
+}
