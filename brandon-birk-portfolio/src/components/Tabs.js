@@ -58,35 +58,65 @@ const Tabs = () => {
         <div
           className={toggleState === 1 ? "content  active-content" : "content"}
         >
-          <p className="project-page-desc-design">
-            {restData.acf.development_1}
-          </p>
+          <div className="block-3">
+            {restData.acf.development_1 && (
+              <p className="project-page-desc-dev">
+                {restData.acf.development_1}
+              </p>
+            )}
 
-          <p className="project-page-desc-design code-container">
-            <pre>
-              <code>{restData.acf.code_1}</code>
-            </pre>
-          </p>
+            {restData.acf.code_1 && (
+              <pre className="project-page-desc-dev code-container">
+                <code>{restData.acf.code_1}</code>
+              </pre>
+            )}
+
+            {restData.acf.development_2 && (
+              <p className="project-page-desc-dev">
+                {restData.acf.development_2}
+              </p>
+            )}
+
+            {restData.acf.code_2 && (
+              <pre className="project-page-desc-dev code-container">
+                <code>{restData.acf.code_2}</code>
+              </pre>
+            )}
+
+            {restData.acf.development_3 && (
+              <p className="project-page-desc-dev">
+                {restData.acf.development_3}
+              </p>
+            )}
+          </div>
         </div>
 
         <div
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
           <div className="block-3">
-            <p className="project-page-desc-design">{restData.acf.design_1}</p>
+            {restData.acf.design_1 && (
+              <p className="project-page-desc-design">
+                {restData.acf.design_1}
+              </p>
+            )}
 
-            <a
-              href="#proj-image2-lightbox"
-              className="lightbox-container-image3"
-            >
-              <img
-                className="project-page-image3"
-                src={restData.acf.image_2.url}
-                alt={restData.acf.image_2.alt}
-              ></img>
-            </a>
+            {restData.acf.image_2.url && (
+              <a
+                href="#proj-image2-lightbox"
+                className="lightbox-container-image3"
+              >
+                <img
+                  className="project-page-image3"
+                  src={restData.acf.image_2.url}
+                  alt={restData.acf.image_2.alt}
+                />
+              </a>
+            )}
 
-            <h3 className="image-click">Click on image to enhance</h3>
+            {restData.acf.image_2.url && (
+              <h3 className="image-click">Click on image to enhance</h3>
+            )}
 
             <a
               href="#inspiration"
@@ -99,22 +129,27 @@ const Tabs = () => {
                 }}
               ></span>
             </a>
+            {restData.acf.design_1 && (
+              <p className="project-page-desc-design">
+                {restData.acf.design_2}
+              </p>
+            )}
 
-            <p className="project-page-desc-design">{restData.acf.design_2}</p>
-
-            <a
-              href="#proj-image3-lightbox"
-              className="lightbox-container-image3"
-            >
-              <img
-                className="project-page-image3"
-                src={restData.acf.image_3.url}
-                alt={restData.acf.image_3.alt}
-              ></img>
-            </a>
-
-            <h3 className="image-click">Click on image to enhance</h3>
-
+            {restData.acf.image_3.url && (
+              <a
+                href="#proj-image3-lightbox"
+                className="lightbox-container-image3"
+              >
+                <img
+                  className="project-page-image3"
+                  src={restData.acf.image_3.url}
+                  alt={restData.acf.image_3.alt}
+                ></img>
+              </a>
+            )}
+            {restData.acf.image_3.url && (
+              <h3 className="image-click">Click on image to enhance</h3>
+            )}
             <a
               href="#inspiration"
               className="lightbox"
@@ -127,23 +162,26 @@ const Tabs = () => {
               ></span>
             </a>
 
-            <p className="project-page-desc-design">{restData.acf.design_3}</p>
+            {restData.acf.design_3 && (
+              <p className="project-page-desc-design">
+                {restData.acf.design_3}
+              </p>
+            )}
           </div>
         </div>
 
         <div
           className={toggleState === 3 ? "content  active-content" : "content"}
         >
-          <h2>Content 3</h2>
-          <hr />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sed
-            nostrum rerum laudantium totam unde adipisci incidunt modi alias!
-            Accusamus in quia odit aspernatur provident et ad vel distinctio
-            recusandae totam quidem repudiandae omnis veritatis nostrum
-            laboriosam architecto optio rem, dignissimos voluptatum beatae
-            aperiam voluptatem atque. Beatae rerum dolores sunt.
-          </p>
+          <div className="block-3">
+            {restData.acf.outcomes_1 && (
+              <p className="project-page-desc-dev">{restData.acf.outcomes_1}</p>
+            )}
+
+            {restData.acf.outcomes_2 && (
+              <p className="project-page-desc-dev">{restData.acf.outcomes_2}</p>
+            )}
+          </div>
         </div>
       </div>
     </div>

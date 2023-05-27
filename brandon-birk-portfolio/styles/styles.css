@@ -1111,6 +1111,10 @@ section {
   width: 100%;
   margin: 2rem 0;
 }
+#inspiration .block-3 .project-page-desc-dev {
+  width: 100%;
+  margin: 2rem 0;
+}
 #inspiration .block-3 .image-click {
   font-size: 1rem;
   color: #3e1162;
@@ -1129,6 +1133,11 @@ section {
     margin: 2rem;
   }
   #inspiration .project-page-desc-design {
+    position: relative;
+    max-width: 100%;
+    margin: 2rem 0;
+  }
+  #inspiration .project-page-desc-dev {
     position: relative;
     max-width: 100%;
     margin: 2rem 0;
@@ -1201,6 +1210,10 @@ section {
     width: 100%;
   }
   #examples .block-4 .project-page-desc-design {
+    max-width: 70%;
+    margin: 2rem 0;
+  }
+  #examples .block-4 .project-page-desc-dev {
     max-width: 70%;
     margin: 2rem 0;
   }

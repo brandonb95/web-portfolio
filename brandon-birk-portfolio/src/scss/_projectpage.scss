@@ -370,6 +370,11 @@ section {
       margin: $default-spacing 0;
     }
 
+    .project-page-desc-dev {
+      width: 100%;
+      margin: $default-spacing 0;
+    }
+
     .image-click {
       font-size: 1rem;
       color: $third-color-theme;
@@ -393,7 +398,12 @@ section {
     .project-page-desc-design {
       position: relative;
       max-width: 100%;
-      // height: 400px;
+      margin: $default-spacing 0;
+    }
+
+    .project-page-desc-dev {
+      position: relative;
+      max-width: 100%;
       margin: $default-spacing 0;
     }
   }
@@ -479,6 +489,11 @@ section {
       }
 
       .project-page-desc-design {
+        max-width: 70%;
+        margin: $default-spacing 0;
+      }
+
+      .project-page-desc-dev {
         max-width: 70%;
         margin: $default-spacing 0;
       }
