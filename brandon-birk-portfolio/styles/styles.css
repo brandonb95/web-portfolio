@@ -1093,10 +1093,9 @@ section {
   margin: 2rem 0;
 }
 #inspiration .block-3 .lightbox-container-image3 {
-  margin: 0 auto;
-  width: 80%;
+  width: 100%;
   object-fit: cover;
-  margin: 2rem;
+  margin: 2rem 0;
   transition: 0.3s ease;
 }
 #inspiration .block-3 .lightbox-container-image3:hover, #inspiration .block-3 .lightbox-container-image3:focus {
@@ -1106,8 +1105,9 @@ section {
   width: 100%;
   object-fit: cover;
   height: 300px;
+  border: 1px solid #2d2d2d;
 }
-#inspiration .block-3 .project-page-desc4 {
+#inspiration .block-3 .project-page-desc-design {
   width: 100%;
   margin: 2rem 0;
 }
@@ -1115,6 +1115,7 @@ section {
   font-size: 1rem;
   color: #3e1162;
   text-align: center;
+  width: 100%;
 }
 
 @media screen and (min-width: 48rem) {
@@ -1127,10 +1128,9 @@ section {
     object-fit: cover;
     margin: 2rem;
   }
-  #inspiration .project-page-desc4 {
+  #inspiration .project-page-desc-design {
     position: relative;
     max-width: 100%;
-    height: 400px;
     margin: 2rem 0;
   }
 }
@@ -1200,7 +1200,7 @@ section {
   #examples .block-4 .lightbox-container-image5 img {
     width: 100%;
   }
-  #examples .block-4 .project-page-desc4 {
+  #examples .block-4 .project-page-desc-design {
     max-width: 70%;
     margin: 2rem 0;
   }
@@ -1385,23 +1385,27 @@ section {
 }
 .bloc-tabs button {
   font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
-  color: #3e1162;
 }
 
 .tabs {
   padding: 15px;
   text-align: center;
   width: 100%;
+  height: 40px;
   background: #eeeeee;
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.274);
+  border: 1px solid #3e1162;
   box-sizing: content-box;
   position: relative;
   outline: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s ease;
+  color: #3e1162;
 }
 
 .tabs:not(:last-child) {
-  border: 1px solid rgba(0, 0, 0, 0.274);
+  border: 1px solid #3e1162;
+  border-bottom: 1px solid transparent;
 }
 
 @media screen and (min-width: 48rem) {
@@ -1413,7 +1417,8 @@ section {
   }
 }
 .active-tabs {
-  background: #eeeeee;
+  background: #3e1162;
+  color: #ffffff;
   border-bottom: 1px solid transparent;
 }
 
@@ -1461,6 +1466,25 @@ button {
 
 .active-content {
   display: block;
+}
+
+.code-container {
+  margin: 2rem 0;
+  border-radius: 10px;
+  background-color: #3e1162;
+  padding: 2rem;
+  overflow: auto; /* Add a scrollbar when content overflows */
+  max-height: 500px; /* Set a maximum height for the container */
+}
+
+.code-container pre {
+  margin: 0;
+}
+
+.code-container code {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  color: #ffffff;
 }
 
 * {

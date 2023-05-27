@@ -21,24 +21,29 @@
   align-items: center;
   width: 80%;
   margin: 0 auto;
+
   button {
     font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
-    color: $third-color-theme;
   }
 }
 .tabs {
   padding: 15px;
   text-align: center;
   width: 100%;
+  height: 40px;
   background: $background-color-light;
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.274);
+  border: 1px solid $third-color-theme;
   box-sizing: content-box;
   position: relative;
   outline: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s ease;
+  color: $third-color-theme;
 }
 .tabs:not(:last-child) {
-  border: 1px solid rgba(0, 0, 0, 0.274);
+  border: 1px solid $third-color-theme;
+  border-bottom: 1px solid transparent;
 }
 
 @media screen and (min-width: 48rem) {
@@ -51,7 +56,8 @@
 }
 
 .active-tabs {
-  background: $background-color-light;
+  background: $third-color-theme;
+  color: $text-color-light;
   border-bottom: 1px solid transparent;
 }
 
@@ -93,4 +99,23 @@ button {
 }
 .active-content {
   display: block;
+}
+
+.code-container {
+  margin: $default-spacing 0;
+  border-radius: 10px;
+  background-color: $third-color-theme;
+  padding: $default-spacing;
+  overflow: auto; /* Add a scrollbar when content overflows */
+  max-height: 500px; /* Set a maximum height for the container */
+}
+
+.code-container pre {
+  margin: 0;
+}
+
+.code-container code {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  color: $text-color-light;
 }

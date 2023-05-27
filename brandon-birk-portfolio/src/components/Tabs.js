@@ -58,7 +58,50 @@ const Tabs = () => {
         <div
           className={toggleState === 1 ? "content  active-content" : "content"}
         >
+          <p className="project-page-desc-design">
+            {restData.acf.development_1}
+          </p>
+
+          <p className="project-page-desc-design code-container">
+            <pre>
+              <code>{restData.acf.code_1}</code>
+            </pre>
+          </p>
+        </div>
+
+        <div
+          className={toggleState === 2 ? "content  active-content" : "content"}
+        >
           <div className="block-3">
+            <p className="project-page-desc-design">{restData.acf.design_1}</p>
+
+            <a
+              href="#proj-image2-lightbox"
+              className="lightbox-container-image3"
+            >
+              <img
+                className="project-page-image3"
+                src={restData.acf.image_2.url}
+                alt={restData.acf.image_2.alt}
+              ></img>
+            </a>
+
+            <h3 className="image-click">Click on image to enhance</h3>
+
+            <a
+              href="#inspiration"
+              className="lightbox"
+              id="proj-image2-lightbox"
+            >
+              <span
+                style={{
+                  backgroundImage: `url(${restData.acf.image_2.url})`,
+                }}
+              ></span>
+            </a>
+
+            <p className="project-page-desc-design">{restData.acf.design_2}</p>
+
             <a
               href="#proj-image3-lightbox"
               className="lightbox-container-image3"
@@ -84,19 +127,8 @@ const Tabs = () => {
               ></span>
             </a>
 
-            <p className="project-page-desc4">{restData.acf.inspiration}</p>
+            <p className="project-page-desc-design">{restData.acf.design_3}</p>
           </div>
-        </div>
-
-        <div
-          className={toggleState === 2 ? "content  active-content" : "content"}
-        >
-          <h2>Content 2</h2>
-          <hr />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            voluptatum qui adipisci.
-          </p>
         </div>
 
         <div
