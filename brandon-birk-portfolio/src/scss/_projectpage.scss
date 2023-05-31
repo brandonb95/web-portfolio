@@ -198,7 +198,7 @@ section {
 
   .tools-container {
     img {
-      max-width: 10%;
+      max-width: 9%;
     }
   }
 }
@@ -575,7 +575,7 @@ section {
 
 #related-posts {
   background-color: $first-color-theme;
-  color: $second-color-theme;
+  color: $text-color-light;
   height: 30vh;
   display: flex;
   flex-wrap: wrap;
@@ -587,6 +587,7 @@ section {
     width: 100%;
     padding: $default-spacing;
     text-align: center;
+    margin-top: 2rem;
   }
 
   ul {
@@ -600,15 +601,15 @@ section {
       a {
         text-decoration: none;
         color: $text-color-light;
-        border: 2px solid $fourth-color-theme;
+        // border: 2px solid $second-color-theme;
         border-radius: 2rem;
-        padding: 0.3rem 1rem;
+        padding: 0.6rem 1.3rem;
         transition: 0.3s ease;
         margin: 0 1rem;
-        background-color: $fourth-color-theme;
+        background-color: $second-color-theme;
 
         &:hover {
-          background-color: $second-color-theme;
+          background-color: $fourth-color-theme;
         }
       }
     }

@@ -20,6 +20,20 @@ $code-color-bg: rgb(34, 34, 34);
 $default-spacing: 2rem;
 
 // FONTS
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+@font-face {
+  font-family: "Archivo";
+  src: url("https://brandonbirk.ca/fonts/ArchivoBlack-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("https://brandonbirk.ca/fonts/Karla-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Tilt Warp";
+  src: url("https://brandonbirk.ca/fonts/TiltWarp-Regular-VariableFont_XROT,YROT.ttf")
+    format("truetype");
+}

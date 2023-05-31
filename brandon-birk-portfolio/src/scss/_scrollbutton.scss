@@ -25,3 +25,14 @@
     bottom: 80px;
   }
 }
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.icon {
+  font-size: 3rem;
+}

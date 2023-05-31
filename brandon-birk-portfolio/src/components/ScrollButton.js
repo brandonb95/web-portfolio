@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const isIOS = () => {
   return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
@@ -28,12 +29,13 @@ const ScrollButton = () => {
   window.addEventListener("scroll", toggleVisible);
 
   return (
-    <button className="to-top" aria-label="To Top">
-      <FaArrowCircleUp
-        onClick={scrollToTop}
-        style={{ display: visible ? "inline" : "none" }}
-      />
-    </button>
+    <div className="to-top" aria-label="To Top">
+      {visible && (
+        <div className="icon-container" onClick={scrollToTop}>
+          <FaArrowCircleUp className="icon" />
+        </div>
+      )}
+    </div>
   );
 };
 

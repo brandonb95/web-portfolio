@@ -1,6 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+@font-face {
+  font-family: "Archivo";
+  src: url("https://brandonbirk.ca/fonts/ArchivoBlack-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Karla";
+  src: url("https://brandonbirk.ca/fonts/Karla-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Tilt Warp";
+  src: url("https://brandonbirk.ca/fonts/TiltWarp-Regular-VariableFont_XROT,YROT.ttf") format("truetype");
+}
 .landing-banner {
   display: flex;
   position: relative;
@@ -14,22 +23,22 @@
   color: #ffffff;
 }
 .landing-banner .landing-title {
-  width: 100%;
+  width: 80%;
   position: absolute;
   display: flex;
   text-align: center;
   justify-content: center;
   margin: 0 auto;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   font-weight: 800;
   font-family: "Archivo", Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
-  top: 25%;
+  top: 30%;
   text-transform: uppercase;
   z-index: 999;
 }
 .landing-banner .landing-subheading {
-  width: 100%;
+  width: 60%;
   font-size: 1rem;
   font-weight: 800;
   font-family: Archivo, Arial, Helvetica, sans-serif;
@@ -78,7 +87,7 @@
   animation-delay: 0.5s; /* Add a delay of 0.5 seconds */
 }
 .landing-banner .landing-description {
-  width: 80%;
+  width: 60%;
   font-size: 0.8rem;
   font-weight: 600;
   font-family: Archivo, Arial, Helvetica, sans-serif;
@@ -142,7 +151,16 @@
 
 @media screen and (min-width: 22.563rem) {
   .landing-banner .landing-title {
-    top: 37%;
+    top: 33%;
+  }
+}
+@media screen and (min-width: 30.625rem) {
+  .landing-banner .landing-title {
+    top: 35%;
+    font-size: 2.5rem;
+  }
+  .landing-banner .landing-subheading {
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 48rem) {
@@ -310,8 +328,8 @@
   padding: 0.5rem;
   border-radius: 50%;
 }
-.main-nav ul li a:hover {
-  background-color: #dd7157;
+.main-nav ul li a:hover, .main-nav ul li a:active {
+  color: #dd7157;
 }
 .show .main-nav {
   transition: height 0.5s ease, visibility 0s;
@@ -359,9 +377,7 @@
     padding: 1rem;
   }
   .main-nav ul li a:hover {
-    color: #ffffff;
-    background-color: #dd7157;
-    border-radius: 50%;
+    color: #dd7157;
   }
   .main-nav .navbar-postpage li a {
     color: #2d2d2d;
@@ -666,7 +682,7 @@
 }
 .contact-container .contact-title {
   padding: 2rem 0;
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 800;
   color: #dd7157;
   font-family: "Archivo", Arial, Helvetica, sans-serif;
@@ -682,10 +698,10 @@
     padding: 15rem 2rem;
   }
   .contact-container .contact-title {
-    font-size: 4rem;
+    font-size: 3.8rem;
   }
   .contact-container .contact-blurb {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 }
 .social-icons {
@@ -1009,7 +1025,7 @@ section {
     width: 100%;
   }
   .tools-container img {
-    max-width: 10%;
+    max-width: 9%;
   }
 }
 #software-tools-used {
@@ -1276,7 +1292,7 @@ section {
 }
 #related-posts {
   background-color: #21013a;
-  color: #dd7157;
+  color: #ffffff;
   height: 30vh;
   display: flex;
   flex-wrap: wrap;
@@ -1288,6 +1304,7 @@ section {
   width: 100%;
   padding: 2rem;
   text-align: center;
+  margin-top: 2rem;
 }
 #related-posts ul {
   list-style: none;
@@ -1301,15 +1318,14 @@ section {
 #related-posts ul li a {
   text-decoration: none;
   color: #ffffff;
-  border: 2px solid #aa402b;
   border-radius: 2rem;
-  padding: 0.3rem 1rem;
+  padding: 0.6rem 1.3rem;
   transition: 0.3s ease;
   margin: 0 1rem;
-  background-color: #aa402b;
+  background-color: #dd7157;
 }
 #related-posts ul li a:hover {
-  background-color: #dd7157;
+  background-color: #aa402b;
 }
 
 @media screen and (min-width: 48rem) {
@@ -1347,6 +1363,17 @@ section {
     bottom: 80px;
   }
 }
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.icon {
+  font-size: 3rem;
+}
+
 .circles {
   position: fixed;
   top: 50%;
