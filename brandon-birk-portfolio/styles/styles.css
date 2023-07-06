@@ -40,11 +40,11 @@
 .landing-banner .landing-subheading {
   width: 60%;
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 600;
   font-family: Archivo, Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
   position: absolute;
-  top: 43%;
+  top: 45%;
   text-transform: uppercase;
   align-items: center;
   z-index: 999;
@@ -89,7 +89,7 @@
 .landing-banner .landing-description {
   width: 60%;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 400;
   font-family: Archivo, Arial, Helvetica, sans-serif;
   opacity: 0.5;
   letter-spacing: 1px;

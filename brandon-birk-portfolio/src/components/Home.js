@@ -162,7 +162,7 @@ const Home = () => {
   // Cycle through subheading text
   const subheadingValues = [
     "Front-End Web Developer",
-    "UX Designer",
+    "UX / UI Designer",
     "Creative Enthusiast",
     "Spider-Man Fanatic",
   ];
@@ -270,7 +270,7 @@ const Home = () => {
           </article>
 
           <ScrollButton />
-          <SectionHandler />
+          {/* <SectionHandler /> */}
         </>
       ) : (
         <PacmanLoader
