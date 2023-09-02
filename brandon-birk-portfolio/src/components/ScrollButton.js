@@ -24,6 +24,9 @@ const ScrollButton = () => {
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
+
+    // Clear the anchor from the URL
+    window.history.replaceState({}, document.title, window.location.pathname);
   };
 
   window.addEventListener("scroll", toggleVisible);

@@ -12,7 +12,7 @@ const Arrow = () => {
 
   return (
     <div className="arrow-down">
-      <a href="#about" aria-label="About Section">
+      <a href="#works" aria-label="Works Section">
         <div className="left"></div>
         <div className="right"></div>
       </a>

@@ -251,26 +251,28 @@ const Home = () => {
                 {restData.acf.landing_description}
               </p>
 
-              <h3 className="hint">
+              {/* <h3 className="hint">
                 Psst.. bubbles like to be dragged around!
-              </h3>
+              </h3> */}
             </article>
 
             <Arrow />
           </header>
 
-          <article id="about" data-section="about">
-            <About />
-          </article>
           <article id="works" data-section="works">
             <Works />
           </article>
+
+          <article id="about" data-section="about">
+            <About />
+          </article>
+
           <article id="contact" data-section="contact">
             <Contact />
           </article>
 
           <ScrollButton />
-          {/* <SectionHandler /> */}
+          <SectionHandler />
         </>
       ) : (
         <PacmanLoader

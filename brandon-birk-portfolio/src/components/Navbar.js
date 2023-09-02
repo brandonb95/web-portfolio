@@ -57,13 +57,13 @@ const Navbar = ({ handleShowHideNav }) => {
       </div>
       <ul>
         <li>
-          <a href="#about" aria-label="About Section">
-            About
+          <a href="#works" aria-label="Works Section">
+            Works
           </a>
         </li>
         <li>
-          <a href="#works" aria-label="Works Section">
-            Works
+          <a href="#about" aria-label="About Section">
+            About
           </a>
         </li>
         <li>

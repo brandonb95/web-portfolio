@@ -42,7 +42,7 @@ const Contact = () => {
             <div className="social-icons">
               <div className="solo-social">
                 <a
-                  href="https://www.linkedin.com/in/brandon-birk-36b4a3114/?originalSubdomain=ca"
+                  href="https://www.linkedin.com/in/brandon-birk/"
                   rel="noreferrer"
                   target="_blank"
                   aria-label="LinkedIn Button"

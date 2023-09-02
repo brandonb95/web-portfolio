@@ -55,20 +55,20 @@ const SectionHandler = () => {
           data-section="home"
         ></div>
       </a>
-      <a href="#about" aria-label="About Section">
-        <div
-          ref={circlesRef.about}
-          className={`circle about ${activeCircle === "about" ? "active" : ""}`}
-          onClick={() => handleButtonClick("about")}
-          data-section="about"
-        ></div>
-      </a>
       <a href="#works" aria-label="Works Section">
         <div
           ref={circlesRef.works}
           className={`circle works ${activeCircle === "works" ? "active" : ""}`}
           onClick={() => handleButtonClick("works")}
           data-section="works"
+        ></div>
+      </a>
+      <a href="#about" aria-label="About Section">
+        <div
+          ref={circlesRef.about}
+          className={`circle about ${activeCircle === "about" ? "active" : ""}`}
+          onClick={() => handleButtonClick("about")}
+          data-section="about"
         ></div>
       </a>
       <a href="#contact" aria-label="Contact Section">
