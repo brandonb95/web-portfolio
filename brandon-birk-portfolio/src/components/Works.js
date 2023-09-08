@@ -6,7 +6,7 @@ import "animate.css/animate.min.css";
 
 const Works = () => {
   const restPath =
-    "https://brandonbirk.ca/portfolio-backend/wp-json/wp/v2/brandonbirk-works?_embed&acf_format=standard&orderby=date&order=asc";
+    "http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?_embed&acf_format=standard&orderby=date&order=asc";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
   const [imagePath, setImagePath] = useState(null);

@@ -9,7 +9,7 @@ import "animate.css/animate.min.css";
 
 const PostPage = () => {
   const { slug } = useParams();
-  const restPath = `https://brandonbirk.ca/portfolio-backend/wp-json/wp/v2/brandonbirk-works?slug=${slug}&_embed&acf_format=standard`;
+  const restPath = `http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?slug=${slug}&_embed&acf_format=standard`;
   const [restData, setData] = useState({});
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -27,7 +27,7 @@ const PostPage = () => {
 
         // Get related posts
         const relatedPostsResponse = await fetch(
-          `https://brandonbirk.ca/portfolio-backend/wp-json/wp/v2/brandonbirk-works?per_page=3&_embed&exclude=${data[0].id}`
+          `http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?per_page=3&_embed&exclude=${data[0].id}`
         );
         if (relatedPostsResponse.ok) {
           const relatedPostsData = await relatedPostsResponse.json();
@@ -76,7 +76,7 @@ const PostPage = () => {
                 />
 
                 <h2 data-aos="fade-up" data-aos-duration="1000">
-                  Overview
+                  Context & Role
                 </h2>
 
                 <p
@@ -221,6 +221,35 @@ const PostPage = () => {
                 <p>No repeater data available</p>
               )}
 
+              <div className="duration-container">
+                <h2
+                  className="work-duration"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  Duration
+                </h2>
+
+                <p
+                  className="duration"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  {restData.acf.date}
+                </p>
+
+                <h2
+                  className="work-role"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  Role
+                </h2>
+
+                <p className="role" data-aos="fade-up" data-aos-duration="1000">
+                  {restData.acf.role}
+                </p>
+              </div>
               {/* <article id={`post-${restData.id}`}>
                 <div
                   className="entry-content"
@@ -328,7 +357,7 @@ const PostPage = () => {
 
             {relatedPosts.length > 0 && (
               <section id="related-posts">
-                <h3>Check out one of my other projects:</h3>
+                <h3>Other work</h3>
                 <ul>
                   {relatedPosts.map((post) => (
                     <li key={post.id}>

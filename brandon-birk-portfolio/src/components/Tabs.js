@@ -5,7 +5,7 @@ const Tabs = () => {
   const [toggleState, setToggleState] = useState(1);
 
   const { slug } = useParams();
-  const restPath = `https://brandonbirk.ca/portfolio-backend/wp-json/wp/v2/brandonbirk-works?slug=${slug}&_embed&acf_format=standard`;
+  const restPath = `http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?slug=${slug}&_embed&acf_format=standard`;
   const [restData, setData] = useState({});
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -38,19 +38,19 @@ const Tabs = () => {
           className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(1)}
         >
-          DEVELOPMENT
+          Development
         </button>
         <button
           className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(2)}
         >
-          DESIGN
+          Design
         </button>
         <button
           className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(3)}
         >
-          OVERALL THOUGHTS
+          Problems & Solutions
         </button>
       </div>
 
@@ -59,17 +59,31 @@ const Tabs = () => {
           className={toggleState === 1 ? "content  active-content" : "content"}
         >
           <div className="block-3">
-            {restData.acf.development_1 && (
-              <p className="project-page-desc-dev">
-                {restData.acf.development_1}
-              </p>
+            <div className="dev-code-container1">
+              {restData.acf.development_1 && (
+                <p className="project-page-desc-dev">
+                  {restData.acf.development_1}
+                </p>
+              )}
+
+              {restData.acf.code_1 && (
+                <pre className="code-container">
+                  <code>{restData.acf.code_1}</code>
+                </pre>
+              )}
+            </div>
+
+            {restData.acf.code_image_1 && restData.acf.code_image_1.url && (
+              <img
+                className="project-page-image"
+                src={restData.acf.code_image_1.url}
+                alt={restData.acf.code_image_1.alt}
+              />
             )}
 
-            {restData.acf.code_1 && (
-              <pre className="project-page-desc-dev code-container">
-                <code>{restData.acf.code_1}</code>
-              </pre>
-            )}
+            {/* {restData.acf.code_image_1.url && (
+              <h3 className="image-click">Click on image to open in new tab</h3>
+            )} */}
 
             {restData.acf.development_2 && (
               <p className="project-page-desc-dev">
@@ -81,6 +95,14 @@ const Tabs = () => {
               <pre className="project-page-desc-dev code-container">
                 <code>{restData.acf.code_2}</code>
               </pre>
+            )}
+
+            {restData.acf.code_image_2 && restData.acf.code_image_2.url && (
+              <img
+                className="project-page-image"
+                src={restData.acf.code_image_2.url}
+                alt={restData.acf.code_image_2.alt}
+              />
             )}
 
             {restData.acf.development_3 && (
@@ -102,23 +124,23 @@ const Tabs = () => {
             )}
 
             {restData.acf.image_2.url && (
-              <a
-                href="#proj-image2-lightbox"
-                className="lightbox-container-image3"
-              >
-                <img
-                  className="project-page-image3"
-                  src={restData.acf.image_2.url}
-                  alt={restData.acf.image_2.alt}
-                />
-              </a>
+              // <a
+              //   href="#proj-image2-lightbox"
+              //   className="lightbox-container-image3"
+              // >
+              <img
+                className="project-page-image"
+                src={restData.acf.image_2.url}
+                alt={restData.acf.image_2.alt}
+              />
+              // </a>
             )}
 
-            {restData.acf.image_2.url && (
+            {/* {restData.acf.image_2.url && (
               <h3 className="image-click">Click on image to enhance</h3>
-            )}
+            )} */}
 
-            <a
+            {/* <a
               href="#inspiration"
               className="lightbox"
               id="proj-image2-lightbox"
@@ -128,7 +150,7 @@ const Tabs = () => {
                   backgroundImage: `url(${restData.acf.image_2.url})`,
                 }}
               ></span>
-            </a>
+            </a> */}
             {restData.acf.design_1 && (
               <p className="project-page-desc-design">
                 {restData.acf.design_2}
@@ -136,21 +158,18 @@ const Tabs = () => {
             )}
 
             {restData.acf.image_3.url && (
-              <a
-                href="#proj-image3-lightbox"
-                className="lightbox-container-image3"
-              >
-                <img
-                  className="project-page-image3"
-                  src={restData.acf.image_3.url}
-                  alt={restData.acf.image_3.alt}
-                ></img>
-              </a>
+              <img
+                className="project-page-image"
+                src={restData.acf.image_3.url}
+                alt={restData.acf.image_3.alt}
+              ></img>
             )}
-            {restData.acf.image_3.url && (
+
+            {/* {restData.acf.image_3.url && (
               <h3 className="image-click">Click on image to enhance</h3>
-            )}
-            <a
+            )} */}
+
+            {/* <a
               href="#inspiration"
               className="lightbox"
               id="proj-image3-lightbox"
@@ -160,7 +179,7 @@ const Tabs = () => {
                   backgroundImage: `url(${restData.acf.image_3.url})`,
                 }}
               ></span>
-            </a>
+            </a> */}
 
             {restData.acf.design_3 && (
               <p className="project-page-desc-design">

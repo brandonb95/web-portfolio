@@ -132,7 +132,8 @@ section {
 
   .project-page-desc1 {
     width: 80%;
-    color: $first-color-theme;
+    color: $text-color-dark;
+    font-weight: 600;
   }
 }
 
@@ -162,7 +163,8 @@ section {
   }
 }
 
-.tools-container {
+.tools-container,
+.duration-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -177,8 +179,14 @@ section {
     margin: 2rem 0;
   }
   img {
-    width: 30%;
+    width: 20%;
     margin: 0.5rem;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
   }
 }
 
@@ -343,7 +351,8 @@ section {
   padding-top: 4rem;
 
   .block-3 {
-    color: $first-color-theme;
+    color: $text-color-dark;
+    font-weight: 600;
     margin: $default-spacing 0;
 
     .lightbox-container-image3 {
@@ -388,23 +397,26 @@ section {
 @media screen and (min-width: 48rem) {
   #inspiration {
     padding-top: 10rem;
-    .lightbox-container-image3 {
-      margin: 0 auto;
-      max-width: 100%;
-      object-fit: cover;
-      margin: $default-spacing;
-    }
 
-    .project-page-desc-design {
-      position: relative;
-      max-width: 100%;
-      margin: $default-spacing 0;
-    }
+    .block-3 {
+      .lightbox-container-image3 {
+        margin: 0 auto;
+        max-width: 100%;
+        object-fit: cover;
+        margin: $default-spacing;
+      }
 
-    .project-page-desc-dev {
-      position: relative;
-      max-width: 100%;
-      margin: $default-spacing 0;
+      .project-page-desc-design {
+        position: relative;
+        max-width: 100%;
+        margin: $default-spacing 0;
+      }
+
+      .project-page-desc-dev {
+        position: relative;
+        width: 100%;
+        margin: $default-spacing 0;
+      }
     }
   }
 }
@@ -574,7 +586,7 @@ section {
 }
 
 #related-posts {
-  background-color: $first-color-theme;
+  background-color: $background-color-dark;
   color: $text-color-light;
   height: 30vh;
   display: flex;
@@ -622,6 +634,25 @@ section {
   }
 }
 
+//  Revised image layouts
+.project-page-image {
+  width: 80%;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.dev-code-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 48rem) {
+  .dev-code-container1 {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 // WordPress block code
 
 .entry-content {

@@ -11,7 +11,7 @@
 
 @media screen and (min-width: 48rem) {
   .details-container {
-    width: 50%;
+    max-width: 60%;
   }
 }
 
@@ -19,7 +19,7 @@
   display: block;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
 
   button {
@@ -40,6 +40,7 @@
   border-bottom: 1px solid transparent;
   transition: 0.3s ease;
   color: $third-color-theme;
+  font-size: 1rem;
 }
 .tabs:not(:last-child) {
   border: 1px solid $third-color-theme;
@@ -104,10 +105,10 @@ button {
 .code-container {
   margin: $default-spacing 0;
   border-radius: 10px;
-  background-color: $third-color-theme;
+  background-color: $background-color-code;
   padding: $default-spacing;
   overflow: auto; /* Add a scrollbar when content overflows */
-  max-height: 500px; /* Set a maximum height for the container */
+  max-height: 300px; /* Set a maximum height for the container */
 }
 
 .code-container pre {
@@ -118,4 +119,10 @@ button {
   font-family: "Courier New", monospace;
   font-size: 14px;
   color: $text-color-light;
+}
+
+@media screen and (min-width: 48rem) {
+  .code-container {
+    width: 100% !important;
+  }
 }
