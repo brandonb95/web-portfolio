@@ -11,8 +11,7 @@ import SectionHandler from "./SectionHandler";
 import PacmanLoader from "react-spinners/PacmanLoader";
 
 const Home = () => {
-  const restPath =
-    "https://brandonbirk.ca/portfolio-backend/wp-json/wp/v2/pages/6?_embed";
+  const restPath = "http://localhost/brandonbirk/wp-json/wp/v2/pages/6?_embed";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -214,50 +213,48 @@ const Home = () => {
     <>
       {isLoaded ? (
         <>
-          <header id="masthead" className="site-header">
-            <Header />
+          <Header />
 
-            <article id="home" className="landing-banner" data-section="home">
-              <div className="bubbles">
-                {positions.map((position, i) => (
-                  <span
-                    key={i}
-                    style={{
-                      "--i": i + 1,
-                      left: position.left,
-                      top: position.top,
-                    }}
-                    ref={setBubbleRef(i)}
-                    onMouseDown={bubbleMouseDownHandlers[i]}
-                  ></span>
-                ))}
-              </div>
+          <article id="home" className="landing-banner" data-section="home">
+            <div className="bubbles">
+              {positions.map((position, i) => (
+                <span
+                  key={i}
+                  style={{
+                    "--i": i + 1,
+                    left: position.left,
+                    top: position.top,
+                  }}
+                  ref={setBubbleRef(i)}
+                  onMouseDown={bubbleMouseDownHandlers[i]}
+                ></span>
+              ))}
+            </div>
 
-              <h1 className="landing-title animate__animated animate__bounceIn">
-                {restData.acf.heading}
-              </h1>
+            <h1 className="landing-title animate__animated animate__bounceIn">
+              {restData.acf.heading}
+            </h1>
 
-              <h2
-                className={`landing-subheading animate__animated ${
-                  subheadingAnimating === "bounceOut"
-                    ? "animate__bounceOut"
-                    : "animate__bounceIn"
-                }`}
-              >
-                {subheadingValues[subheadingIndex]}
-              </h2>
+            <h2
+              className={`landing-subheading animate__animated ${
+                subheadingAnimating === "bounceOut"
+                  ? "animate__bounceOut"
+                  : "animate__bounceIn"
+              }`}
+            >
+              {subheadingValues[subheadingIndex]}
+            </h2>
 
-              <p className="landing-description animate__animated animate__bounceIn">
-                {restData.acf.landing_description}
-              </p>
+            <p className="landing-description animate__animated animate__bounceIn">
+              {restData.acf.landing_description}
+            </p>
 
-              {/* <h3 className="hint">
+            {/* <h3 className="hint">
                 Psst.. bubbles like to be dragged around!
               </h3> */}
-            </article>
+          </article>
 
-            <Arrow />
-          </header>
+          {/* <Arrow /> */}
 
           <article id="works" data-section="works">
             <Works />
@@ -272,7 +269,7 @@ const Home = () => {
           </article>
 
           <ScrollButton />
-          <SectionHandler />
+          {/* <SectionHandler /> */}
         </>
       ) : (
         <PacmanLoader

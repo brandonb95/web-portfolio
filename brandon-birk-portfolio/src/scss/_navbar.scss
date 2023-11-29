@@ -1,233 +1,74 @@
 @use "variables" as *;
 
 .main-nav {
-  display: block;
-  text-align: center;
-  position: fixed;
+  position: relative;
   z-index: 100;
-  width: 100vw;
-  justify-content: center;
-  bottom: 0;
+  width: 100%;
+  background-color: $white;
   height: 0;
-  background-color: #fff;
-  margin: 0 auto;
-  transition: height 0.5s ease, visibility 0s;
-
-  .logo-name {
-    padding: 1rem 0 0 1rem;
-    text-transform: uppercase;
-    transition: 0.3s ease;
-    width: 6rem;
-    position: absolute;
-    justify-content: center;
-    fill: $third-color-theme;
-
-    &:hover,
-    &:focus,
-    &:active {
-      transform: scale(1.1);
-    }
-
-    a {
-      color: $third-color-theme;
-      text-decoration: none;
-      font-family: "Archivo", Arial, Helvetica, sans-serif;
-      font-weight: 800;
-    }
-  }
-
-  .logo-name-postpage {
-    padding-top: 1rem;
-    text-transform: uppercase;
-    transition: 0.3s ease;
-    width: 4rem;
-    position: absolute;
-    justify-content: center;
-    fill: $third-color-theme;
-
-    &:hover,
-    &:focus,
-    &:active {
-      transform: scale(1.1);
-    }
-
-    a {
-      color: $third-color-theme;
-      text-decoration: none;
-      font-family: Archivo, Arial, Helvetica, sans-serif;
-      font-weight: 800;
-    }
-  }
-
-  ul {
-    display: block;
-    list-style: none;
-    // padding: 1rem 0;
-    transition: height 0.5s ease, visibility 0s;
-
-    li {
-      padding: 1rem 0;
-
-      a {
-        color: $first-color-theme;
-        text-decoration: none;
-        transition: 0.5s ease;
-        padding: 0.5rem;
-        border-radius: 50%;
-        &:hover,
-        &:active {
-          color: $second-color-theme;
-        }
-      }
-    }
-  }
+  overflow: hidden;
+  transition: height 0.5s ease, visibility 0s 0.5s;
 
   .show & {
     transition: height 0.5s ease, visibility 0s;
     visibility: visible;
-    height: 240px;
+    height: 300px;
   }
-}
 
-// 768px - Tablet
-@media screen and (min-width: 48rem) {
-  .main-nav {
-    position: absolute;
-    top: 0;
-    background-color: transparent;
-    z-index: 999;
-    color: $text-color-light;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    transition: none;
-    overflow: visible;
-
-    .logo-name {
-      position: relative;
-      padding-top: 0.5rem;
-      width: 7rem;
-      fill: #fff;
-      align-items: center;
-      transition: 0.3s ease;
-
-      &:hover,
-      &:focus,
-      &:active {
-        transform: scale(1.1);
-      }
-
-      a {
-        color: $text-color-light;
-      }
-    }
-
-    .logo-name-postpage {
-      position: relative;
-    }
-
-    ul {
-      padding-top: 1rem;
-
-      li {
-        a {
-          color: $text-color-light;
-          padding: 1rem;
-          &:hover {
-            // padding: 0.2rem;
-            color: $second-color-theme;
-          }
-        }
-      }
-    }
-
-    // For Single Project Page
-    .navbar-postpage {
-      li {
-        a {
-          color: $text-color-dark;
-        }
-      }
-    }
-    .show & {
-      display: flex;
-      transition: none;
-    }
-
-    ul {
-      display: flex;
-      text-align: center;
-
-      li {
-        text-decoration: none;
-        list-style: none;
-        padding: 1rem;
-      }
-
-      a {
-        padding: 0;
-        text-align: center;
-        border-top: none;
-        @at-root .main-nav li:not(:first-child) a {
-          border-top: none;
-        }
-
-        &:hover,
-        &:focus,
-        &:active {
-          background-color: transparent;
-          color: $primary-theme-color;
-          transition: 0.5s;
-        }
-      }
+  a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: $text-color-dark;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 12px;
+    @at-root .main-nav li:not(:first-child) a {
+      border-top: 1px solid #d3d3d3;
+      margin: 0 4rem;
     }
   }
 }
 
 // Mobile Menu
 .btn-main-nav {
-  position: fixed;
-  z-index: 999;
-  bottom: 1vh;
-  left: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: transparent;
-  background-color: $second-color-theme;
-  border: 5px solid $fourth-color-theme;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  transition: 0.3s ease-in-out;
-
-  &:active,
-  &:focus {
-    background-color: $fourth-color-theme;
-    cursor: pointer;
-  }
+  background-color: transparent;
+  border: none;
+  transition: 0.3s ease;
 }
 
 .hamburger-icon {
+  position: relative;
+  right: 0;
   cursor: pointer;
-  position: inherit;
+
+  &:hover .line {
+    background-color: $second-color-theme;
+  }
 }
 
 .line {
-  background: $first-color-theme;
+  background-color: $black;
   display: block;
   position: relative;
-  z-index: 99;
-  width: 36px;
-  height: 4px;
+  width: 25px;
+  height: 3px;
   border-radius: 2px;
-  margin: 7px;
+  margin: 5px;
   transition: all 0.55s cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+    color: $primary-theme-color;
+  }
 
   .show &:nth-child(1) {
-    transform: translateY(11px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
   }
 
   .show &:nth-child(2) {
@@ -235,23 +76,57 @@
   }
 
   .show &:nth-child(3) {
-    transform: translateY(-11px) rotate(-45deg);
+    transform: translateY(-9px) rotate(-45deg);
   }
 }
 
-// Custom animation modification from aos package
-[data-aos^="fade"][data-aos^="fade"].aos-animate {
-  opacity: 1;
-  transform: translateZ(0);
-  transition: 0.8s ease;
-}
-
-// 768px - Tablet
 @media screen and (min-width: 48rem) {
+  .main-nav {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    transition: none;
+    overflow: visible;
+    .show & {
+      display: flex;
+      transition: none;
+      // height: auto;
+    }
+
+    li {
+      text-decoration: none;
+      list-style: none;
+      // flex: 1;
+      padding: 1rem;
+    }
+
+    a {
+      padding: 0;
+      text-align: center;
+      border-top: none;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      @at-root .main-nav li:not(:first-child) a {
+        border-top: none;
+        margin: 0;
+      }
+      transition: 0.3s;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent;
+        color: $primary-theme-color;
+      }
+    }
+  }
+
   .btn-main-nav {
     visibility: hidden;
+    display: none;
     margin: 0;
-
     padding: 0;
     list-style: none;
     line-height: 1;

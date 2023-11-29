@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import Header from "./components/Header";
+
 import About from "./components/About";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
@@ -14,7 +16,8 @@ import "./scss/styles.scss";
 function App() {
   return (
     <BrowserRouter>
-      <header id="masthead" className="site-header">
+      <Header />
+      <main>
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/about" exact element={<About />} />
@@ -22,7 +25,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/works/:slug" element={<PostPage />} />
         </Routes>
-      </header>
+      </main>
     </BrowserRouter>
   );
 }

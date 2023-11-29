@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Logo from "./Logo";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "animate.css/animate.min.css";
@@ -50,11 +49,6 @@ const Navbar = ({ handleShowHideNav }) => {
       onClick={closeNav}
       data-aos-duration="1000"
     >
-      <div className="logo-name">
-        <a href="/" aria-label="Home">
-          <Logo />
-        </a>
-      </div>
       <ul>
         <li>
           <a href="#works" aria-label="Works Section">

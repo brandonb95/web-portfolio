@@ -6,8 +6,7 @@ import "animate.css/animate.min.css";
 import ContactAnimation from "./ContactAnimation";
 
 const Contact = () => {
-  const restPath =
-    "https://brandonbirk.ca/portfolio-backend/wp-json/wp/v2/pages/61?_embed";
+  const restPath = "http://localhost/brandonbirk/wp-json/wp/v2/pages/61?_embed";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 

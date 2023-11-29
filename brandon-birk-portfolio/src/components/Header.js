@@ -1,52 +1,52 @@
-import { useState, useEffect } from 'react'
-import Navbar from './Navbar';
+import { useState, useEffect } from "react";
+import Logo from "./Logo";
+
+import Navbar from "./Navbar";
 
 const Header = () => {
+  // Mobile Nav Settings
+  const [navOpen, setNavOpen] = useState(false);
 
-    // Mobile Nav Settings
-    const [navOpen, setNavOpen] = useState(false);
+  const showHideNav = () => {
+    setNavOpen(!navOpen);
+  };
 
-    const showHideNav = () => {
-        setNavOpen(!navOpen);
-      };
-    
-      const isDesktop = e => {
-        if (e.matches) {
-          setNavOpen(false);
-        }
-      };
+  const isDesktop = (e) => {
+    if (e.matches) {
+      setNavOpen(false);
+    }
+  };
 
-      useEffect(() => {
-        let mediaQuery = window.matchMedia('(min-width: 768px)');
-        mediaQuery.addEventListener('change', isDesktop);
-        return () => mediaQuery.removeEventListener('change', isDesktop);
-      }, []);
+  useEffect(() => {
+    let mediaQuery = window.matchMedia("(min-width: 768px)");
+    mediaQuery.addEventListener("change", isDesktop);
+    return () => mediaQuery.removeEventListener("change", isDesktop);
+  }, []);
 
-return(
+  return (
+    <header className={navOpen ? "show" : undefined}>
+      <a href="/" aria-label="Home">
+        <Logo />
+      </a>
+      {/* <div className="logo-wrapper"></div> */}
+      <button
+        className="btn-main-nav"
+        onMouseDown={(e) => {
+          e.preventDefault();
+        }}
+        onClick={showHideNav}
+      >
+        <span className="hamburger-icon btn-main-nav">
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
+        </span>
+        <span className="sr-only">Menu</span>
+      </button>
 
-<div className={navOpen ? 'show' : undefined}>
-          <div className="logo-wrapper">
-          </div>
-        <button
-            className="btn-main-nav"
-            onMouseDown={e => {
-            e.preventDefault();
-            }}
-            onClick={showHideNav}
-        >
-            <span className="hamburger-icon">
-            <span className="line"></span>
-            <span className="line"></span>
-            <span className="line"></span>
-            </span>
-            <span className="sr-only">Menu</span>
-        </button>
+      <Navbar handleShowHideNav={showHideNav} />
+    </header>
+  );
+};
 
-         <Navbar handleShowHideNav={showHideNav}/>
-        
-        </div>
-
-)
-}
-
-export default Header
+export default Header;

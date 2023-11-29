@@ -5,7 +5,7 @@ const Tabs = () => {
   const [toggleState, setToggleState] = useState(1);
 
   const { slug } = useParams();
-  const restPath = `https://brandonbirk.ca/portfolio-backend/wp-json/wp/v2/brandonbirk-works?slug=${slug}&_embed&acf_format=standard`;
+  const restPath = `http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?slug=${slug}&_embed&acf_format=standard`;
   const [restData, setData] = useState({});
   const [isLoaded, setLoadStatus] = useState(false);
 
