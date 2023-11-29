@@ -9,7 +9,7 @@ import "animate.css/animate.min.css";
 
 const PostPage = () => {
   const { slug } = useParams();
-  const restPath = `http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?slug=${slug}&_embed&acf_format=standard`;
+  const restPath = `https://brandonbirk.ca/portfolio-backend/wp-json/wp/v2/brandonbirk-works?slug=${slug}&_embed&acf_format=standard`;
   const [restData, setData] = useState({});
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -27,7 +27,7 @@ const PostPage = () => {
 
         // Get related posts
         const relatedPostsResponse = await fetch(
-          `http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?per_page=3&_embed&exclude=${data[0].id}`
+          `https://brandonbirk.ca/portfolio-backend/wp-json/wp/v2/brandonbirk-works?per_page=3&_embed&exclude=${data[0].id}`
         );
         if (relatedPostsResponse.ok) {
           const relatedPostsData = await relatedPostsResponse.json();

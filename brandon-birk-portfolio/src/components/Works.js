@@ -6,7 +6,7 @@ import "animate.css/animate.min.css";
 
 const Works = () => {
   const restPath =
-    "http://localhost/brandonbirk/wp-json/wp/v2/brandonbirk-works?_embed&acf_format=standard&orderby=date&order=asc";
+    "https://brandonbirk.ca/portfolio-backend/wp-json/wp/v2/brandonbirk-works?_embed&acf_format=standard";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
   const [imagePath, setImagePath] = useState(null);
@@ -39,13 +39,20 @@ const Works = () => {
     once: true, // only animate once per viewport on page load
   });
 
+  const postOrder = [59, 57, 130, 50];
+
   return (
     <>
       {isLoaded && restData.length > 0 ? (
         <article className="work-container">
-          {restData.map((post) => (
-            <Post key={post.id} post={post} imagePath={imagePath} />
-          ))}
+          {postOrder.map((postId) => {
+            const post = restData.find((item) => item.id === postId);
+            if (post) {
+              return <Post key={post.id} post={post} imagePath={imagePath} />;
+            } else {
+              return null; // Handle missing posts gracefully
+            }
+          })}
         </article>
       ) : (
         <h2>Works Loading...</h2>

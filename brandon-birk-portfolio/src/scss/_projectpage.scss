@@ -121,6 +121,7 @@ section {
     font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 2rem 0;
+    font-weight: 400;
   }
   .project-page-cover {
     margin: 0 auto;
@@ -133,7 +134,9 @@ section {
   .project-page-desc1 {
     width: 80%;
     color: $text-color-dark;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -177,6 +180,7 @@ section {
     font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 2rem 0;
+    font-weight: 400;
   }
   img {
     width: 20%;
@@ -185,7 +189,7 @@ section {
 
   p {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 600;
   }
 }
@@ -352,7 +356,9 @@ section {
 
   .block-3 {
     color: $text-color-dark;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
     margin: $default-spacing 0;
 
     .lightbox-container-image3 {
@@ -586,7 +592,7 @@ section {
 }
 
 #related-posts {
-  background-color: $background-color-dark;
+  background-color: $background-color-code;
   color: $text-color-light;
   height: 30vh;
   display: flex;
@@ -639,6 +645,7 @@ section {
   width: 80%;
   object-fit: cover;
   max-width: 100%;
+  max-height: 30rem;
 }
 
 .dev-code-container1 {

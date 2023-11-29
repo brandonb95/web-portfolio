@@ -8,7 +8,6 @@ import About from "./components/About";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
 import PostPage from "./components/PostPage";
-import AOS from "aos";
 
 import "./scss/styles.scss";
 
