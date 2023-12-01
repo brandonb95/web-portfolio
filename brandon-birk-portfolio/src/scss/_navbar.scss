@@ -12,23 +12,37 @@
   .show & {
     transition: height 0.5s ease, visibility 0s;
     visibility: visible;
-    height: 300px;
+    height: 100vh;
   }
 
-  a {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    color: $text-color-dark;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    line-height: 60px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 0 12px;
-    @at-root .main-nav li:not(:first-child) a {
-      border-top: 1px solid #d3d3d3;
-      margin: 0 4rem;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      width: 100%;
+      text-align: center;
+      padding: 3rem 0;
+      a {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        color: $text-color-dark;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 0 2rem;
+        transition: 0.3s ease;
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: transparent;
+          color: $primary-theme-color;
+        }
+        @at-root .main-nav li:not(:first-child) a {
+          border-top: 1px solid #d3d3d3;
+          padding: 3rem 0;
+          margin: 0 4rem;
+        }
+      }
     }
   }
 }
@@ -39,6 +53,7 @@
   background-color: transparent;
   border: none;
   transition: 0.3s ease;
+  margin: 1rem;
 }
 
 .hamburger-icon {
@@ -88,37 +103,40 @@
     justify-content: right;
     transition: none;
     overflow: visible;
+    padding-right: 4rem;
+
     .show & {
       display: flex;
       transition: none;
       // height: auto;
     }
 
-    li {
-      text-decoration: none;
-      list-style: none;
-      // flex: 1;
-      padding: 1rem;
-    }
+    ul {
+      flex-wrap: nowrap;
+      width: 20rem;
+      li {
+        text-decoration: none;
+        list-style: none;
+        padding: 0rem;
+        a {
+          padding: 0;
+          text-align: center;
+          border-top: none;
+          height: 100%;
 
-    a {
-      padding: 0;
-      text-align: center;
-      border-top: none;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      @at-root .main-nav li:not(:first-child) a {
-        border-top: none;
-        margin: 0;
-      }
-      transition: 0.3s;
+          @at-root .main-nav li:not(:first-child) a {
+            border-top: none;
+            margin: 0;
+          }
+          transition: 0.3s;
 
-      &:hover,
-      &:focus,
-      &:active {
-        background-color: transparent;
-        color: $primary-theme-color;
+          &:hover,
+          &:focus,
+          &:active {
+            background-color: transparent;
+            color: $primary-theme-color;
+          }
+        }
       }
     }
   }

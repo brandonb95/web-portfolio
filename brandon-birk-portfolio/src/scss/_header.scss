@@ -8,13 +8,11 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 3rem;
   z-index: 99;
-  height: 100px;
-  box-shadow: 0px 5px 10px $black;
+  box-shadow: 0px 5px 10px #f1f1f1;
   a {
-    width: 4rem;
-
+    width: 3rem;
+    margin: 1rem;
     .logo-name {
       svg {
         &:hover,
@@ -43,7 +41,6 @@ header {
     }
 
     .logo-name {
-      margin: 0;
       a {
         img {
           display: flex;

@@ -40,3 +40,10 @@ $default-spacing: 2rem;
   src: url("https://brandonbirk.ca/fonts/TiltWarp-Regular-VariableFont_XROT,YROT.ttf")
     format("truetype");
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+
+$main-font: "Poppins", sans-serif;
+$text-font: "Open Sans", sans-serif;
