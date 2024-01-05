@@ -1,0 +1,15 @@
+@mixin works-button {
+  text-decoration: none;
+  display: inline-block;
+  justify-content: center;
+  color: $text-color-dark;
+  background-color: #ebebeb;
+  //   border: 1px solid $first-color-theme;
+  //   border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  transition: ease-in-out 0.2s;
+  font-weight: 600;
+  &:hover {
+    background-color: #c4c4c4;
+  }
+}

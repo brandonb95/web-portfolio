@@ -45,6 +45,13 @@ const Works = () => {
     <>
       {isLoaded && restData.length > 0 ? (
         <article className="work-container">
+          <h2
+            className="work-section-title"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            Work
+          </h2>
           {postOrder.map((postId) => {
             const post = restData.find((item) => item.id === postId);
             if (post) {

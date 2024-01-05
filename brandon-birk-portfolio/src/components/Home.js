@@ -45,8 +45,8 @@ const Home = () => {
       "Spider-Man Fanatic",
     ],
     loop: {},
-    typeSpeed: 80,
-    deleteSpeed: 80,
+    typeSpeed: 30,
+    deleteSpeed: 30,
   });
 
   // Loading Spinner
@@ -78,11 +78,11 @@ const Home = () => {
                 {restData.acf.heading}
               </h1>
 
-              <h2 className="landing-subheading">
+              {/* <h2 className="landing-subheading">
                 {" "}
                 {subheadingValues}
                 <Cursor cursorStyle="|" />
-              </h2>
+              </h2> */}
 
               <p className="landing-description animate__animated animate__bounceIn">
                 {restData.acf.landing_description}

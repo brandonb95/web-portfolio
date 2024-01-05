@@ -37,7 +37,7 @@
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
-  z-index: 999;
+  z-index: 1;
   color: #2d2d2d;
 }
 .landing-banner .landing-container .landing-subheading {
@@ -46,7 +46,7 @@
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
-  z-index: 999;
+  z-index: 1;
   transition: opacity 0.5s ease-out;
   opacity: 1;
   animation-name: bounceIn;
@@ -94,7 +94,7 @@
   letter-spacing: 1px;
   line-height: 1.5rem;
   width: 100%;
-  z-index: 999;
+  z-index: 1;
   transition: opacity 0.5s ease-out;
   animation-name: bounceIn;
   animation-duration: 1s;
@@ -209,7 +209,7 @@
 }
 .main-nav {
   position: relative;
-  z-index: 100;
+  z-index: 999;
   width: 100%;
   background-color: #ffffff;
   height: 0;
@@ -464,77 +464,104 @@
   min-height: 100vh;
   padding: 2rem 0;
 }
+.work-container .work-section-title {
+  text-align: center;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  color: #dd7157;
+}
 .work-container .single-project {
   background-color: #fff;
-  padding: 2rem;
-  width: 80%;
-  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+  width: fit-content;
+  max-width: 500px;
   position: relative;
   z-index: 5;
   margin: 2rem;
   justify-content: center;
-  border-radius: 5%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px #dddddd;
+  padding: 2rem;
 }
-.work-container .single-project .project-title {
-  padding: 2rem 0;
+.work-container .single-project .project-text-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.work-container .single-project .project-text-container .project-title {
   font-size: 1.4rem;
-  color: #3e1162;
-  font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
+  color: #2d2d2d;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
+  width: 100%;
+}
+.work-container .single-project .project-text-container .project-excerpt {
+  width: 100%;
+  color: #2d2d2d;
 }
 .work-container .single-project .project-image {
-  padding: 1rem 0;
   max-width: 100%;
+  width: 800px;
+  max-height: 300px;
+  border-radius: 20px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px #dddddd;
+  object-fit: cover;
+}
+.work-container .single-project .tools-used {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.work-container .single-project .tools-used p {
+  color: #48a4ff;
+  padding: 0.5rem 2rem;
+  box-shadow: 0px 0px 10px #dddddd;
   width: 200px;
-  height: auto;
-}
-.work-container .single-project .project-excerpt {
-  color: #21013a;
-  position: relative;
-}
-@media screen and (min-width: 32rem) {
-  .work-container .single-project {
-    max-width: 65%;
-  }
-  .work-container .project-excerpt {
-    min-height: 5rem;
-  }
+  font-weight: 400;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
 }
 
-.project-button {
-  margin: 2rem;
-}
 .project-button a {
   text-decoration: none;
   display: inline-block;
   justify-content: center;
-  color: #21013a;
-  border: 2px solid #21013a;
-  border-radius: 2rem;
-  padding: 1rem 1rem;
+  color: #2d2d2d;
+  background-color: #ebebeb;
+  padding: 0.5rem 1rem;
   transition: ease-in-out 0.2s;
+  font-weight: 600;
 }
 .project-button a:hover {
-  background-color: #21013a;
-  color: #ffffff;
+  background-color: #c4c4c4;
 }
 
 @media screen and (min-width: 48rem) {
   .work-container .single-project {
-    max-width: 35%;
+    width: 60rem;
+    flex-direction: row;
   }
-  .work-container .project-excerpt {
-    min-height: 4rem;
+  .work-container .single-project .project-text-container {
+    width: 20rem;
+    padding: 2rem 0;
+  }
+  .work-container .single-project .project-image {
+    width: 30rem;
+    margin: 0;
   }
 }
-@media screen and (min-width: 81rem) {
-  .work-container {
-    justify-content: center;
-    gap: 2rem;
-  }
+@media screen and (min-width: 62.5rem) {
   .work-container .single-project {
-    max-width: 25%;
+    max-width: 100%;
   }
 }
 .contact-container {

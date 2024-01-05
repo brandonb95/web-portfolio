@@ -10,6 +10,8 @@
 @use "tabs";
 @use "header";
 
+@import "mixins";
+
 * {
   margin: 0;
   padding: 0;

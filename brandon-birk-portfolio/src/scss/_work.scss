@@ -1,4 +1,5 @@
 @use "variables" as *;
+@import "mixins";
 
 .work-container {
   display: flex;
@@ -9,67 +10,84 @@
   min-height: 100vh;
   padding: $default-spacing 0;
 
+  .work-section-title {
+    text-align: center;
+    width: 100%;
+    font-family: $main-font;
+    text-transform: uppercase;
+    color: $second-color-theme;
+  }
+
   .single-project {
     background-color: #fff;
-    padding: $default-spacing;
-    width: 80%;
-    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+    width: fit-content;
+    max-width: 500px;
     position: relative;
     z-index: 5;
     margin: $default-spacing;
     justify-content: center;
-    border-radius: 5%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #dddddd;
+    padding: 2rem;
 
-    .project-title {
-      padding: $default-spacing 0;
-      font-size: 1.4rem;
-      color: $third-color-theme;
-      font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
-      text-transform: uppercase;
-      font-weight: 400;
+    .project-text-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+
+      .project-title {
+        font-size: 1.4rem;
+        color: $text-color-dark;
+        font-family: $main-font;
+        font-weight: 400;
+        width: 100%;
+      }
+
+      .project-excerpt {
+        width: 100%;
+        color: $text-color-dark;
+      }
     }
 
     .project-image {
-      padding: 1rem 0;
       max-width: 100%;
-      width: 200px;
-      height: auto;
+      width: 800px;
+      max-height: 300px;
+      border-radius: 20px;
+      margin: 0 auto;
+      box-shadow: 0px 0px 10px #dddddd;
+      object-fit: cover;
     }
 
-    .project-excerpt {
-      color: $first-color-theme;
-      position: relative;
-    }
-  }
+    .tools-used {
+      width: 100%;
+      display: grid;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0;
 
-  // 512px
-  @media screen and (min-width: 32rem) {
-    .single-project {
-      max-width: 65%;
-    }
-
-    .project-excerpt {
-      min-height: 5rem;
+      p {
+        color: $primary-theme-color;
+        padding: 0.5rem 2rem;
+        box-shadow: 0px 0px 10px #dddddd;
+        width: 200px;
+        font-weight: 400;
+        font-size: 15px;
+        font-family: $main-font;
+      }
     }
   }
 }
 
 .project-button {
-  margin: $default-spacing;
-
   a {
-    text-decoration: none;
-    display: inline-block;
-    justify-content: center;
-    color: $first-color-theme;
-    border: 2px solid $first-color-theme;
-    border-radius: 2rem;
-    padding: 1rem 1rem;
-    transition: ease-in-out 0.2s;
-    &:hover {
-      background-color: $first-color-theme;
-      color: $text-color-light;
-    }
+    @include works-button;
   }
 }
 
@@ -77,22 +95,26 @@
 @media screen and (min-width: 48rem) {
   .work-container {
     .single-project {
-      max-width: 35%;
-    }
+      width: 60rem;
+      flex-direction: row;
+      .project-text-container {
+        width: 20rem;
+        padding: 2rem 0;
+      }
 
-    .project-excerpt {
-      min-height: 4rem;
+      .project-image {
+        width: 30rem;
+        margin: 0;
+      }
     }
   }
 }
 
-// 1296px
-@media screen and (min-width: 81rem) {
+// 768px
+@media screen and (min-width: 62.5rem) {
   .work-container {
-    justify-content: center;
-    gap: $default-spacing;
     .single-project {
-      max-width: 25%;
+      max-width: 100%;
     }
   }
 }
