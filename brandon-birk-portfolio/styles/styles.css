@@ -468,6 +468,7 @@
   text-align: center;
   width: 100%;
   font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
   text-transform: uppercase;
   color: #dd7157;
 }
@@ -486,13 +487,18 @@
   justify-content: center;
   border-radius: 20px;
   box-shadow: 0px 0px 10px #dddddd;
-  padding: 2rem;
+  padding: 1rem;
+  transition: 0.3s ease;
+}
+.work-container .single-project:hover {
+  transform: scale(1.05);
 }
 .work-container .single-project .project-text-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  max-width: 26rem;
 }
 .work-container .single-project .project-text-container .project-title {
   font-size: 1.4rem;
@@ -502,30 +508,31 @@
   width: 100%;
 }
 .work-container .single-project .project-text-container .project-excerpt {
-  width: 100%;
+  font-family: "Open Sans", sans-serif;
   color: #2d2d2d;
+  width: 80%;
 }
 .work-container .single-project .project-image {
   max-width: 100%;
   width: 800px;
-  max-height: 300px;
   border-radius: 20px;
   margin: 0 auto;
   box-shadow: 0px 0px 10px #dddddd;
   object-fit: cover;
+  max-height: 20rem;
 }
 .work-container .single-project .tools-used {
-  width: 100%;
-  display: grid;
+  width: 80%;
+  display: flex;
   justify-content: center;
   gap: 1rem;
   margin: 1rem 0;
+  max-height: 2.3rem;
 }
 .work-container .single-project .tools-used p {
   color: #48a4ff;
-  padding: 0.5rem 2rem;
+  padding: 0.4rem 1rem;
   box-shadow: 0px 0px 10px #dddddd;
-  width: 200px;
   font-weight: 400;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
@@ -551,7 +558,6 @@
     flex-direction: row;
   }
   .work-container .single-project .project-text-container {
-    width: 20rem;
     padding: 2rem 0;
   }
   .work-container .single-project .project-image {

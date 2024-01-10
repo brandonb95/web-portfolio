@@ -99,6 +99,9 @@ const About = () => {
             data-aos="fade-left"
             data-aos-duration="1000"
           >
+            <h3 className="about-title">
+              An enthusiastic Front-end Developer from Vancouver, Canada
+            </h3>
             <p>{restData.acf.description}</p>
           </div>
         </article>

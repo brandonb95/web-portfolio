@@ -14,6 +14,7 @@
     text-align: center;
     width: 100%;
     font-family: $main-font;
+    font-size: 2.5rem;
     text-transform: uppercase;
     color: $second-color-theme;
   }
@@ -33,13 +34,18 @@
     justify-content: center;
     border-radius: 20px;
     box-shadow: 0px 0px 10px #dddddd;
-    padding: 2rem;
+    padding: 1rem;
+    transition: 0.3s ease;
 
+    &:hover {
+      transform: scale(1.05);
+    }
     .project-text-container {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: center;
+      max-width: 26rem;
 
       .project-title {
         font-size: 1.4rem;
@@ -50,33 +56,34 @@
       }
 
       .project-excerpt {
-        width: 100%;
+        font-family: $text-font;
         color: $text-color-dark;
+        width: 80%;
       }
     }
 
     .project-image {
       max-width: 100%;
       width: 800px;
-      max-height: 300px;
       border-radius: 20px;
       margin: 0 auto;
       box-shadow: 0px 0px 10px #dddddd;
       object-fit: cover;
+      max-height: 20rem;
     }
 
     .tools-used {
-      width: 100%;
-      display: grid;
+      width: 80%;
+      display: flex;
       justify-content: center;
       gap: 1rem;
       margin: 1rem 0;
+      max-height: 2.3rem;
 
       p {
         color: $primary-theme-color;
-        padding: 0.5rem 2rem;
+        padding: 0.4rem 1rem;
         box-shadow: 0px 0px 10px #dddddd;
-        width: 200px;
         font-weight: 400;
         font-size: 15px;
         font-family: $main-font;
@@ -98,7 +105,7 @@
       width: 60rem;
       flex-direction: row;
       .project-text-container {
-        width: 20rem;
+        // width: 20rem;
         padding: 2rem 0;
       }
 
@@ -110,7 +117,7 @@
   }
 }
 
-// 768px
+// 1000px
 @media screen and (min-width: 62.5rem) {
   .work-container {
     .single-project {

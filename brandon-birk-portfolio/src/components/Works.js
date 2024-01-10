@@ -50,8 +50,9 @@ const Works = () => {
             data-aos="fade-down"
             data-aos-duration="1000"
           >
-            Work
+            Portfolio
           </h2>
+
           {postOrder.map((postId) => {
             const post = restData.find((item) => item.id === postId);
             if (post) {
