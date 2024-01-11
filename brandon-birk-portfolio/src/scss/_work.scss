@@ -14,9 +14,9 @@
     text-align: center;
     width: 100%;
     font-family: $main-font;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     text-transform: uppercase;
-    color: $second-color-theme;
+    color: $primary-theme-color;
   }
 
   .single-project {
@@ -69,7 +69,7 @@
       margin: 0 auto;
       box-shadow: 0px 0px 10px #dddddd;
       object-fit: cover;
-      max-height: 20rem;
+      max-height: 22rem;
     }
 
     .tools-used {

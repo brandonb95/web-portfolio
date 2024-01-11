@@ -53,6 +53,18 @@
     font-family: "Karla", Arial, Helvetica, sans-serif;
     line-height: 2rem;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    h3 {
+      font-family: $main-font;
+    }
+
+    p {
+      font-family: $text-font;
+      color: $text-color-dark;
+    }
   }
 
   img::after {

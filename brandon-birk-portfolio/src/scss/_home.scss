@@ -218,3 +218,12 @@
     opacity: 0.5;
   }
 }
+
+.animation {
+  position: relative;
+  display: flex;
+  width: 15rem;
+  height: auto;
+  margin: 0 auto;
+  z-index: 999;
+}

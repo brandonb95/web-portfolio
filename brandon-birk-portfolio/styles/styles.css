@@ -207,6 +207,15 @@
     opacity: 0.5;
   }
 }
+.animation {
+  position: relative;
+  display: flex;
+  width: 15rem;
+  height: auto;
+  margin: 0 auto;
+  z-index: 999;
+}
+
 .main-nav {
   position: relative;
   z-index: 999;
@@ -387,6 +396,16 @@
   font-family: "Karla", Arial, Helvetica, sans-serif;
   line-height: 2rem;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+#post-13 .about-description h3 {
+  font-family: "Poppins", sans-serif;
+}
+#post-13 .about-description p {
+  font-family: "Open Sans", sans-serif;
+  color: #2d2d2d;
 }
 #post-13 img::after {
   border: 2px solid #aa402b;
@@ -468,9 +487,9 @@
   text-align: center;
   width: 100%;
   font-family: "Poppins", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   text-transform: uppercase;
-  color: #dd7157;
+  color: #48a4ff;
 }
 .work-container .single-project {
   background-color: #fff;
@@ -519,7 +538,7 @@
   margin: 0 auto;
   box-shadow: 0px 0px 10px #dddddd;
   object-fit: cover;
-  max-height: 20rem;
+  max-height: 22rem;
 }
 .work-container .single-project .tools-used {
   width: 80%;

@@ -82,8 +82,6 @@ const About = () => {
 
           <div
             className="image-container"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
             data-aos="fade-down"
             data-aos-duration="1000"
           >
