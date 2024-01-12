@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 import About from "./components/About";
 import Works from "./components/Works";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/works/:slug" element={<PostPage />} />
         </Routes>
       </main>
+      <Footer title="Brandon Birk" />
     </BrowserRouter>
   );
 }

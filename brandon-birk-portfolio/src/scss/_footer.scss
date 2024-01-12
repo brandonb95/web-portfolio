@@ -1,0 +1,52 @@
+@use "variables" as *;
+
+footer {
+  .footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    color: $text-color-light;
+    background-color: $background-color-dark;
+    padding: 2rem 0;
+
+    .footer-logo {
+      max-width: 7rem;
+      width: 7rem;
+      a {
+        svg {
+          &:hover,
+          &:active,
+          &:focus {
+            g path {
+              fill: $primary-theme-color;
+            }
+          }
+          g path {
+            transition: 0.3s ease;
+            fill: $white;
+          }
+        }
+      }
+    }
+
+    .footer-desc {
+      width: 60%;
+      font-family: $main-font;
+      font-size: 0.9rem;
+      padding: 1rem 0;
+      margin: 0 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  footer {
+    .footer-main {
+      .footer-desc {
+        font-size: 1rem;
+      }
+    }
+  }
+}

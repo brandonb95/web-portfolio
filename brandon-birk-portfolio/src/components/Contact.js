@@ -34,9 +34,13 @@ const Contact = () => {
     <>
       {isLoaded ? (
         <article className="contact-container" id={`post-${restData.id}`}>
-          <div data-aos="fade-up" data-aos-duration="1000">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="content-container"
+          >
             <h2 className="contact-title">{restData.acf.heading}</h2>
-            <p className="contact-blurb">{restData.acf.blurb}</p>
+            {/* <p className="contact-blurb">{restData.acf.blurb}</p> */}
 
             <div className="social-icons">
               <div className="solo-social">
@@ -71,12 +75,12 @@ const Contact = () => {
               </div>
             </div>
 
-            <div
+            {/* <div
               className="entry-content"
               dangerouslySetInnerHTML={{ __html: restData.content.rendered }}
-            ></div>
+            ></div> */}
           </div>
-          <ContactAnimation />
+          {/* <ContactAnimation /> */}
         </article>
       ) : (
         <h2>Contact loading...</h2>

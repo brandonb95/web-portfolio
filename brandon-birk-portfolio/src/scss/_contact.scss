@@ -2,34 +2,37 @@
 
 .contact-container {
   text-align: center;
+  gap: 2rem;
   width: 100%;
-  height: 100vh;
-  background-color: $first-color-theme;
-  padding: 10rem $default-spacing;
-  position: absolute;
-  overflow: hidden;
+  background-color: $white;
+  padding: $default-spacing;
+  // position: absolute;
   z-index: 99;
 
-  .contact-title {
-    padding: $default-spacing 0;
-    font-size: 2.8rem;
-    font-weight: 800;
-    color: $second-color-theme;
-    font-family: "Archivo", Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-  }
+  .content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    .contact-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: $text-color-dark;
+      font-family: $main-font;
+    }
 
-  .contact-blurb {
-    margin: 0 $default-spacing;
-    color: $text-color-light;
+    .contact-blurb {
+      margin: 0 $default-spacing;
+      color: $text-color-light;
+    }
   }
 }
 
 @media screen and (min-width: 48rem) {
   .contact-container {
-    padding: 15rem $default-spacing;
+    padding: 5rem $default-spacing;
     .contact-title {
-      font-size: 3.8rem;
+      font-size: 2Drem;
     }
 
     .contact-blurb {
@@ -40,10 +43,9 @@
 
 .social-icons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  position: relative;
-  top: 5rem;
-  font-size: 3rem;
+  font-size: 2.4rem;
 
   .solo-social {
     transition: 0.5s ease;

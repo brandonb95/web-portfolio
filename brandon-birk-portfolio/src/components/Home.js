@@ -73,7 +73,7 @@ const Home = () => {
 
       loadAnimation();
     }
-  }, [isLoaded]); // Run this effect when isLoaded changes
+  }, [isLoaded]);
 
   return (
     <>

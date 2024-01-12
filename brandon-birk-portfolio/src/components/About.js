@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "animate.css/animate.min.css";
+import lottie from "lottie-web";
 
 const About = () => {
   const restPath = "http://localhost/brandonbirk/wp-json/wp/v2/posts/13?_embed";
@@ -12,6 +13,7 @@ const About = () => {
     width: 0,
     opacity: 0,
   });
+  const aboutContainer = useRef(null);
 
   // initialize the animate-on-scroll
   AOS.init({
@@ -36,42 +38,31 @@ const About = () => {
     fetchData();
   }, [restPath]);
 
-  const handleMouseEnter = () => {
-    // add event handler for mouse enter
-    setOverlayStyle({
-      opacity: 0.8,
-      transition: "0.3s ease",
-    });
+  useEffect(() => {
+    if (aboutContainer.current) {
+      console.log("Container ref in useEffect:", aboutContainer.current);
 
-    setData({
-      ...restData,
-      acf: {
-        ...restData.acf,
-        profile: {
-          url: "http://localhost/brandonbirk/wp-content/uploads/2023/05/brandon-birks.jpg",
-          alt: "Brandon-Birk-Hover",
-        },
-      },
-    });
-  };
+      const loadAnimation = async () => {
+        try {
+          const animationContainer = aboutContainer.current;
 
-  const handleMouseLeave = () => {
-    // add event handler for mouse leave
-    setOverlayStyle({
-      transition: "0.3s ease",
-    });
+          const animationData = require("../spiderman.json");
 
-    setData({
-      ...restData,
-      acf: {
-        ...restData.acf,
-        profile: {
-          url: "http://localhost/brandonbirk/wp-content/uploads/2023/04/brandon-edited.jpg",
-          alt: "Brandon-Birk-Hover",
-        },
-      },
-    });
-  };
+          lottie.loadAnimation({
+            container: animationContainer,
+            renderer: "svg",
+            loop: true,
+            autoplay: true,
+            animationData: animationData,
+          });
+        } catch (error) {
+          console.error("Error loading Lottie animation:", error);
+        }
+      };
+
+      loadAnimation();
+    }
+  }, [isLoaded]);
 
   return (
     <>
@@ -91,12 +82,13 @@ const About = () => {
             />
             {/* <div className="overlay" style={{ ...overlayStyle }} /> */}
           </div>
-
           <div
             className="about-description"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
+            {/* <div className="about-animation" ref={aboutContainer}></div> */}
+
             <h3 className="about-title">
               An enthusiastic Front-end Developer from Vancouver, Canada
             </h3>

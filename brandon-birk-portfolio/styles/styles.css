@@ -368,10 +368,6 @@
   width: 100%;
   z-index: 2;
   border-radius: 5%;
-  transition: 0.3s ease;
-}
-#post-13 .image-container img:hover {
-  transform: scale(1.05);
 }
 #post-13 .image-container .overlay {
   position: absolute;
@@ -440,9 +436,12 @@
     margin: 2rem;
   }
   #post-13 .about-description {
-    max-width: 30%;
+    max-width: 500px;
     margin: 2rem 1rem;
-    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  #post-13 .about-description p {
+    font-size: 15px;
   }
   .entry-content {
     display: flex;
@@ -463,7 +462,10 @@
   }
   #post-13 .about-description {
     max-width: 30%;
-    font-size: 1.2rem;
+    font-size: 12px;
+  }
+  #post-13 .about-description h3 {
+    font-size: 1.3rem;
   }
   .entry-content {
     display: flex;
@@ -474,6 +476,10 @@
     max-width: 50%;
   }
 }
+.about-animation {
+  width: 100px;
+}
+
 .work-container {
   display: flex;
   flex-wrap: wrap;
@@ -591,33 +597,35 @@
 }
 .contact-container {
   text-align: center;
+  gap: 2rem;
   width: 100%;
-  height: 100vh;
-  background-color: #21013a;
-  padding: 10rem 2rem;
-  position: absolute;
-  overflow: hidden;
+  background-color: #ffffff;
+  padding: 2rem;
   z-index: 99;
 }
-.contact-container .contact-title {
-  padding: 2rem 0;
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: #dd7157;
-  font-family: "Archivo", Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
+.contact-container .content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
-.contact-container .contact-blurb {
+.contact-container .content-container .contact-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #2d2d2d;
+  font-family: "Poppins", sans-serif;
+}
+.contact-container .content-container .contact-blurb {
   margin: 0 2rem;
   color: #ffffff;
 }
 
 @media screen and (min-width: 48rem) {
   .contact-container {
-    padding: 15rem 2rem;
+    padding: 5rem 2rem;
   }
   .contact-container .contact-title {
-    font-size: 3.8rem;
+    font-size: 2Drem;
   }
   .contact-container .contact-blurb {
     font-size: 1.5rem;
@@ -625,10 +633,9 @@
 }
 .social-icons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  position: relative;
-  top: 5rem;
-  font-size: 3rem;
+  font-size: 2.4rem;
 }
 .social-icons .solo-social {
   transition: 0.5s ease;
@@ -1525,6 +1532,40 @@ header a .logo-name svg g path {
   header .logo-name a img {
     display: flex;
     vertical-align: middle;
+  }
+}
+footer .footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  padding: 2rem 0;
+}
+footer .footer-main .footer-logo {
+  max-width: 7rem;
+  width: 7rem;
+}
+footer .footer-main .footer-logo a svg:hover g path, footer .footer-main .footer-logo a svg:active g path, footer .footer-main .footer-logo a svg:focus g path {
+  fill: #48a4ff;
+}
+footer .footer-main .footer-logo a svg g path {
+  transition: 0.3s ease;
+  fill: #ffffff;
+}
+footer .footer-main .footer-desc {
+  width: 60%;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+  margin: 0 2rem;
+}
+
+@media screen and (min-width: 48rem) {
+  footer .footer-main .footer-desc {
+    font-size: 1rem;
   }
 }
 * {
