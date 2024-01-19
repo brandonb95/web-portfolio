@@ -653,7 +653,7 @@
   transition: 0.3s ease;
 }
 .social-icons .solo-social a:hover, .social-icons .solo-social a:active, .social-icons .solo-social a:focus {
-  color: #aa402b;
+  color: #39cd0d;
 }
 
 @media screen and (min-width: 48rem) {
@@ -1316,11 +1316,11 @@ section {
   font-size: 3rem;
   z-index: 99;
   cursor: pointer;
-  color: #dd7157;
+  color: #48a4ff;
   transition: 0.3s ease-in-out;
 }
 .to-top:hover, .to-top:active {
-  color: #aa402b;
+  color: #39cd0d;
 }
 
 @media screen and (min-width: 48rem) {
@@ -1566,6 +1566,20 @@ footer .footer-main .footer-desc {
   padding: 1rem 0;
   margin: 0 2rem;
 }
+footer .footer-main .icon-credit {
+  width: 60%;
+  font-size: 0.7rem;
+  color: #474747;
+}
+footer .footer-main .icon-credit a {
+  text-decoration: none;
+  font-weight: 800;
+  color: #474747;
+  transition: 0.3s ease;
+}
+footer .footer-main .icon-credit a:hover {
+  color: #555555;
+}
 
 @media screen and (min-width: 48rem) {
   footer .footer-main .footer-desc {
@@ -1585,7 +1599,7 @@ footer .footer-main .footer-desc {
   height: 180px;
   margin: 0 auto;
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 .specialties-container .icon-container .specialties-icon-container {
   text-align: center;
@@ -1594,6 +1608,7 @@ footer .footer-main .footer-desc {
   width: 50px;
   height: 50px;
   color: #ffffff;
+  fill: #ffffff;
 }
 .specialties-container .icon-container .specialties-icon-container p {
   font-family: "Poppins", sans-serif;

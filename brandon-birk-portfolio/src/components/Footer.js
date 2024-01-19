@@ -12,6 +12,12 @@ const Footer = () => {
     <footer>
       <article className="footer-main">
         <p className="footer-desc">Copyright © Brandon Birk {currentYear}</p>
+        <p className="icon-credit">
+          Icons from{" "}
+          <a href="https://icons8.com/icons" target="_blank">
+            Icons8
+          </a>
+        </p>
       </article>
     </footer>
   );

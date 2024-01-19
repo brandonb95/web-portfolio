@@ -10,12 +10,12 @@
   font-size: 3rem;
   z-index: 99;
   cursor: pointer;
-  color: $second-color-theme;
+  color: $primary-theme-color;
   transition: 0.3s ease-in-out;
 
   &:hover,
   &:active {
-    color: $fourth-color-theme;
+    color: $secondary-theme-color;
   }
 }
 
