@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
-import "animate.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "animate.css/animate.min.css";
 import Header from "./Header";
 import About from "./About";
 import Works from "./Works";
@@ -8,6 +10,7 @@ import ScrollButton from "./ScrollButton";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import lottie from "lottie-web";
+import BannerAnimation from "./BannerAnimation";
 
 const Home = () => {
   const restPath = "http://localhost/brandonbirk/wp-json/wp/v2/pages/6?_embed";
@@ -75,6 +78,35 @@ const Home = () => {
     }
   }, [isLoaded]);
 
+  useEffect(() => {
+    const specialtiesContainer = document.getElementById("specialties");
+
+    const handleScroll = () => {
+      if (specialtiesContainer) {
+        const boundingBox = specialtiesContainer.getBoundingClientRect();
+        const isInViewport = boundingBox.top < window.innerHeight;
+
+        if (
+          isInViewport &&
+          !specialtiesContainer.classList.contains("animate__animated")
+        ) {
+          specialtiesContainer.classList.add(
+            "animate__animated",
+            "animate__slideInLeft"
+          );
+        }
+      }
+    };
+
+    // Attach the scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       {isLoaded ? (
@@ -101,6 +133,10 @@ const Home = () => {
             </div>
           </article>
 
+          <article id="specialties">
+            <BannerAnimation />
+          </article>
+
           <article id="works" data-section="works">
             <Works />
           </article>
@@ -114,7 +150,6 @@ const Home = () => {
           </article>
 
           <ScrollButton />
-          {/* <SectionHandler /> */}
         </>
       ) : (
         <PacmanLoader

@@ -10,9 +10,9 @@ const Footer = () => {
 
   return (
     <footer>
-      <section className="footer-main">
+      <article className="footer-main">
         <p className="footer-desc">Copyright © Brandon Birk {currentYear}</p>
-      </section>
+      </article>
     </footer>
   );
 };

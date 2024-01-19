@@ -90,7 +90,7 @@ const About = () => {
             {/* <div className="about-animation" ref={aboutContainer}></div> */}
 
             <h3 className="about-title">
-              An enthusiastic Front-end Developer from Vancouver, Canada
+              An enthusiastic Front-End Web Developer from Vancouver, Canada
             </h3>
             <p>{restData.acf.description}</p>
           </div>
