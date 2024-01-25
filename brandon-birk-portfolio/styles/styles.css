@@ -1593,6 +1593,8 @@ footer .footer-main .icon-credit a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .specialties-container .icon-container {
   width: 80%;
@@ -1603,6 +1605,8 @@ footer .footer-main .icon-credit a:hover {
 }
 .specialties-container .icon-container .specialties-icon-container {
   text-align: center;
+  display: inline-block;
+  margin-right: 20px; /* Adjust this value based on your design */
 }
 .specialties-container .icon-container .specialties-icon-container svg {
   width: 50px;

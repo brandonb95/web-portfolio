@@ -51,8 +51,6 @@ const PostPage = () => {
     <>
       {isLoaded ? (
         <>
-          <HeaderPostPage />
-
           <article
             className="project-page-container"
             id={`post-${restData.id}`}

@@ -31,8 +31,6 @@ const Home = () => {
   });
 
   useEffect(() => {
-    console.log("Container ref before useEffect:", container.current);
-
     const fetchData = async () => {
       try {
         const response = await fetch(restPath);
@@ -54,8 +52,6 @@ const Home = () => {
 
   useEffect(() => {
     if (container.current) {
-      console.log("Container ref in useEffect:", container.current);
-
       const loadAnimation = async () => {
         try {
           const animationContainer = container.current;
