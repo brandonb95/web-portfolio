@@ -1,19 +1,26 @@
 @use "variables" as *;
+@import "mixins";
 
 .project-page-container {
   background-color: $background-color-light;
+  position: relative;
 }
 
 .project-page-title {
-  position: absolute;
-  top: 5rem;
+  position: relative;
   font-size: 2.4rem;
   text-align: center;
+  padding-top: 10rem;
   width: 100%;
-  margin: 0 0 $default-spacing 0;
-  color: $third-color-theme;
-  font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
+  color: $text-color-dark;
+  font-family: $main-font;
+}
+
+// 768px
+@media screen and (min-width: 48rem) {
+  .project-page-title {
+    padding-top: 12rem;
+  }
 }
 
 .logo-name-postpage {
@@ -39,7 +46,6 @@ section {
   display: block;
   position: relative;
   width: 100%;
-  top: 11rem;
 }
 
 .block-1,
@@ -98,17 +104,6 @@ section {
   background-size: contain;
 }
 
-// 768px
-@media screen and (min-width: 48rem) {
-  .project-page-title {
-    top: 10rem;
-  }
-
-  section {
-    top: 15rem;
-  }
-}
-
 // Problem/Solution Block
 .block-1 {
   background-color: $background-color-light;
@@ -117,8 +112,8 @@ section {
   h2 {
     width: 100%;
     text-align: center;
-    color: $third-color-theme;
-    font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
+    color: $text-color-dark;
+    font-family: $main-font;
     text-align: center;
     margin: 2rem 0;
     font-weight: 400;
@@ -134,6 +129,7 @@ section {
   .project-page-desc1 {
     width: 80%;
     color: $text-color-dark;
+    font-family: $text-font;
     font-weight: 400;
     font-size: 0.9rem;
     line-height: 1.5rem;
@@ -142,26 +138,14 @@ section {
 
 .project-links-container {
   width: 100%;
+
   .project-link-1 {
     margin: $default-spacing 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     a {
-      color: $third-color-theme;
-      font-weight: 500;
-      text-decoration: none;
-      display: inline-block;
-      justify-content: center;
-      border: 2px solid $third-color-theme;
-      border-radius: 2rem;
-      padding: 1rem 1rem;
-      transition: ease-in-out 0.2s;
-
-      &:hover {
-        color: $text-color-light;
-        background-color: $third-color-theme;
-      }
+      @include works-button;
     }
   }
 }
@@ -176,8 +160,8 @@ section {
 
   h2 {
     width: 100%;
-    color: $third-color-theme;
-    font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
+    color: $text-color-dark;
+    font-family: $main-font;
     text-align: center;
     margin: 2rem 0;
     font-weight: 400;
@@ -203,9 +187,17 @@ section {
     .project-page-desc1 {
       max-width: 50%;
     }
+
     .project-link-1 {
       width: 100%;
     }
+  }
+
+  .project-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
   }
 
   .tools-container {
@@ -353,7 +345,7 @@ section {
 // Inspiration/Process Block
 #inspiration {
   padding-top: 4rem;
-
+  position: relative;
   .block-3 {
     color: $text-color-dark;
     font-weight: 400;
@@ -592,20 +584,21 @@ section {
 }
 
 #related-posts {
-  background-color: $background-color-code;
+  background-color: $white;
   color: $text-color-light;
-  height: 30vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  padding-bottom: 17rem;
+  gap: 2rem;
+  padding: 4rem 0;
 
   h3 {
     width: 100%;
-    padding: $default-spacing;
     text-align: center;
-    margin-top: 2rem;
+    color: $text-color-dark;
+    font-family: $main-font;
+    font-size: 1.5rem;
   }
 
   ul {
@@ -613,30 +606,13 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    gap: 2rem;
+    width: 80%;
     li {
-      height: 4rem;
       a {
-        text-decoration: none;
-        color: $text-color-light;
-        // border: 2px solid $second-color-theme;
-        border-radius: 2rem;
-        padding: 0.6rem 1.3rem;
-        transition: 0.3s ease;
-        margin: 0 1rem;
-        background-color: $second-color-theme;
-
-        &:hover {
-          background-color: $fourth-color-theme;
-        }
+        @include works-button;
       }
     }
-  }
-}
-
-@media screen and (min-width: 48rem) {
-  #related-posts {
-    padding-bottom: 12rem;
   }
 }
 

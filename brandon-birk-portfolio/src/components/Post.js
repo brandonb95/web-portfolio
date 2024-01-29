@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "animate.css/animate.min.css";
 
-function Post({ post, imagePath }) {
+function Post({ post, imagePath, index }) {
   const { acf, content, id } = post;
 
   // initialize the animate-on-scroll
@@ -15,7 +15,7 @@ function Post({ post, imagePath }) {
 
   return (
     <div
-      className="single-project"
+      className={`single-project ${index % 2 === 0 ? "even" : "odd"}`}
       id={`post-${id}`}
       data-aos="fade-down"
       data-aos-duration="1000"

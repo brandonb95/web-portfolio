@@ -89,6 +89,17 @@
         font-family: $main-font;
       }
     }
+
+    &:nth-child(even) {
+      /* Target every even-numbered project */
+      .project-text-container {
+        order: 2; /* Change the order property to 2 for even-numbered projects */
+      }
+
+      .project-image {
+        order: 1; /* Change the order property to 1 for even-numbered projects */
+      }
+    }
   }
 }
 

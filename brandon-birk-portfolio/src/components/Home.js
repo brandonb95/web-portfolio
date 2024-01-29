@@ -11,6 +11,7 @@ import PacmanLoader from "react-spinners/PacmanLoader";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import lottie from "lottie-web";
 import BannerAnimation from "./BannerAnimation";
+import HomeAnimation from "./HomeAnimation";
 
 const Home = () => {
   const restPath = "http://localhost/brandonbirk/wp-json/wp/v2/pages/6?_embed";
@@ -108,7 +109,7 @@ const Home = () => {
       {isLoaded ? (
         <>
           <Header />
-
+          {/* <HomeAnimation /> */}
           <article id="home" className="landing-banner" data-section="home">
             <div className="landing-container animate__animated animate__bounceIn">
               <h1 className="landing-title ">{restData.acf.heading}</h1>

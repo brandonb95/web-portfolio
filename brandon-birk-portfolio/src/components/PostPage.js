@@ -6,6 +6,7 @@ import Tabs from "./Tabs";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "animate.css/animate.min.css";
+import Footer from "./Footer";
 
 const PostPage = () => {
   const { slug } = useParams();
@@ -355,7 +356,7 @@ const PostPage = () => {
 
             {relatedPosts.length > 0 && (
               <section id="related-posts">
-                <h3>Other work</h3>
+                <h3>Other Work</h3>
                 <ul>
                   {relatedPosts.map((post) => (
                     <li key={post.id}>

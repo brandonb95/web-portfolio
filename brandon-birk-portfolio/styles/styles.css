@@ -273,7 +273,7 @@
   cursor: pointer;
 }
 .hamburger-icon:hover .line {
-  background-color: #dd7157;
+  background-color: #48a4ff;
 }
 
 .line {
@@ -562,6 +562,15 @@
   font-size: 15px;
   font-family: "Poppins", sans-serif;
 }
+.work-container .single-project:nth-child(even) {
+  /* Target every even-numbered project */
+}
+.work-container .single-project:nth-child(even) .project-text-container {
+  order: 2; /* Change the order property to 2 for even-numbered projects */
+}
+.work-container .single-project:nth-child(even) .project-image {
+  order: 1; /* Change the order property to 1 for even-numbered projects */
+}
 
 .project-button a {
   text-decoration: none;
@@ -653,7 +662,7 @@
   transition: 0.3s ease;
 }
 .social-icons .solo-social a:hover, .social-icons .solo-social a:active, .social-icons .solo-social a:focus {
-  color: #39cd0d;
+  color: #2e73b8;
 }
 
 @media screen and (min-width: 48rem) {
@@ -779,20 +788,24 @@
 
 .project-page-container {
   background-color: #fafafa;
+  position: relative;
 }
 
 .project-page-title {
-  position: absolute;
-  top: 5rem;
+  position: relative;
   font-size: 2.4rem;
   text-align: center;
+  padding-top: 10rem;
   width: 100%;
-  margin: 0 0 2rem 0;
-  color: #3e1162;
-  font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
+  color: #2d2d2d;
+  font-family: "Poppins", sans-serif;
 }
 
+@media screen and (min-width: 48rem) {
+  .project-page-title {
+    padding-top: 12rem;
+  }
+}
 .logo-name-postpage {
   padding-top: 1rem;
   text-transform: uppercase;
@@ -813,7 +826,6 @@ section {
   display: block;
   position: relative;
   width: 100%;
-  top: 11rem;
 }
 
 .block-1,
@@ -869,14 +881,6 @@ section {
   background-size: contain;
 }
 
-@media screen and (min-width: 48rem) {
-  .project-page-title {
-    top: 10rem;
-  }
-  section {
-    top: 15rem;
-  }
-}
 .block-1 {
   background-color: #fafafa;
   justify-content: center;
@@ -884,8 +888,8 @@ section {
 .block-1 h2 {
   width: 100%;
   text-align: center;
-  color: #3e1162;
-  font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
+  color: #2d2d2d;
+  font-family: "Poppins", sans-serif;
   text-align: center;
   margin: 2rem 0;
   font-weight: 400;
@@ -899,6 +903,7 @@ section {
 .block-1 .project-page-desc1 {
   width: 80%;
   color: #2d2d2d;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
   line-height: 1.5rem;
@@ -914,19 +919,17 @@ section {
   justify-content: center;
 }
 .project-links-container .project-link-1 a {
-  color: #3e1162;
-  font-weight: 500;
   text-decoration: none;
   display: inline-block;
   justify-content: center;
-  border: 2px solid #3e1162;
-  border-radius: 2rem;
-  padding: 1rem 1rem;
+  color: #2d2d2d;
+  background-color: #ebebeb;
+  padding: 0.5rem 1rem;
   transition: ease-in-out 0.2s;
+  font-weight: 600;
 }
 .project-links-container .project-link-1 a:hover {
-  color: #ffffff;
-  background-color: #3e1162;
+  background-color: #c4c4c4;
 }
 
 .tools-container,
@@ -940,8 +943,8 @@ section {
 .tools-container h2,
 .duration-container h2 {
   width: 100%;
-  color: #3e1162;
-  font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
+  color: #2d2d2d;
+  font-family: "Poppins", sans-serif;
   text-align: center;
   margin: 2rem 0;
   font-weight: 400;
@@ -967,6 +970,12 @@ section {
   }
   .block-1 .project-link-1 {
     width: 100%;
+  }
+  .project-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
   }
   .tools-container img {
     max-width: 9%;
@@ -1047,6 +1056,7 @@ section {
 }
 #inspiration {
   padding-top: 4rem;
+  position: relative;
 }
 #inspiration .block-3 {
   color: #2d2d2d;
@@ -1238,48 +1248,44 @@ section {
   }
 }
 #related-posts {
-  background-color: #2c2035;
+  background-color: #ffffff;
   color: #ffffff;
-  height: 30vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  padding-bottom: 17rem;
+  gap: 2rem;
+  padding: 4rem 0;
 }
 #related-posts h3 {
   width: 100%;
-  padding: 2rem;
   text-align: center;
-  margin-top: 2rem;
+  color: #2d2d2d;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
 }
 #related-posts ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-#related-posts ul li {
-  height: 4rem;
+  gap: 2rem;
+  width: 80%;
 }
 #related-posts ul li a {
   text-decoration: none;
-  color: #ffffff;
-  border-radius: 2rem;
-  padding: 0.6rem 1.3rem;
-  transition: 0.3s ease;
-  margin: 0 1rem;
-  background-color: #dd7157;
+  display: inline-block;
+  justify-content: center;
+  color: #2d2d2d;
+  background-color: #ebebeb;
+  padding: 0.5rem 1rem;
+  transition: ease-in-out 0.2s;
+  font-weight: 600;
 }
 #related-posts ul li a:hover {
-  background-color: #aa402b;
+  background-color: #c4c4c4;
 }
 
-@media screen and (min-width: 48rem) {
-  #related-posts {
-    padding-bottom: 12rem;
-  }
-}
 .project-page-image {
   width: 80%;
   object-fit: cover;
@@ -1320,7 +1326,7 @@ section {
   transition: 0.3s ease-in-out;
 }
 .to-top:hover, .to-top:active {
-  color: #39cd0d;
+  color: #2e73b8;
 }
 
 @media screen and (min-width: 48rem) {
@@ -1390,7 +1396,7 @@ section {
   margin: 0 auto;
 }
 .bloc-tabs button {
-  font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .tabs {
@@ -1400,18 +1406,18 @@ section {
   height: 40px;
   background: #fafafa;
   cursor: pointer;
-  border: 1px solid #3e1162;
+  border: 1px solid #48a4ff;
   box-sizing: content-box;
   position: relative;
   outline: none;
   border-bottom: 1px solid transparent;
   transition: 0.3s ease;
-  color: #3e1162;
+  color: #48a4ff;
   font-size: 1rem;
 }
 
 .tabs:not(:last-child) {
-  border: 1px solid #3e1162;
+  border: 1px solid #48a4ff;
   border-bottom: 1px solid transparent;
 }
 
@@ -1424,7 +1430,7 @@ section {
   }
 }
 .active-tabs {
-  background: #3e1162;
+  background: #48a4ff;
   color: #ffffff;
   border-bottom: 1px solid transparent;
 }
@@ -1478,7 +1484,7 @@ button {
 .code-container {
   margin: 2rem 0;
   border-radius: 10px;
-  background-color: #2c2035;
+  background-color: #2e73b8;
   padding: 2rem;
   overflow: auto; /* Add a scrollbar when content overflows */
   max-height: 300px; /* Set a maximum height for the container */
@@ -1597,11 +1603,12 @@ footer .footer-main .icon-credit a:hover {
   white-space: nowrap;
 }
 .specialties-container .icon-container {
-  width: 80%;
-  height: 180px;
+  width: 90%;
+  height: 150px;
   margin: 0 auto;
   display: flex;
-  gap: 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 .specialties-container .icon-container .specialties-icon-container {
   text-align: center;
@@ -1609,16 +1616,38 @@ footer .footer-main .icon-credit a:hover {
   margin-right: 20px; /* Adjust this value based on your design */
 }
 .specialties-container .icon-container .specialties-icon-container svg {
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   color: #ffffff;
   fill: #ffffff;
 }
 .specialties-container .icon-container .specialties-icon-container p {
   font-family: "Poppins", sans-serif;
   color: #ffffff;
+  font-size: 0.8rem;
 }
 
+@media screen and (min-width: 31.25rem) {
+  .specialties-container .icon-container .specialties-icon-container svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .specialties-container .icon-container .specialties-icon-container svg {
+    width: 35px;
+    height: 35px;
+  }
+  .specialties-container .icon-container .specialties-icon-container p {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 62.5rem) {
+  .specialties-container .icon-container .specialties-icon-container svg {
+    width: 50px;
+    height: 50px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
